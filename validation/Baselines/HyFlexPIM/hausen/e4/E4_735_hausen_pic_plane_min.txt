@@ -1,0 +1,3 @@
+% Minimum temperatures for the floorplan of the die PIC_PLANE
+% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 FILL_9(K) 	 FILL_10(K) 	 COMB_SRC(K) 	 PIC_ROUTE(K) 	 BRIDGE(K) 	 PIC_MRR(K) 	 PIC_WG_S(K) 	 PIC_WG_N(K) 	 
+0.000 	 309.448 	 309.620 	 317.743 	 314.327 	 328.986 	 328.981 	 317.080 	 329.070 	 313.841 	 329.343 	 313.720 	 317.993 	 317.993 	 320.037 	 324.279 	 312.668 	 320.261 	 

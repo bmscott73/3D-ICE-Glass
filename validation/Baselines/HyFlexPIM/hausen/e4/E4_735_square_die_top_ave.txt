@@ -1,0 +1,3 @@
+% Average temperatures for the floorplan of the die DIE_TOP
+% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 MEM0(K) 	 OPT_IO(K) 	 GPU0(K) 	 
+0.000 	 317.067 	 314.260 	 332.506 	 319.365 	 325.754 	 336.002 	 318.545 	 341.153 	 326.210 	 329.933 	 329.880 	 339.284 	 

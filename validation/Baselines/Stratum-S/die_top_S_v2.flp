@@ -1,0 +1,111 @@
+// ============================================================
+// 3D-ICE Floorplan: die_top_S_v2.flp
+// Stratum-S v2 -- TOP die tier (closest to the TIM / cold plate)
+//
+// WHAT CHANGED vs v1 (logic_die_S.flp / mem_die_S.flp):
+//   1. GPU0 MOVED FROM THE BOTTOM TIER TO THE TOP TIER.
+//      Physically the xPU backside faces the cold plate directly; there is no
+//      Mono3D DRAM stacked over the GPU. v1 put 151 um of fictitious silicon
+//      between GPU0 and the TIM. Worth only ~0.7 K today, but it hard-coded a
+//      topology that breaks as soon as more chips are composed onto the panel.
+//   2. 2000 um GUARD GAP between the xPU and the Mono3D column.
+//      3D-ICE assigns material PER LAYER, not per floorplan element, so every
+//      FILL_* block is silicon. In v1 GPU0 and the Mono3D column were directly
+//      adjacent, so that fictitious silicon acted as a real lateral short.
+//      Die-layer spreading length is ~0.73 mm; a 2 mm gap is ~2.7x that, which
+//      bounds the artefact. Real chip-to-chip coupling now goes through the
+//      cold plate, which is the correct physics.
+//   3. GPU0 resized to 22600 x 27800 = 628.28 mm^2.
+//      NVIDIA GA102 whitepaper: 628.4 mm^2. Error 0.02% (v1 was 0.10%).
+//      Aspect 1.230 vs David's die-shot estimate 1.240. Also keeps every edge
+//      on a 200 um grid so the model can run at 200 um cells.
+//   4. Mono3D tile resized to 11000 x 11000 = 121.00 mm^2.
+//      Stratum Table 1: "Chip Area 121 mm^2". Exact match (v1 was 120.75).
+//   5. GPU0 power 230 W, not 300 W.
+//      300 W is the RTX A6000 MAXIMUM BOARD POWER for the whole card, which
+//      carries 48 GB of ECC GDDR6 on a 384-bit bus plus VRM and blower.
+//      The GA102 die alone is ~200-240 W. See the 300 W worst-case line below.
+//
+// Canvas: 39600 x 31800 um = 1259.3 mm^2   (v1 was 46600 x 34500 = 1607.7 mm^2)
+//   Active fill factor 59.5% (v1: 46.6%) -- less fictitious silicon.
+//
+// Layout (x):  0-2000 margin | 2000-13000 Mono3D | 13000-15000 GAP
+//              | 15000-37600 xPU | 37600-39600 margin
+//
+// Power density:
+//   GPU0 : 230 W / 628.28 mm^2 = 36.6 W/cm^2   (300 W -> 47.8 W/cm^2)
+//   MEM0 : 102 W / 121.00 mm^2 = 84.3 W/cm^2
+//   Mono3D column total (MEM0 + LOGIC0 below) = 144.67 W / 121 mm^2 = 119.6 W/cm^2
+//
+// NOTE: die_bot_S_v2.flp uses IDENTICAL block boundaries so Tmap outputs from
+//       the two tiers are cell-aligned and can be differenced directly.
+// ============================================================
+
+// ---- left margin ----
+
+FILL_LEFT :
+    position  0, 0 ;
+    dimension 2000, 31800 ;
+    power values 0 ;
+
+// ---- Mono3D column: below the tile ----
+
+FILL_M3D_BOT :
+    position  2000, 0 ;
+    dimension 11000, 10400 ;
+    power values 0 ;
+
+// ---- Mono3D DRAM tile (active) ----
+
+MEM0 :
+    position  2000, 10400 ;
+    dimension 11000, 11000 ;
+    power values 102 ;
+    // Stratum Fig. 15(b): peak stack 144.53 W, DRAM = 70.5% -> 101.9 W.
+    // Section 6.2.2 quotes ~104 W at full 30.34 TB/s bandwidth utilisation.
+    // 102 W = the peak-performance operating point. State which one in the paper.
+
+// ---- Mono3D column: above the tile ----
+
+FILL_M3D_TOP :
+    position  2000, 21400 ;
+    dimension 11000, 10400 ;
+    power values 0 ;
+
+// ---- GUARD GAP between the two chips (see header note 2) ----
+
+FILL_GAP :
+    position  13000, 0 ;
+    dimension 2000, 31800 ;
+    power values 0 ;
+
+// ---- xPU column: below GPU0 ----
+
+FILL_GPU_BOT :
+    position  15000, 0 ;
+    dimension 22600, 2000 ;
+    power values 0 ;
+
+// ---- A6000-class GA102 xPU (active) ----
+
+GPU0 :
+    position  15000, 2000 ;
+    dimension 22600, 27800 ;
+    power values 230 ;
+    // 22.6 x 27.8 mm = 628.28 mm^2 vs NVIDIA's published 628.4 mm^2 (0.02%).
+    // 230 W = GA102 DIE power estimate. The A6000's 300 W is board TBP.
+    // WORST CASE: change to 300 and re-run; q" goes 36.6 -> 47.8 W/cm^2.
+
+// ---- xPU column: above GPU0 ----
+
+FILL_GPU_TOP :
+    position  15000, 29800 ;
+    dimension 22600, 2000 ;
+    power values 0 ;
+
+// ---- right margin ----
+
+FILL_RIGHT :
+    position  37600, 0 ;
+    dimension 2000, 31800 ;
+    power values 0 ;

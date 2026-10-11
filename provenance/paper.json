@@ -1,0 +1,48 @@
+{
+  "source_filename": "3D_ICE_Glass__DATE_27_final.pdf",
+  "sha256": "c2a04c8a6ae721b4dda7f748df95d891552fda2d5fb67d6a0939225d2bb211b9",
+  "title": "3D-ICE-Glass: Calibrated Thermal-Aware Floorplanning of Photonic Glass Packages for Scalable AI",
+  "status": "supplied manuscript; authors omitted for blind review; no public DOI supplied",
+  "figures": [
+    {
+      "file": "methodology.png",
+      "page": 2,
+      "crop_points": [
+        310,
+        74,
+        553,
+        707
+      ]
+    },
+    {
+      "file": "architectures.png",
+      "page": 5,
+      "crop_points": [
+        36,
+        234,
+        292,
+        453
+      ]
+    },
+    {
+      "file": "validation-fields.png",
+      "page": 4,
+      "crop_points": [
+        36,
+        435,
+        290,
+        540
+      ]
+    },
+    {
+      "file": "panel-temperature.png",
+      "page": 6,
+      "crop_points": [
+        304,
+        224,
+        557,
+        300
+      ]
+    }
+  ]
+}

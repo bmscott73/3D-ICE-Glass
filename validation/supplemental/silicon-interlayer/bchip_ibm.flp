@@ -1,0 +1,6 @@
+// bchip_ibm.flp -- Miyazawa ITherm'23 intra-chip validation, BOTTOM chip
+// Uniform volumetric heating in reference -> single uniform block, 100 W
+BCHIP0 :
+   position 0, 0 ;
+   dimension 9975, 10000 ;
+   power values 100.0 ;

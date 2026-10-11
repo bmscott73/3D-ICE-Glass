@@ -1,0 +1,136 @@
+// ============================================================
+// cpo_3d.stk -- CPO package-level thermal field, 3D configuration
+// Comparison target: S. Sheikh Sofla, M. Swaminathan et al. (PSU / ASE / MediaTek),
+//   "Physics-Informed Neural Network Approach for Fast Prediction of Temperature
+//   Distribution and Hot Spots in Co-Packaged Optics." Reference field = ANSYS
+//   Icepak (the paper's ground truth); the PINN is the surrogate at 89% of it.
+//
+// SCOPE -- read this before quoting any number from this run.
+//   This row validates the PACKAGE-LEVEL temperature field at the PIC region:
+//   how much compute heat is conveyed laterally and vertically to the optics.
+//   It does NOT reproduce the paper's Fig. 4 intra-PIC device map (laser ->
+//   waveguide diffusion, ring-to-ring crosstalk), because 3D-ICE layers are
+//   materially HOMOGENEOUS: a layer carries one material and floorplan blocks
+//   assign power, not conductivity. Silicon features embedded in glass and
+//   discrete TGV patterning cannot be represented except as effective media.
+//   Those are exactly the PINN's differentiators. Different length scales.
+//
+// The paper reports ONE usable quantity: GPU power density 100 W/cm^2.
+// Everything else below (die areas, HBM/CPU/EIC powers, boundary h, glass
+// thickness) is ASSUMED. This run is therefore NOT a temperature point check.
+// What it validates is the ORDINAL claim of the paper's Fig. 6: stacking the
+// EIC on the PIC (3D) raises PIC temperature versus placing them side by side
+// (2.5D). That comparison is robust because the two configs share every
+// boundary, so the assumed values cancel in the difference.
+//
+// 3D:   EIC sits at y 16000..24000, DIRECTLY ABOVE the PIC footprint, so its
+//       heat reaches the optics by the short vertical path through ubump +
+//       tier2 + TGV. NOTE: that path is 250 um in our stack versus a direct
+//       microbump/TGV stack in the reference, so our 3D-vs-2.5D delta is a
+//       LOWER BOUND on the effect the paper reports.
+// ============================================================
+
+material SILICON :
+    thermal conductivity     1.30e-04 ;
+    volumetric heat capacity 1.75e-12 ;
+
+material COPPER :
+    thermal conductivity     4.00e-04 ;
+    volumetric heat capacity 3.45e-12 ;
+
+material TIM :
+    thermal conductivity     4.00e-06 ;
+    volumetric heat capacity 4.00e-12 ;
+
+material UBUMP_UF :
+    thermal conductivity     2.00e-05 ;
+    volumetric heat capacity 2.50e-12 ;
+
+material GLASS :
+    thermal conductivity     1.40e-06 ;      // 1.4 W/mK
+    volumetric heat capacity 1.60e-12 ;
+
+material ABF :
+    thermal conductivity     3.00e-07 ;      // 0.3 W/mK build-up film
+    volumetric heat capacity 1.50e-12 ;
+
+material TGV_GLASS_COMPOSITE :
+    thermal conductivity     1.00e-06, 1.00e-06, 7.9204e-05 ;   // f_Cu = 0.196
+    volumetric heat capacity 1.96e-12 ;
+
+// LIMITATION: 3D-ICE applies ONE global top boundary. In the reference the
+// copper spreader covers only the compute region and stops before the EIC/PIC
+// (their Fig. 5b), so our PIC is cooled from above where theirs is not. This
+// biases our absolute PIC temperature LOW. It cancels in the 3D-vs-2.5D delta.
+top heat sink :
+    heat transfer coefficient 4.08e-08 ;
+    temperature 300 ;
+
+// Bottom adiabatic: conservative for the optics (forbids downward escape).
+
+dimensions :
+    chip length 40000, width 30000 ;
+    cell length 100,   width 100 ;      // 400x300/layer. See README on why
+    non-uniform false ;                 // 50-100 um is the CORRECT resolution.
+
+layer CP_BASE_L :
+    height   2000 ;
+    material COPPER ;
+
+layer TIM_L :
+    height   20 ;
+    material TIM ;
+
+layer UBUMP_L :
+    height   40 ;
+    material UBUMP_UF ;
+
+layer TGV_L :
+    height   110 ;
+    material TGV_GLASS_COMPOSITE ;
+
+layer ABF_L :
+    height   30 ;
+    material ABF ;
+
+layer GLASS_CORE_L :
+    height   300 ;
+    material GLASS ;
+
+die TIER1_D :
+    layer  145 SILICON ;
+    source   5 SILICON ;
+
+die TIER2_D :
+    source   5 SILICON ;
+    layer   95 SILICON ;
+
+// PIC plane declared as a die only so 3D-ICE accepts a floorplan on it.
+// It is glass, and carries only optical sources plus 0 W region markers.
+die PIC_PLANE_D :
+    source  20 GLASS ;
+
+stack :
+    layer CP_BASE   CP_BASE_L ;
+    layer TIM_TOP   TIM_L ;
+    die   TIER1     TIER1_D      floorplan "tier1_3d.flp" ;
+    layer UBUMP     UBUMP_L ;
+    die   TIER2     TIER2_D      floorplan "tier2_cpu.flp" ;
+    layer TGV       TGV_L ;
+    die   PIC_PLANE PIC_PLANE_D  floorplan "pic_plane.flp" ;
+    layer ABF       ABF_L ;
+    layer GLASS_CORE GLASS_CORE_L ;
+
+solver :
+    steady ;
+    initial temperature 300.0 ;
+    numofcores 12 ;
+
+output :
+    Tflp( PIC_PLANE, "outputs-opt1/cpo3d_pic_max.txt", maximum, final ) ;
+    Tflp( PIC_PLANE, "outputs-opt1/cpo3d_pic_avg.txt", average, final ) ;
+    Tflp( PIC_PLANE, "outputs-opt1/cpo3d_pic_min.txt", minimum, final ) ;
+    Tflp( TIER1,     "outputs-opt1/cpo3d_t1_max.txt",  maximum, final ) ;
+    Tflp( TIER2,     "outputs-opt1/cpo3d_t2_max.txt",  maximum, final ) ;
+    Tmap( PIC_PLANE, "outputs-opt1/cpo3d_pic_tmap.txt", final ) ;
+    Tmap( TIER1,     "outputs-opt1/cpo3d_t1_tmap.txt",  final ) ;

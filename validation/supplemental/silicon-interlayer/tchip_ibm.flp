@@ -1,0 +1,9 @@
+// tchip_ibm.flp -- Miyazawa ITherm'23 intra-chip validation, TOP chip
+// Uniform volumetric heating in reference -> single uniform block, 100 W
+// Footprint 9975 x 10000 um: LENGTH 9975 = 133 exact 75-um transverse columns
+// (0.25% trim from 10 mm, power held at 100 W); WIDTH 10000 = flow direction.
+// For the 50 W and 75 W Table III points, edit power values accordingly.
+TCHIP0 :
+   position 0, 0 ;
+   dimension 9975, 10000 ;
+   power values 100.0 ;

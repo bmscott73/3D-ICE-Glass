@@ -1,0 +1,3 @@
+% Maximum temperatures for the floorplan of the die PIM
+% Time(s) 	 PU0_DIG_A(K) 	 PU0_ANA(K) 	 PU0_DIG_B(K) 	 PU1_DIG_A(K) 	 PU1_ANA(K) 	 PU1_DIG_B(K) 	 PU2_DIG_A(K) 	 PU2_ANA(K) 	 PU2_DIG_B(K) 	 PU3_DIG_A(K) 	 PU3_ANA(K) 	 PU3_DIG_B(K) 	 PU4_DIG_A(K) 	 PU4_ANA(K) 	 PU4_DIG_B(K) 	 PU5_DIG_A(K) 	 PU5_ANA(K) 	 PU5_DIG_B(K) 	 
+0.000 	 354.390 	 370.664 	 356.227 	 352.629 	 368.641 	 354.450 	 354.390 	 370.664 	 356.227 	 347.835 	 364.107 	 349.674 	 346.215 	 362.225 	 348.038 	 347.835 	 364.107 	 349.674 	 

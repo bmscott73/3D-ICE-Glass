@@ -1,0 +1,79 @@
+// ttv_interpack.stk -- H100-SCALE TWO-PHASE TTV BENCHMARK
+// Scope (deliberately narrow): experimentally CALIBRATED and power-sweep
+//   EVALUATED top-side effective cold-plate boundary, with the 2 mm copper
+//   thermocouple-to-case segment verified ANALYTICALLY. This is NOT validation
+//   of an NVIDIA H100 junction, NOT a universally portable cold-plate h, and
+//   NOT an independent experimental validation of copper conduction (see below).
+//
+// Reference: Narayanan, Wang, Ozguc, Bonner III (Accelsius), ASME InterPACK 2024,
+//   IPACK2024-141261. Copper TTV, 26 x 35 mm heated area, 700 W, two-phase
+//   R1233zd(E), 450-500 mL/min per TTV, vapor quality < 0.55.
+//
+// WHY THE COPPER SEGMENT IS NOT AN EXPERIMENTAL CHECK:
+//   The paper measures ONE temperature (embedded thermocouple, T_TC) and DERIVES
+//   the case temperature from it using T_case = T_TC - Q*L/(A*k_Cu) -- the same
+//   1-D conduction we would be testing. So R_TC-sat == R_case-sat + L/(kA) holds
+//   in the experiment BY CONSTRUCTION. Reproducing the ~3.84 K drop confirms our
+//   Fourier implementation; it cannot confirm it against data. Reported for
+//   transparency, never as a second independent delta.
+//
+// BOUNDARY, fully documented per area-portability discipline:
+//   R_case-sat (measured, 4-TTV average at 700 W) = 0.0250 K/W
+//   A_applied  = 26 x 35 mm = 910 mm^2   (EXACTLY this definition)
+//   h_eff      = 1/(R*A) = 43,956 W/m2K = 4.3956e-8 W/um2K
+//   G = h*A    = 40.000 W/K   (quote G alongside h whenever this is reused)
+//   h_eff LUMPS TIM + cold plate. Any design that models a TIM layer explicitly
+//   AND uses an h_eff derived from a case-to-fluid resistance DOUBLE-COUNTS the
+//   TIM. Check every liquid variant for this before reusing the formulation.
+//
+// T_sat = 47.5 C is INFERRED from the rounded 700 W pair (65 - 0.025*700), not a
+//   published constant. The paper defines R against LOCAL saturation temperature,
+//   which varies with power and pressure. Use this value ONLY for the 700 W
+//   closure. For the sweep, compare R_case-sat, NOT absolute temperatures.
+//
+// Sides/bottom ASSUMED adiabatic based on the insulated PEEK test arrangement;
+//   insulation reduces parasitic loss but does not prove a perfect boundary.
+//   See ttv_interpack_parasitic.stk for the 5% loss sensitivity.
+//
+// Geometry note: modelled copper is the UPPER 2 mm thermocouple-to-case segment,
+//   not the whole heater block. The 5 um "source" is a computational device that
+//   injects the flux at the thermocouple plane -- it is a PROXY (T_TC_PROXY), not
+//   a physical heater plane. Cell-centre offsets: probe centre to source centre
+//   = 1.9925 mm; source centre to surface = 1.9975 mm; probe centre sits 5 um
+//   below the surface. extract_R.py applies both corrections.
+
+material COPPER :
+   thermal conductivity     4.00e-04 ;
+   volumetric heat capacity 3.45e-12 ;
+
+top heat sink :
+   heat transfer coefficient 4.3956e-08 ;
+   temperature               320.65 ;    // inferred T_sat = 47.5 C (700 W only)
+
+dimensions :
+   chip length 26000, width 35000 ;
+   cell length 250,   width 250 ;
+   non-uniform false ;
+
+layer CASE_PROBE :
+   height   10 ;                         // cell centre 5 um below the case surface
+   material COPPER ;
+
+die TTV_BLOCK :
+   layer  1985 COPPER ;
+   source    5 COPPER ;                  // T_TC_PROXY plane (computational)
+
+stack :
+   layer CASE CASE_PROBE ;
+   die   TTV  TTV_BLOCK  floorplan "ttv_heater.flp" ;
+
+solver :
+   steady ;
+   initial temperature 320.65 ;
+   numofcores 12 ;
+
+output :
+   Tflp( TTV,  "outputs/ttv_700W_tcproxy_max.txt", maximum, final ) ;
+   Tflp( TTV,  "outputs/ttv_700W_tcproxy_avg.txt", average, final ) ;
+   Tmap( CASE, "outputs/ttv_700W_case_tmap.txt",   final ) ;
+   T(    CASE, 13000, 17500, "outputs/ttv_700W_case_ctr.txt", final ) ;

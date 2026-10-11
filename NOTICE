@@ -1,0 +1,22 @@
+3D-ICE-Glass
+
+The thermal solver in vendor/3d-ice is an unmodified snapshot of:
+https://github.com/esl-epfl/3d-ice
+Commit e0bb6850c5e446363e26936586d625270c87f224 (2025-12-01).
+
+3D-ICE is copyright the Embedded Systems Laboratory, Ecole Polytechnique
+Federale de Lausanne, and its contributing authors. Original notices and
+COPYING are retained. The solver is distributed under GPL version 3 or later.
+The bundled SuperLU MT archive and other third-party components retain their
+original licensing, including notices inside the archive.
+
+3D-ICE-Glass's release tools and supplied model inputs are released under the
+GNU GPL version 3 or later. Academic source papers are cited for architectural
+and calibration provenance; the model inputs are research representations,
+not manufacturer CAD, certification, or official vendor models.
+
+Documentation figures are extracted from the user-supplied manuscript,
+"3D-ICE-Glass: Calibrated Thermal-Aware Floorplanning of Photonic Glass
+Packages for Scalable AI". Figure numbers and source SHA-256 are recorded in
+provenance/paper.json. Authors were omitted for blind review in that source.
+A software license does not override rights in referenced third-party papers.

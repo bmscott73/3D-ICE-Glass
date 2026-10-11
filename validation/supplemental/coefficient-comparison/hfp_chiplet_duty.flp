@@ -1,0 +1,123 @@
+// ========================================================================
+// 3D-ICE Floorplan: hfp_chiplet_duty.flp
+// HyFlexPIM v3 -- ONE LATERAL CHIPLET (the reusable baseline unit)
+//
+// DUTY-WEIGHTED steady state -- PRIMARY BASELINE.
+// N=128 stage schedule: 410 us analog + 16 us digital = 426 us -> 96.2% / 3.8%.
+// Valid as a steady state because 426 us is ~25x below the 10-17 ms thermal
+// time constant, so the die sees thermally equivalent continuous loading.
+// Chiplet = 6 PU x 23.450 W = 140.70 W.  Four chiplets = 562.8 W.
+// ========================================================================
+// Chiplet 26100 x 17400 um = 454 mm^2. Four of these = 24 PUs = 1817 mm^2.
+// Partitioning is MANDATORY: 1817 mm^2 exceeds a ~858 mm^2 reticle field.
+// It is NOT a thermal optimisation -- coolant temperature rise is invariant
+// under partitioning (P/4 dissipated into Q/4 of flow gives the same P/(Q.rho.cp)).
+// What it buys is pressure: 0.89 bar here vs 5.29 bar monolithic.
+//
+// PU grid 3 x 2, PU = 8700 x 8700 um.
+// Coolant flows +y. Row 1 (y=0) is the INLET, row 0 (y=17400) the OUTLET.
+//
+// EDGE FIX APPLIED. The analog strip is now placed BETWEEN two digital
+// half-strips (3700/1300/3700 um) instead of flush against the
+// downstream chip edge. In Probes A and D the flush placement cost 10.1 K and
+// 10.7 K respectively, because a strip against an adiabatic boundary loses half
+// its lateral spreading relief: the fin solution degrades from (1-e^-m) to
+// (1-e^-2m). Partitioning MULTIPLIES the number of such edges, so this fix
+// matters more in the chiplet layout than it did monolithically.
+//
+// Powers: ANA 21.488 W ; DIG_A = DIG_B = 0.981 W
+// Chiplet total = 6 x (21.488 + 2 x 0.981) = 140.70 W
+// q": ANA 190.0 W/cm^2 ; DIG 3.0 W/cm^2  (ratio 62x)
+// ========================================================================
+
+// ---- PU row 0  (y = 8700 .. 17400)   OUTLET SIDE
+PU0_DIG_A :
+    position  0, 8700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU0_ANA :
+    position  0, 12400 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU0_DIG_B :
+    position  0, 13700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU1_DIG_A :
+    position  8700, 8700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU1_ANA :
+    position  8700, 12400 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU1_DIG_B :
+    position  8700, 13700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU2_DIG_A :
+    position  17400, 8700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU2_ANA :
+    position  17400, 12400 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU2_DIG_B :
+    position  17400, 13700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+// ---- PU row 1  (y = 0 .. 8700)   INLET SIDE
+PU3_DIG_A :
+    position  0, 0 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU3_ANA :
+    position  0, 3700 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU3_DIG_B :
+    position  0, 5000 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU4_DIG_A :
+    position  8700, 0 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU4_ANA :
+    position  8700, 3700 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU4_DIG_B :
+    position  8700, 5000 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU5_DIG_A :
+    position  17400, 0 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU5_ANA :
+    position  17400, 3700 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU5_DIG_B :
+    position  17400, 5000 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
