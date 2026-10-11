@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-11",
+  "platform": "Ubuntu 24.04 ARM64; Docker Desktop; 2 solver threads; 16 GB VM memory",
+  "upstream_commit": "e0bb6850c5e446363e26936586d625270c87f224",
+  "superlu_u_fill": 100,
+  "files": [
+    {
+      "path": "demo/figures/smoke-check.json",
+      "role": "fresh synthetic solver output; coarse demo grid",
+      "sha256": "ad47075c7d48842bff1500ecc0f3b46387a0890d099ae2b060e0521f03effce1",
+      "bytes": 260
+    },
+    {
+      "path": "demo/figures/smoke-fine-check.json",
+      "role": "fresh synthetic solver output; original 200 um grid",
+      "sha256": "0c257e2141be5c661830049cfd6d38078e1082fe325223e571e5f347b5491a69",
+      "bytes": 262
+    },
+    {
+      "path": "demo/figures/smoke-fine.png",
+      "role": "fresh synthetic solver output; original 200 um grid",
+      "sha256": "0ade187e297671e7d95404dccea62ce82821a9ae4d23d395826f28f5f7213862",
+      "bytes": 75143
+    },
+    {
+      "path": "demo/figures/smoke.png",
+      "role": "fresh synthetic solver output; coarse demo grid",
+      "sha256": "442d9a765288c6fa97b60e25cdbaa331095ffc08804bc1944496f9cf4d443e54",
+      "bytes": 74498
+    },
+    {
+      "path": "demo/figures/transient-full.png",
+      "role": "derived from archived Tflp traces with clarified release plot labels",
+      "sha256": "d9feae13504347726e4c8c01ce5ec5348a7d1593c1f95615ba4e80973a3d0682",
+      "bytes": 347194
+    },
+    {
+      "path": "demo/figures/transient-zoom.png",
+      "role": "derived from archived Tflp traces with clarified release plot labels",
+      "sha256": "ceb17fba81660c56ba68b462d0014766de5a69cdbb7a36ab68ae493bfd2df3ea",
+      "bytes": 236943
+    }
+  ]
+}

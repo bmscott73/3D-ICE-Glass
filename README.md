@@ -6,6 +6,8 @@
 
 Start with [installation](#installation), run the [small validation example](#first-simulation), then choose an [architecture](#architecture-models). The [complete input index](docs/case-index.md) links **every released `.stk` and `.flp`** to its dependencies and academic sources.
 
+> **Transient demo branch:** follow the [five-minute walkthrough](demo/README.md). With the analysis dependencies installed, run `python3 demo/run_demo.py reference` to regenerate the saved result, or `python3 demo/run_demo.py smoke --cores 2` for the short live simulation after building the solver.
+
 > **Reproduction status:** imported inputs are preserved byte for byte and have SHA-256 provenance. Some historical inputs differ from the supplied manuscript. Consult [release verification and paper/input differences](docs/reproduction-status.md) before treating a run as an exact paper reproduction.
 
 ## Repository map

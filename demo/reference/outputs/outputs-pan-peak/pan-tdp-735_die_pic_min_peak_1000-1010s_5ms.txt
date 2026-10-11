@@ -1,0 +1,3 @@
+% Minimum temperatures for the floorplan of the die DIE_PIC
+% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 FILL_9(K) 	 FILL_10(K) 	 PIC_X(K) 	 PIC_A(K) 	 PIC_B(K) 	 
+0.000 	 310.628 	 310.654 	 323.563 	 310.742 	 324.128 	 326.937 	 327.731 	 311.215 	 328.525 	 329.482 	 310.579 	 326.431 	 338.102 	 338.556 	 

@@ -1,0 +1,15 @@
+{
+  "slots": 40,
+  "slot_s": 0.005,
+  "simulated_duration_s": 0.2,
+  "wall_seconds": 268.60941437299994,
+  "cell_um": [
+    200,
+    200
+  ],
+  "grid_cells": [
+    449,
+    122
+  ],
+  "purpose": "synthetic two-level solver smoke check; no paper/serving claim"
+}

@@ -1,0 +1,3 @@
+% Average temperatures for the floorplan of the die PIC_PLANE
+% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 WG_CORRIDOR(K) 	 CPL_X(K) 	 CPL_A(K) 	 CPL_B(K) 	 
+0.000 	 327.985 	 317.244 	 329.617 	 336.585 	 337.198 	 336.032 	 328.574 	 326.853 	 338.197 	 339.088 	 

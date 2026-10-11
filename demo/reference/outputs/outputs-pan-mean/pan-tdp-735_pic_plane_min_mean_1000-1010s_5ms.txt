@@ -1,0 +1,3 @@
+% Minimum temperatures for the floorplan of the die PIC_PLANE
+% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 WG_CORRIDOR(K) 	 CPL_X(K) 	 CPL_A(K) 	 CPL_B(K) 	 
+0.000 	 310.630 	 310.656 	 317.732 	 315.451 	 315.677 	 310.581 	 310.641 	 325.655 	 318.049 	 317.869 	 

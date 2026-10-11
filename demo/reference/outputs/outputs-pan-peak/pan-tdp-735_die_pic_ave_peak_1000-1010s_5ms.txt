@@ -1,0 +1,3 @@
+% Average temperatures for the floorplan of the die DIE_PIC
+% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 FILL_9(K) 	 FILL_10(K) 	 PIC_X(K) 	 PIC_A(K) 	 PIC_B(K) 	 
+0.000 	 324.263 	 317.755 	 330.015 	 318.542 	 330.845 	 336.654 	 337.224 	 325.432 	 338.435 	 339.041 	 330.435 	 329.368 	 343.572 	 344.035 	 

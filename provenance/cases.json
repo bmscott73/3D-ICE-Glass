@@ -1132,5 +1132,109 @@
     "power_samples": [
       1
     ]
+  },
+  {
+    "stack": "demo/inputs/pan-tdp-735.stk",
+    "floorplans": [
+      "demo/inputs/pan_mem_tdp.flp",
+      "demo/inputs/pan_logic_tdp.flp",
+      "demo/inputs/pan_pic_die.flp",
+      "demo/inputs/pan_pic.flp"
+    ],
+    "references": [
+      "panel",
+      "stratum",
+      "plate",
+      "pic"
+    ],
+    "grid_um": [
+      "200",
+      "200"
+    ],
+    "boundaries": [
+      "top h=2.999e-08, T=308 K"
+    ],
+    "first_sample_power_W": 1361.01,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "demo/inputs/pan-tdp-735_1000-1010s_5ms.stk",
+    "floorplans": [
+      "demo/inputs/pan_mem_tdp_1000-1010s_5ms.flp",
+      "demo/inputs/pan_logic_tdp_1000-1010s_5ms.flp",
+      "demo/inputs/pan_pic_die_1000-1010s_5ms.flp",
+      "demo/inputs/pan_pic_1000-1010s_5ms.flp"
+    ],
+    "references": [
+      "panel",
+      "stratum",
+      "plate",
+      "pic"
+    ],
+    "grid_um": [
+      "200",
+      "200"
+    ],
+    "boundaries": [
+      "top h=2.999e-08, T=308 K"
+    ],
+    "first_sample_power_W": 628.9472,
+    "power_samples": [
+      6000
+    ]
+  },
+  {
+    "stack": "demo/inputs/pan-tdp-735_mean_1000-1010s_5ms.stk",
+    "floorplans": [
+      "demo/inputs/pan_mem_tdp_mean_1000-1010s_5ms.flp",
+      "demo/inputs/pan_logic_tdp_mean_1000-1010s_5ms.flp",
+      "demo/inputs/pan_pic_die_mean_1000-1010s_5ms.flp",
+      "demo/inputs/pan_pic_mean_1000-1010s_5ms.flp"
+    ],
+    "references": [
+      "panel",
+      "stratum",
+      "plate",
+      "pic"
+    ],
+    "grid_um": [
+      "200",
+      "200"
+    ],
+    "boundaries": [
+      "top h=2.999e-08, T=308 K"
+    ],
+    "first_sample_power_W": 628.9472,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "demo/inputs/pan-tdp-735_peak_1000-1010s_5ms.stk",
+    "floorplans": [
+      "demo/inputs/pan_mem_tdp_peak_1000-1010s_5ms.flp",
+      "demo/inputs/pan_logic_tdp_peak_1000-1010s_5ms.flp",
+      "demo/inputs/pan_pic_die_peak_1000-1010s_5ms.flp",
+      "demo/inputs/pan_pic_peak_1000-1010s_5ms.flp"
+    ],
+    "references": [
+      "panel",
+      "stratum",
+      "plate",
+      "pic"
+    ],
+    "grid_um": [
+      "200",
+      "200"
+    ],
+    "boundaries": [
+      "top h=2.999e-08, T=308 K"
+    ],
+    "first_sample_power_W": 1084.5172,
+    "power_samples": [
+      1
+    ]
   }
 ]
