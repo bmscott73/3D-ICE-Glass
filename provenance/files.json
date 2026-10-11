@@ -1363,5 +1363,19 @@
     "role": "validation-supplement",
     "sha256": "490ebd07d6f5b9ff9c187f762e8e18653bca48aab37f98e5e5226ea4d9e58a61",
     "bytes": 456
+  },
+  {
+    "source": "seelab-russell:~/3d-ice/superlu_mt-4.0.0/SRC/sp_ienv.c",
+    "path": "provenance/research-build/sp_ienv.c",
+    "role": "research sparse-solver allocation configuration; preserved reference, not used verbatim",
+    "sha256": "5eca2dab374d877bc1660ec532ca1186bc8efad0fa9c9f8bc2a13c5c231e7e41",
+    "bytes": 4365
+  },
+  {
+    "source": "vendor/3d-ice/superlu_mt-4.0.0.zip:superlu_mt-4.0.0/License.txt",
+    "path": "provenance/research-build/License.txt",
+    "role": "SuperLU BSD license for preserved research tuning source",
+    "sha256": "5ae57ff762cfa3a25d10f8fe88dcc861194a35e8753a5877fce0828a3b02f915",
+    "bytes": 1684
   }
 ]

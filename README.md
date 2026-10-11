@@ -48,6 +48,8 @@ bash tools/build.sh
 
 The executable is `build/3d-ice/bin/3D-ICE-Emulator`. Build logs are `build/superlu-build.log` and `build/3d-ice-build.log`. The build script copies the pinned source into `build/`; it preserves `vendor/3d-ice/`. If a build fails, inspect the logs and rename the failed build directory before retrying.
 
+The build sets SuperLU MT's **U-factor storage multiplier to 100** (bundled default 50). This changes sparse factorization allocation capacity, with no change to the thermal equations or input values. The default 50 exhausted storage on the original 200 µm transient panel. Russell's research dependency uses 500; its [original tuning source and license](provenance/research-build/) are preserved. For a larger workstation, choose `SUPERLU_U_FILL=500 bash tools/build.sh`, or Docker's `--build-arg SUPERLU_U_FILL=500`. Higher storage limits still require sufficient memory. See [measured release checks](docs/reproduction-status.md).
+
 For plotting and the transient demo, install the optional analysis dependencies:
 
 ```bash

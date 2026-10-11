@@ -15,6 +15,11 @@ mkdir -p "$release_root/build"
 cp -R "$release_root/vendor/3d-ice" "$release_build"
 cd "$release_build"
 bash install-superlumt.sh > ../superlu-build.log 2>&1
+# The fine panel grid exceeds the bundled library's default U-factor storage.
+# Change allocation capacity in the extracted dependency, never vendor/ or physics.
+python3 "$release_root/tools/tune_superlu.py" superlu_mt-4.0.0/SRC/sp_ienv.c \
+  --u-fill "${SUPERLU_U_FILL:-100}" >> ../superlu-build.log 2>&1
+make -C superlu_mt-4.0.0 lib >> ../superlu-build.log 2>&1
 make > ../3d-ice-build.log 2>&1
 for release_binary in 3D-ICE-Emulator 3D-ICE-Server 3D-ICE-Client; do
   test -x "bin/$release_binary"

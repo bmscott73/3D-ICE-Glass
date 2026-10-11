@@ -9,6 +9,9 @@ Federale de Lausanne, and its contributing authors. Original notices and
 COPYING are retained. The solver is distributed under GPL version 3 or later.
 The bundled SuperLU MT archive and other third-party components retain their
 original licensing, including notices inside the archive.
+The preserved research SuperLU tuning source in provenance/research-build
+retains its BSD license. Release builds tune only the extracted dependency's
+U-factor allocation capacity; the pinned thermal engine is unchanged.
 
 3D-ICE-Glass's release tools and supplied model inputs are released under the
 GNU GPL version 3 or later. Academic source papers are cited for architectural
