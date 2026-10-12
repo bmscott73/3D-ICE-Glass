@@ -10,7 +10,14 @@ def references(path):
     if s.startswith('models/co-planar'): return ['stratum','plate','glass']
     if s.startswith('models/dual-side'): return ['stratum','plate','air']
     if s.startswith('models/interlayer'): return ['stratum','hyflex','glass-cooling','plate']
-    if s.startswith('models/panel') or s.startswith('demo/inputs'): return ['panel','stratum','plate','pic']
+    if s.startswith('models/panel') or s.startswith('transient/inputs'): return ['panel','stratum','plate','pic']
+    if s.startswith('validation/'):
+        key=Path(path).parts[1]
+        return {'h100-ttv':['ttv'],'h200-plate':['plate'],'stratum-l':['stratum','pic'],
+            'stratum-s':['stratum','plate'],'glass-microchannel':['glass-cooling'],
+            'cu-pillar':['glass-cooling'],'silicon-interlayer':['silicon-cooling'],
+            'hyflex-pinfin':['hyflex','glass-cooling'],'hyflex-microchannel':['hyflex','hausen'],
+            'photonic':['pic']}.get(key,['glass'])
     if 'H100' in s or 'h100-power' in s: return ['ttv']
     if 'H200' in s: return ['plate']
     if 'Stratum-S' in s: return ['stratum','plate']
@@ -21,8 +28,9 @@ def references(path):
 
 def main():
     cases=[];used={}
-    for folder in ('models','validation','demo/inputs'):
+    for folder in ('models','validation','transient/inputs'):
         for stk in sorted((ROOT/folder).rglob('*.stk')):
+            if 'provenance' in stk.parts:continue
             path=stk.relative_to(ROOT).as_posix();txt=uncomment(stk.read_text())
             flps=[resolve_floorplan(stk,r) for r in floorplans(stk)]
             power=0.;samples=set()
@@ -46,7 +54,7 @@ def main():
         refs=', '.join(f'[{r}](references.md#{r})' for r in c['references'])
         lines.append('| '+ ' | '.join([link(c['stack']),'<br>'.join(map(link,c['floorplans'])),' × '.join(c['grid_um']),str(c['first_sample_power_W']),'<br>'.join(c['boundaries']) or 'Embedded cooling; see stack',refs])+' |')
     lines+=['','## Every floorplan','','Includes geometry variants and generator seeds that are not referenced by a released stack.','','| Floorplan | Used by | Academic sources |','|---|---|---|']
-    for folder in ('models','validation','demo/inputs'):
+    for folder in ('models','validation','transient/inputs'):
         for f in sorted((ROOT/folder).rglob('*.flp')):
             p=f.relative_to(ROOT).as_posix();users=used.get(p,[])
             refs=', '.join(f'[{r}](references.md#{r})' for r in references(p))

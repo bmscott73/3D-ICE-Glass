@@ -1,0 +1,9 @@
+// 3D-ICE-Glass | estc_microchannel_author_inputs_v2.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 1 rectangles; first-sample power 16.2529 W; 1 power sample(s); powered footprint 6.5536 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+TTC_HEATER :
+    position 120, 120 ;
+    dimension 2560, 2560 ;
+    power values 16.252928 ;

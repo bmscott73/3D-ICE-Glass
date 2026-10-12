@@ -1,3 +1,0 @@
-% Maximum temperatures for the floorplan of the die PIC_PLANE
-% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 FILL_9(K) 	 FILL_10(K) 	 COMB_SRC(K) 	 PIC_ROUTE(K) 	 BRIDGE(K) 	 PIC_MRR(K) 	 PIC_WG_S(K) 	 PIC_WG_N(K) 	 
-0.000 	 326.477 	 323.469 	 356.681 	 332.484 	 356.772 	 336.037 	 332.801 	 360.861 	 326.295 	 361.752 	 336.827 	 320.031 	 332.621 	 329.807 	 339.099 	 335.992 	 339.116 	 

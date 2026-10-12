@@ -1,0 +1,196 @@
+// ============================================================
+// 3D-ICE 4.0 Stack Description File
+// Translated from 3ddram_logic_top.lcf (HotSpot format)
+// Source: David's Stratum (MICRO '25) Mono3D DRAM thermal model
+//
+// Unit conventions (3D-ICE):
+//   Lengths              : micrometers (um)
+//   Thermal conductivity : W / (um * K)
+//   Volumetric heat cap  : J / (um^3 * K)
+//   Temperature          : K
+//   Power                : W
+//
+// HotSpot -> 3D-ICE unit conversions applied:
+//   thickness   : m  * 1e6       -> um
+//   k           : (1/resistivity_mKW) * 1e-6  -> W/um·K
+//   Cp          : J/(m^3·K) * 1e-18           -> J/(um^3·K)
+// ============================================================
+
+
+// ============================================================
+// 1. MATERIALS
+// ============================================================
+
+// Logic / Memory silicon stack
+// LCF: resistivity = 0.01 (m·K)/W  -> k = 100 W/(m·K) = 1.0e-04 W/(um·K)
+// LCF: Cp = 1.75e6 J/(m^3·K)       -> 1.75e-12 J/(um^3·K)
+
+material LOGIC_MEM :
+    thermal conductivity    1.0e-04 ;
+    volumetric heat capacity 1.75e-12 ;
+
+// Thermal Interface Material (TIM)
+// LCF: resistivity = 0.25 (m·K)/W  -> k = 4 W/(m·K) = 4.0e-06 W/(um·K)
+// LCF: Cp = 4.0e6 J/(m^3·K)        -> 4.0e-12 J/(um^3·K)
+material TIM :
+    thermal conductivity    4.0e-06 ;
+    volumetric heat capacity 4.0e-12 ;
+
+// Stratum between memory and logic layers
+// Cu fraction = 0.3 for signal-grade interconnects
+// kCu = 400 W/(m·K), kSi02 = 1.4 W/(m·K)
+// 0.3 x 400 + 0.7 x 1.4
+
+material HYBRID_BOND :
+    thermal conductivity    1.21e-04 ; // W/(µm·K)
+    volumetric heat capacity 2.14e-12 ; // J/(um^3·K)
+
+
+// ============================================================
+// 2. HEAT SINK
+// Aggressive liquid/vapor-chamber cooling
+//   Air cooling    ~1e-10 W/(um^2·K)
+//   Liquid cooling ~1e-08 W/(um^2·K) ***
+//   Vapor chamber  ~1e-07 W/(um^2·K)
+// ============================================================
+
+top heat sink :
+    heat transfer coefficient 2.78e-08 ; // 1.0e-08 old, David's rec 1/(convec_res * area)
+    temperature 300 ;
+
+// ============================================================
+// 5. DIMENSIONS
+// Chip extents derived from floorplan block coordinates:
+//   x: LOGIC cols (0-10500) + GPU (10500-36100) + LOGIC (36100-46600) = 46600 um
+//   y: GPU height 0.0345 m = 34500 um
+// Cell size 500 um x 500 um -> 93 x 69 grid (manageable for first run)
+// Reduce cell size for higher spatial accuracy later.
+// ============================================================
+
+dimensions :
+    chip length 46600, width 34500 ;
+    cell length 500,   width 500 ;
+    non-uniform true; // needed for native vtk generation
+
+// ============================================================
+// 3. PASSIVE LAYERS
+// TIM is passive (no power source) - declared as layer, not die
+// LCF Layer 2: thickness = 2.0e-05 m = 20 um
+// ============================================================
+
+layer TIM_LAYER :
+    height   20 ;
+    material TIM ;
+
+layer HYBRID_BOND_LAYER :
+    height   1 ;
+    material HYBRID_BOND ;
+
+// ============================================================
+// 4. DIES (active layers with floorplans)
+//
+// In 3D-ICE a die uses 'source' to mark the active layer
+// Single-layer dies: the source IS the die
+//
+// Layer 1 (Memory): thickness = 0.00015 m = 150 um
+// Layer 0 (Logic) : thickness = 0.0001  m = 100 um
+// ============================================================
+
+die MEMORY_DIE :
+    source 150 LOGIC_MEM ;
+
+die LOGIC_DIE :
+    source 100 LOGIC_MEM ;
+
+
+// ============================================================
+// 6. STACK  (top -> bottom)
+//
+//   TIM_LAYER  - passive thermal interface (top, under heat sink)
+//   MEM_DIE    - Mono3D DRAM memory die
+//   HB_INTERFACE - hybrid bonding
+//   LOG_DIE    - Logic / GPU die (bottom)
+// ============================================================
+
+// stack :
+    // layer  TIM_TOP  TIM_LAYER ;
+    // die    MEM_DIE  MEMORY_DIE  floorplan "/workspace/mono3d_dram/mem_die_3D.flp" ;
+    // die    LOG_DIE  LOGIC_DIE   floorplan "/workspace/mono3d_dram/logic_die_3D.flp" ;
+
+// including hybrid bond layer between memory and logic
+// microfluidics 2rm between dies
+stack :
+    layer TIM_TOP TIM_LAYER // passive and thin
+        discretization 1 1 ;
+    die MEM_DIE MEMORY_DIE floorplan "/workspace/mono3d_dram/mem_die_3D.flp" 
+        discretization 12 12 ; // discretization N N ; N=1,2,4,8,12
+    layer HB_INTERFACE HYBRID_BOND_LAYER // passive and thin
+        discretization 1 1 ;
+    die LOG_DIE LOGIC_DIE floorplan "/workspace/mono3d_dram/logic_die_3D.flp" 
+        discretization 12 12 ; // discretization N N ; N=1,2,4,8,12
+
+// ============================================================
+// 7. ANALYSIS OPTIONS
+//
+// Transient: 9 time slots x 0.1 s/slot = 0.9 s total simulation
+// Internal step = 0.01 s (10 steps per slot - good accuracy)
+//
+// To run steady-state instead, replace with:
+//   solver : steady ; initial temperature 300.0 ; numofcores 2 ;
+// (steady ignores time slot structure in floorplans, uses
+//  the first power value per element)
+// ============================================================
+
+// steady state latest
+ solver :
+     steady ;
+     initial temperature 300.0 ;
+     numofcores 2 ;
+
+// TRANSIET o3 power values for prefill + decode
+// solver :
+    // transient step 0.035, slot 0.3511 ;
+    // initial temperature 300.0 ;
+    // numofcores 2 ;
+
+// ============================================================
+// 8. OUTPUT INSTRUCTIONS
+//
+// Tmap  : full 2D temperature grid per die at each slot
+// Tflp  : scalar max/avg temperature per floorplan per slot
+// T3d   : full 3D VTK file at end (open in Paraview)
+// ============================================================
+
+// steady state test with non-uniform true
+output :
+    Tflp( LOG_DIE, "/workspace/mono3d_dram/outputs/out_logic_tflp__12.txt", maximum, final ) ;
+    Tflp( MEM_DIE, "/workspace/mono3d_dram/outputs/out_mem_tflp_12.txt",   maximum, final ) ;
+    T3d( "/workspace/mono3d_dram/outputs/out3d_12.vtk", final ) ;
+
+// steady state 
+// output :
+    // Tmap( LOG_DIE, "/workspace/mono3d_dram/outputs/out_logic_tmap_nonuniform.txt", final) ;
+    // Tmap( MEM_DIE, "/workspace/mono3d_dram/outputs/out_mem_tmap_nonuniform.txt", final) ;
+    // Tflp( LOG_DIE, "/workspace/mono3d_dram/outputs/out_logic_tflp_nonuniform", maximum, final) ;
+    // Tflp( MEM_DIE, "/workspace/mono3d_dram/outputs/out_mem_tflp_nonuniform.txt", maximum, final) ;
+    // Tflp( LOG_DIE, "/workspace/mono3d_dram/outputs/out_logic_tflp_avg_nonuniform.txt", average, final) ;
+    // Tflp( MEM_DIE, "/workspace/mono3d_dram/outputs/out_mem_tflp_avg_nonuniform.txt", average, final) ;
+    // T3d ( "/workspace/mono3d_dram/outputs/out_3d_final_nonuniform.vtk", final) ;
+
+// output :
+    // Tmap( LOG_DIE, "/workspace/mono3d_dram/outputs/transiet_out_logic_tmap.txt", slot) ;
+    // Tmap( MEM_DIE, "/workspace/mono3d_dram/outputs/transient_out_mem_tmap.txt", slot) ;
+    // Tflp( LOG_DIE, "/workspace/mono3d_dram/outputs/transient_out_logic_tflp", maximum, step) ;
+    // Tflp( MEM_DIE, "/workspace/mono3d_dram/outputs/transient_out_mem_tflp.txt", maximum, step) ;
+    // Tflp( LOG_DIE, "/workspace/mono3d_dram/outputs/transient_out_logic_tflp_avg.txt", average, step) ;
+    // Tflp( MEM_DIE, "/workspace/mono3d_dram/outputs/transient_out_mem_tflp_avg.txt", average, step) ;
+    // T3d ( "/workspace/mono3d_dram/outputs/transient_out_3d_final.vtk", final) ;
+
+// add more for cooling desingns
+// T( MEMORY_DIE, 5000, 3000, "output1.txt", step);
+// Tmap( CORE_DIE, "output2.txt", slot );
+// T3d( output3.vtk, final);
+// Pmap( CORE_DIE, "output4.txt", slot );
+// Tflp( MEMORY_DIE, "output5.txt", minimum, step);
+// Tflpel(CORE_DIE.core1, "output6.txt", average, final);
+// Tcoolant(TOP_CHANNEL, "output7.txt", maximum);

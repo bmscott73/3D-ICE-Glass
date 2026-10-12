@@ -1,0 +1,113 @@
+// 3D-ICE-Glass | stratum_S_v2_liquid.stk | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// Canvas 39600 x 31800 um; grid 100 x 100 um.
+// Source power: first 374.67 W; range 374.67..374.67 W; 1 sample(s).
+// Top boundary: h=4.08e-08 W/um2K (40800 W/m2K), reference=300 K.
+// Temperatures in emulator outputs are kelvin; time is seconds.
+// Model data: CC-BY-4.0. References and observation planes: checkpoint README / docs/case-index.md.
+
+material SILICON :
+    thermal conductivity     1.30e-04 ;
+    volumetric heat capacity 1.75e-12 ;
+
+material MONO3D_DRAM :
+    thermal conductivity     3.00e-05 ;
+    volumetric heat capacity 1.75e-12 ;
+
+material TIM :
+    thermal conductivity     4.00e-06 ;
+    volumetric heat capacity 4.00e-12 ;
+
+material COPPER :
+    thermal conductivity     4.00e-04 ;
+    volumetric heat capacity 3.45e-12 ;
+
+material HYBRID_BOND :
+    thermal conductivity     1.21e-04 ;
+    volumetric heat capacity 2.14e-12 ;
+
+material UBUMP_UF :
+    thermal conductivity     2.00e-05 ;
+    volumetric heat capacity 2.50e-12 ;
+
+material GLASS :
+    thermal conductivity     1.40e-06 ;
+    volumetric heat capacity 1.60e-12 ;
+
+material TGV_GLASS_COMPOSITE :
+    thermal conductivity     1.00e-06, 1.00e-06, 7.9204e-05 ;
+    volumetric heat capacity 1.96e-12 ;
+
+top heat sink :
+    heat transfer coefficient 4.08e-08 ;
+    temperature 300 ;
+
+dimensions :
+    chip length 39600, width 31800 ;
+    cell length 100,   width 100 ;
+    non-uniform false ;
+
+layer CP_BASE_L :
+    height   2000 ;
+    material COPPER ;
+
+layer TIM_L :
+    height   20 ;
+    material TIM ;
+
+layer HB_L :
+    height   1 ;
+    material HYBRID_BOND ;
+
+layer UBUMP_L :
+    height   40 ;
+    material UBUMP_UF ;
+
+layer IPOSER_TGV_L :
+    height   110 ;
+    material TGV_GLASS_COMPOSITE ;
+
+layer IPOSER_CAV_L :
+    height   100 ;
+    material GLASS ;
+
+layer IPOSER_CORE_L :
+    height   170 ;
+    material GLASS ;
+
+die DIE_TOP_D :
+    layer  145 SILICON ;
+    source   5 SILICON ;
+
+die DIE_BOT_D :
+    source   5 SILICON ;
+    layer   95 SILICON ;
+
+stack :
+    layer   CP_BASE     CP_BASE_L ;
+    layer   TIM_TOP     TIM_L ;
+    die     DIE_TOP     DIE_TOP_D  floorplan "die_top_S_v2.flp" ;
+    layer   HB_IFACE    HB_L ;
+    die     DIE_BOT     DIE_BOT_D  floorplan "die_bot_S_v2.flp" ;
+    layer   UBUMP       UBUMP_L ;
+    layer   IPOSER_TGV  IPOSER_TGV_L ;
+    layer   IPOSER_CAV  IPOSER_CAV_L ;
+    layer   IPOSER_CORE IPOSER_CORE_L ;
+
+solver :
+    steady ;
+    initial temperature 300.0 ;
+    numofcores 12 ;
+
+output :
+    Tflp( DIE_TOP, "outputs/S_v2_liquid_top_max.txt", maximum, final ) ;
+    Tflp( DIE_TOP, "outputs/S_v2_liquid_top_avg.txt", average, final ) ;
+    Tflp( DIE_TOP, "outputs/S_v2_liquid_top_min.txt", minimum, final ) ;
+    Tflp( DIE_BOT, "outputs/S_v2_liquid_bot_max.txt", maximum, final ) ;
+    Tflp( DIE_BOT, "outputs/S_v2_liquid_bot_avg.txt", average, final ) ;
+    Tmap( DIE_TOP, "outputs/S_v2_liquid_top_tmap.txt", final ) ;
+    Tmap( DIE_BOT, "outputs/S_v2_liquid_bot_tmap.txt", final ) ;
+
+    Tmap( CP_BASE, "outputs/S_v2_liquid_cpbase_tmap.txt", final ) ;
+
+    Tmap( IPOSER_TGV, "outputs/S_v2_liquid_iposer_tmap.txt", final ) ;

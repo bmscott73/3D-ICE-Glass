@@ -1,0 +1,16 @@
+{
+  "id": "silicon-interlayer",
+  "name": "Silicon interlayer microchannels",
+  "stack": "validation/silicon-interlayer/inputs/ibm_intra_q22.stk",
+  "expected_C": 86.51,
+  "reference_C": 84.7,
+  "aggregate": true,
+  "metric": "bottom-die peak",
+  "outputs": [
+    "ibm_intra_q22_bc_max.txt"
+  ],
+  "kind": "floorplan",
+  "correction_K": 0,
+  "assessment": "flow-conditioned CFD comparison",
+  "tolerance_C": 0.1
+}

@@ -1,47 +1,36 @@
 {
-  "source_filename": "3D_ICE_Glass__DATE_27_final.pdf",
-  "sha256": "c2a04c8a6ae721b4dda7f748df95d891552fda2d5fb67d6a0939225d2bb211b9",
-  "title": "3D-ICE-Glass: Calibrated Thermal-Aware Floorplanning of Photonic Glass Packages for Scalable AI",
-  "status": "supplied manuscript; authors omitted for blind review; no public DOI supplied",
   "figures": [
     {
-      "file": "methodology.png",
-      "page": 2,
-      "crop_points": [
-        310,
-        74,
-        553,
-        707
+      "pdf": "docs/figures/source/methodology.pdf",
+      "png": "docs/figures/methodology.png",
+      "source": "/Users/ben/Downloads/fig1.pdf",
+      "source_sha256": "0d93a9e7e456c17c34df9d6c7314490b8142a3beece02097839ab1dc92aaee54",
+      "render": "pdftoppm full source page at max dimension 2000 pixels; no manuscript excerpt"
+    },
+    {
+      "pdf": "docs/figures/source/architectures.pdf",
+      "png": "docs/figures/architectures.png",
+      "source": "/Users/ben/Downloads/overview-floorplans-corrected.pdf",
+      "source_sha256": "1306faa55b58b8e052eb0cc1cf260af460619203ab7538f23aa42edf8fb5dbe1",
+      "render": "Complete source-figure ink rectangle; only blank page margins omitted, no manuscript excerpt",
+      "render_clip_pixels_at_2000": [
+        88,
+        233,
+        1298,
+        1090
       ]
     },
     {
-      "file": "architectures.png",
-      "page": 5,
-      "crop_points": [
-        36,
-        234,
-        292,
-        453
-      ]
-    },
-    {
-      "file": "validation-fields.png",
-      "page": 4,
-      "crop_points": [
-        36,
-        435,
-        290,
-        540
-      ]
-    },
-    {
-      "file": "panel-temperature.png",
-      "page": 6,
-      "crop_points": [
-        304,
-        224,
-        557,
-        300
+      "pdf": "docs/figures/source/panel-temperature.pdf",
+      "png": "docs/figures/panel-temperature.png",
+      "source": "/Users/ben/Downloads/pan-tdp-575_die_mem_fig.pdf",
+      "source_sha256": "b48d6d0d4398b41b8506ccd3ab98617fcdd8e30b5bbb77f5ee965147b7d03717",
+      "render": "Complete source-figure ink rectangle; only blank page margins omitted, no manuscript excerpt",
+      "render_clip_pixels_at_2000": [
+        192,
+        591,
+        1377,
+        402
       ]
     }
   ]

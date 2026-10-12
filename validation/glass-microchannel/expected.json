@@ -1,0 +1,16 @@
+{
+  "id": "glass-microchannel",
+  "name": "Glass microchannel + Cu-TGV",
+  "stack": "validation/glass-microchannel/inputs/estc_microchannel_author_inputs_v2.stk",
+  "expected_C": 86.41,
+  "reference_C": 83.3,
+  "aggregate": true,
+  "metric": "die peak",
+  "outputs": [
+    "microchannel_v2_tj_max_K.txt"
+  ],
+  "kind": "floorplan",
+  "correction_K": 0,
+  "assessment": "experimental comparison with assumed HTC",
+  "tolerance_C": 0.1
+}

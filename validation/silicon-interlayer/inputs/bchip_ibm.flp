@@ -1,0 +1,9 @@
+// 3D-ICE-Glass | bchip_ibm.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 1 rectangles; first-sample power 100 W; 1 power sample(s); powered footprint 99.75 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+BCHIP0 :
+   position 0, 0 ;
+   dimension 9975, 10000 ;
+   power values 100.0 ;

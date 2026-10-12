@@ -1,0 +1,218 @@
+#!/usr/bin/env python3
+"""
+build_bridge_stks.py -- emit the co-planar bridge run matrix as 3D-ICE 4.0 .stk files.
+
+Two branches, two parameter sets:
+  Bridge-Static : validated Robin cold plate (stratum_S_v2_liquid.stk boundary, h = 4.08e-8)
+  Bridge-Flow   : 4rm Cu fin field ON TOP of the same CP_BASE, wall h = 1.16e-8 (Icepak-
+                  calibrated), fin height sized so footprint conductance ~ the validated plate
+  standard      : water, 300 K reference/inlet, Cp 4.18e-12
+  warm          : PG30 at 35 C: 308 K, Cp 3.95e-12, h x 0.735 (laminar k-ratio 0.47/0.62)
+
+Everything below CP_BASE is byte-identical to stratum_S_v2_liquid.stk except that the
+170 um IPOSER_CORE is split into a 20 um glass readout plane + 150 um core (same total).
+"""
+import os
+
+OUT = "outputs-bridge"
+PG30 = 0.735          # h derate for PG30 vs water, laminar (Nu const, h ~ k_fluid). Turbulent bound 0.60.
+
+COMMON_MATERIALS = """
+material SILICON :
+    thermal conductivity     1.30e-04 ;
+    volumetric heat capacity 1.75e-12 ;
+material TIM :
+    thermal conductivity     4.00e-06 ;
+    volumetric heat capacity 4.00e-12 ;
+material COPPER :
+    thermal conductivity     4.00e-04 ;
+    volumetric heat capacity 3.45e-12 ;
+material HYBRID_BOND :
+    thermal conductivity     1.21e-04 ;
+    volumetric heat capacity 2.14e-12 ;
+material UBUMP_UF :
+    thermal conductivity     2.00e-05 ;
+    volumetric heat capacity 2.50e-12 ;
+material GLASS :
+    thermal conductivity     1.40e-06 ;
+    volumetric heat capacity 1.60e-12 ;
+material TGV_GLASS_COMPOSITE :
+    thermal conductivity     1.00e-06, 1.00e-06, 7.9204e-05 ;
+    volumetric heat capacity 1.96e-12 ;
+"""
+
+DIMS = """
+dimensions :
+    chip length 39600, width 31800 ;
+    cell length 100,   width 100 ;
+    non-uniform false ;
+"""
+
+LAYERS_BELOW_PLATE = """
+layer CP_BASE_L :            // 2 mm Cu cold-plate base (v2 spreader) -- UNCHANGED
+    height   2000 ;
+    material COPPER ;
+layer TIM_L :
+    height   20 ;
+    material TIM ;
+layer HB_L :
+    height   1 ;
+    material HYBRID_BOND ;
+layer UBUMP_L :
+    height   40 ;
+    material UBUMP_UF ;
+layer IPOSER_TGV_L :         // chip-side RDL + Cu-TGV field (bridge RDL lives here)
+    height   110 ;
+    material TGV_GLASS_COMPOSITE ;
+layer IPOSER_CAV_L :         // solid glass in this package: NO interlayer cavity
+    height   100 ;
+    material GLASS ;
+layer IPOSER_CORE_L :        // structural glass core. v2 had 170 here; 20 um moved to PIC_PLANE
+    height   150 ;
+    material GLASS ;
+
+die DIE_TOP_D :
+    layer  145 SILICON ;
+    source   5 SILICON ;
+die DIE_BOT_D :
+    source   5 SILICON ;
+    layer   95 SILICON ;
+die PIC_PLANE_D :            // glass readout plane (pic-sohrab pattern): markers + comb only
+    source  20 GLASS ;
+"""
+
+def stack_body(top_flp, bot_flp, pic_flp, plate_lines):
+    return f"""
+stack :
+{plate_lines}    layer   CP_BASE     CP_BASE_L ;
+    layer   TIM_TOP     TIM_L ;
+    die     DIE_TOP     DIE_TOP_D  floorplan "{top_flp}" ;
+    layer   HB_IFACE    HB_L ;
+    die     DIE_BOT     DIE_BOT_D  floorplan "{bot_flp}" ;
+    layer   UBUMP       UBUMP_L ;
+    layer   IPOSER_TGV  IPOSER_TGV_L ;
+    layer   IPOSER_CAV  IPOSER_CAV_L ;
+    die     PIC_PLANE   PIC_PLANE_D floorplan "{pic_flp}" ;
+    layer   IPOSER_CORE IPOSER_CORE_L ;
+"""
+
+def outputs(tag, flow):
+    o = f"""
+solver :
+    steady ;
+    initial temperature 300.0 ;
+    numofcores 12 ;
+
+output :
+    Tflp( DIE_TOP,   "{OUT}/{tag}_top_max.txt", maximum, final ) ;
+    Tflp( DIE_TOP,   "{OUT}/{tag}_top_avg.txt", average, final ) ;
+    Tflp( DIE_BOT,   "{OUT}/{tag}_bot_max.txt", maximum, final ) ;
+    Tflp( PIC_PLANE, "{OUT}/{tag}_pic_max.txt", maximum, final ) ;
+    Tflp( PIC_PLANE, "{OUT}/{tag}_pic_min.txt", minimum, final ) ;
+    Tflp( PIC_PLANE, "{OUT}/{tag}_pic_avg.txt", average, final ) ;
+    Tmap( DIE_TOP,   "{OUT}/{tag}_top_tmap.txt", final ) ;
+    Tmap( DIE_BOT,   "{OUT}/{tag}_bot_tmap.txt", final ) ;
+    Tmap( PIC_PLANE, "{OUT}/{tag}_pic_tmap.txt", final ) ;
+    Tmap( CP_BASE,   "{OUT}/{tag}_cpbase_tmap.txt", final ) ;
+"""
+    if flow:
+        o += f"""    Tmap( CPCH,      "{OUT}/{tag}_channel_tmap.txt", final ) ;   // coolant field: confirm inlet edge, outlet rise
+"""
+    return o
+
+def static_stk(tag, top, bot, pic, h, tref, note):
+    hdr = f"""// ============================================================
+// {tag}.stk -- Co-planar bridge, BRIDGE-STATIC branch
+// {note}
+// Boundary: VALIDATED Stratum-S v2 Robin cold plate (H100 TTV -0.07 C, H200 probe,
+// Stratum-S vs Icepak 0.5 K). No sense of flow: flow ordering is NOT measurable here.
+// Package: xPU + Mono3D DRAM co-planar under one TIM + one 2 mm Cu base (Tejinder's
+// planarization rule); NMP logic under the DRAM; bridge RDL in IPOSER_TGV; waveguides in
+// the 20 um glass readout plane; bottom adiabatic (v2 rationale, <0.5% flows down).
+// h = {h:.3g} W/(um^2 K), reference {tref} K.
+// Generated by build_bridge_stks.py.
+// ============================================================
+"""
+    sink = f"""
+top heat sink :
+    heat transfer coefficient {h:.3g} ;
+    temperature {tref} ;
+"""
+    return hdr + COMMON_MATERIALS + sink + DIMS + LAYERS_BELOW_PLATE + stack_body(top, bot, pic, "") + outputs(tag, False)
+
+def flow_stk(tag, top, bot, pic, flow, h_wall, tin, cp, note):
+    hdr = f"""// ============================================================
+// {tag}.stk -- Co-planar bridge, BRIDGE-FLOW branch
+// {note}
+// Cold plate = 4rm Cu fin field ON TOP OF the unchanged v2 CP_BASE, adiabatic Cu lid above.
+// The ONLY new inputs vs the validated static stack are fin geometry and flow rate:
+//   wall h        = 1.16e-8 W/(um^2 K) -- the Icepak-calibrated wall coefficient (tgvwall_v4)
+//   channel/wall  = 100/100 um at 100 um cells; first wall 200 um so 318 columns = 200 +
+//                   158 x (100+100) - 100 + 100 = 31800 um exactly (158 channels, 159 walls)
+//   fin height    = 300 um: sized so footprint conductance at infinite flow ~= the validated
+//                   4.08e-8 plate (est. 0.5 + 2*(300/200)*eta ~ 3.4-3.9x wall h at eta ~0.98).
+//                   THIS IS A THERMAL SURROGATE FOR THE PLATE, NOT ITS REAL FIN GEOMETRY.
+// Calibration: flow-anchor (1e5 mL/min) must match static-anchor; if |dT| > 1 K adjust the
+// fin height in 50 um steps and REPORT the residual. Inherits the 4rm limit (under-credits
+// conductive walls 8-9% vs CFD). Coolant flows along x; inlet at the x = 0 face (confirm
+// from the CPCH Tmap before labeling upstream/downstream).
+// flow {flow:g} mL/min, inlet {tin} K, Cp {cp:.3g}, wall h {h_wall:.3g}.
+// Generated by build_bridge_stks.py.
+// ============================================================
+// No 'top heat sink': the lid is adiabatic; the channel is the only heat path out.
+"""
+    chan = f"""
+microchannel 4rm :
+    height 300 ;
+    channel length 100 ;
+    wall length 100 ;
+    first wall length 200 ;
+    last wall length 100 ;
+    wall material COPPER ;
+    coolant flow rate {flow:g} ;             // TOTAL over all channels (as in HyFlexPIM files)
+    coolant heat transfer coefficient
+        side   {h_wall:.3g},
+        top    {h_wall:.3g},
+        bottom {h_wall:.3g} ;
+    coolant volumetric heat capacity {cp:.3g} ;
+    coolant incoming temperature {tin} ;
+"""
+    lid = """
+layer CP_LID_L :             // cold-plate lid, 1 mm Cu, adiabatic above
+    height   1000 ;
+    material COPPER ;
+"""
+    plate_lines = "    layer   CP_LID      CP_LID_L ;\n    channel CPCH ;\n"
+    return hdr + COMMON_MATERIALS + chan + DIMS + lid + LAYERS_BELOW_PLATE + stack_body(top, bot, pic, plate_lines) + outputs(tag, True)
+
+def main():
+    os.makedirs("runs", exist_ok=True)
+    v2top, v2bot = "die_top_S_v2.flp", "die_bot_S_v2.flp"
+    files = {}
+    # ---------------- Bridge-Static ----------------
+    files["static-anchor"] = static_stk("static-anchor", v2top, v2bot, "pic_plane_zero.flp", 4.08e-8, 300,
+        "ANCHOR: unchanged v2 floorplans + 0 W readout plane. Must reproduce S_v2_liquid within ~0.05 K.")
+    files["static-standard"] = static_stk("static-standard", "die_top_bridge_memW.flp", "die_bot_bridge_memW.flp",
+        "pic_plane_bridge_memW.flp", 4.08e-8, 300,
+        "STANDARD: bridge floorplans, OPT_IO 30.6 W + comb 0 W; optical I/O budget unchanged. The paper's validated absolute number.")
+    files["static-warm"] = static_stk("static-warm", "die_top_bridge_memW.flp", "die_bot_bridge_memW.flp",
+        "pic_plane_bridge_memW.flp", 4.08e-8 * PG30, 308,
+        f"WARM: 35 C inlet (exact +8 K offset), PG30 h derate x{PG30} (severe property endpoint x0.575 -> 2.346e-8). Sensitivity, not validated.")
+    # ---------------- Bridge-Flow ----------------
+    files["flow-anchor"] = flow_stk("flow-anchor", v2top, v2bot, "pic_plane_zero.flp", 1e5, 1.16e-8, 300.0, 4.18e-12,
+        "ANCHOR: 1e5 mL/min (coolant rise ~0.05 K) + v2 floorplans. Compare to static-anchor -> 4rm-vs-Robin residual.")
+    for cond, tin, cp, hw in (("standard", 300.0, 4.18e-12, 1.16e-8), ("warm", 308.0, 3.95e-12, 1.16e-8 * PG30)):
+        for o in ("memW", "memE"):
+            for q in (2000, 1000, 500, 250):
+                tag = f"flow-{cond}-{o}-{q}"
+                files[tag] = flow_stk(tag, f"die_top_bridge_{o}.flp", f"die_bot_bridge_{o}.flp", f"pic_plane_bridge_{o}.flp",
+                    q, hw, tin, cp,
+                    f"{cond.upper()} {o} ({'memory at low x' if o=='memW' else 'memory at high x, mirrored'}), {q} mL/min. "
+                    f"Expected outlet rise = 362.6+42.67 W / (Q*Cp): {405.27/(q*cp*1e12/60):.2f} K (Q*Cp = {q*cp*1e12/60:.1f} W/K).")
+    for tag, txt in files.items():
+        with open(f"runs/{tag}.stk", "w") as f:
+            f.write(txt)
+    print(f"wrote {len(files)} stacks to runs/")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,86 @@
+// 3D-ICE-Glass | hfp_tgv_E1a_hausen.stk | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// Canvas 26100 x 17400 um; grid 100 x 100 um.
+// Source power: first 140.7 W; range 140.7..140.7 W; 1 sample(s).
+// External faces: adiabatic; coolant channel is the heat-removal boundary.
+// Embedded cooling 4rm: flow/velocity=156.5 mL/min; inlet=300.0 K; h=side 2.49e-08, top 2.49e-08, bottom 2.49e-08.
+// Temperatures in emulator outputs are kelvin; time is seconds.
+// Model data: CC-BY-4.0. References and observation planes: checkpoint README / docs/case-index.md.
+
+========================================================================
+
+material SILICON :
+    thermal conductivity     1.30e-04 ;
+    volumetric heat capacity 1.628e-12 ;
+
+material GLASS :
+    thermal conductivity     1.40e-06 ;
+    volumetric heat capacity 1.60e-12 ;
+
+material TGV_GLASS_COMPOSITE :
+    thermal conductivity     1.00e-06, 1.00e-06, 7.9204e-05 ;
+    volumetric heat capacity 1.96e-12 ;
+
+material SINTER_AG :
+    thermal conductivity     2.00e-04 ;
+    volumetric heat capacity 2.50e-12 ;
+
+microchannel 4rm :
+    height 100 ;
+    channel length 100 ;
+    wall length 100 ;
+    first wall length 100 ;
+    last wall length 100 ;
+    wall material TGV_GLASS_COMPOSITE ;
+    coolant flow rate 156.5 ;
+    coolant heat transfer coefficient
+        side   2.49e-08,
+        top    2.49e-08,
+        bottom 2.49e-08 ;
+    coolant volumetric heat capacity 4.18e-12 ;
+    coolant incoming temperature 300.0 ;
+
+dimensions :
+    chip length 26100, width 17400 ;
+    cell length 100,   width 100 ;
+    non-uniform false ;
+
+layer GLASS_COVER_L :
+    height   200 ;
+    material GLASS ;
+
+layer TGVS_L :
+    height   100 ;
+    material TGV_GLASS_COMPOSITE ;
+
+layer ATTACH_L :
+    height   20 ;
+    material SINTER_AG ;
+
+layer GLASS_BASE_L :
+    height   200 ;
+    material GLASS ;
+
+die PIM_D :
+    layer   50 SILICON ;
+    source   5 SILICON ;
+    layer   45 SILICON ;
+
+stack :
+    layer   GLASS_COVER  GLASS_COVER_L ;
+    channel MCH ;
+    layer   TGVS         TGVS_L ;
+    layer   ATTACH       ATTACH_L ;
+    die     PIM          PIM_D  floorplan "hfp_chiplet_duty.flp" ;
+    layer   GLASS_BASE   GLASS_BASE_L ;
+
+solver :
+    steady ;
+    initial temperature 300.0 ;
+    numofcores 12 ;
+
+output :
+    Tflp( PIM, "outputs/E1a_hausen_max.txt", maximum, final ) ;
+    Tflp( PIM, "outputs/E1a_hausen_avg.txt", average, final ) ;
+    Tmap( PIM, "outputs/E1a_hausen_tmap.txt", final ) ;
+    Tmap( MCH, "outputs/E1a_hausen_mch.txt", final ) ; ========================================================================

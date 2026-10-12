@@ -1,0 +1,29 @@
+// 3D-ICE-Glass | tier2_cpu.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 5 rectangles; first-sample power 80 W; 1 power sample(s); powered footprint 64 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+FILL_0_0 :
+   position 0, 0 ;
+   dimension 40000, 11000 ;
+   power values 0.0 ;
+
+FILL_11000_0 :
+   position 0, 11000 ;
+   dimension 13000, 8000 ;
+   power values 0.0 ;
+
+CPU :
+   position 13000, 11000 ;
+   dimension 8000, 8000 ;
+   power values 80.0 ;
+
+FILL_11000_21000 :
+   position 21000, 11000 ;
+   dimension 19000, 8000 ;
+   power values 0.0 ;
+
+FILL_19000_0 :
+   position 0, 19000 ;
+   dimension 40000, 11000 ;
+   power values 0.0 ;

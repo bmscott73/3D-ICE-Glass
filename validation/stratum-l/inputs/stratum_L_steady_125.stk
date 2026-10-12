@@ -1,0 +1,59 @@
+// 3D-ICE-Glass | stratum_L_steady_125.stk | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// Canvas 46600 x 34500 um; grid 125 x 125 um.
+// Source power: first 1152 W; range 1152..1152 W; 9 sample(s).
+// Top boundary: h=2.78e-08 W/um2K (27800 W/m2K), reference=300 K.
+// Temperatures in emulator outputs are kelvin; time is seconds.
+// Model data: CC-BY-4.0. References and observation planes: checkpoint README / docs/case-index.md.
+
+material LOGIC_MEM :
+    thermal conductivity    1.0e-04 ;
+    volumetric heat capacity 1.75e-12 ;
+
+material TIM :
+    thermal conductivity    4.0e-06 ;
+    volumetric heat capacity 4.0e-12 ;
+
+material HYBRID_BOND :
+    thermal conductivity    1.21e-04 ;
+    volumetric heat capacity 2.14e-12 ;
+
+top heat sink :
+    heat transfer coefficient 2.78e-08 ;
+    temperature 300 ;
+
+dimensions :
+    chip length 46600, width 34500 ;
+    cell length 125, width 125 ;
+    non-uniform false;
+
+layer TIM_LAYER :
+    height   20 ;
+    material TIM ;
+
+layer HYBRID_BOND_LAYER :
+    height   1 ;
+    material HYBRID_BOND ;
+
+die MEMORY_DIE :
+    source 150 LOGIC_MEM ;
+
+die LOGIC_DIE :
+    source 100 LOGIC_MEM ;
+
+stack :
+    layer TIM_TOP TIM_LAYER ;
+    die MEM_DIE MEMORY_DIE floorplan "./mem_die_3D.flp" ;
+    layer HB_INTERFACE HYBRID_BOND_LAYER ;
+    die LOG_DIE LOGIC_DIE floorplan "./logic_die_3D.flp" ;
+
+solver :
+    steady ;
+    initial temperature 300.0 ;
+    numofcores 2 ;
+
+output :
+    Tflp( LOG_DIE, "outputs/stratumL_logic_max.txt", maximum, final ) ;
+    Tflp( MEM_DIE, "outputs/stratumL_mem_max.txt", maximum, final ) ;
+    Tflp( LOG_DIE, "outputs/stratumL_logic_avg.txt", average, final ) ;
+    Tflp( MEM_DIE, "outputs/stratumL_mem_avg.txt", average, final ) ;

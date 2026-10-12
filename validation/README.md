@@ -1,33 +1,27 @@
-# Validation models
+# Paper validation checkpoints
 
-`Baselines/` contains all **91 research files** supplied in the local validation repository's `Baselines` subtree, including nested results, scripts, and logs. No local `Old`, `Photonic`, or `floorplans` contents were imported. Original baseline files are unchanged. The missing `pic-sohrab/tier2_cpu.flp` was subsequently added from the server with separate provenance.
-
-`supplemental/` adds the server validation models and dependencies authorized for this release. [files.json](../provenance/files.json) records the source and SHA-256 of every original file. The [complete index](../docs/case-index.md) links all stacks and floorplans.
-
-## Checkpoint map
-
-| Supplied manuscript checkpoint | Released input | What it can establish |
-|---|---|---|
-| H100-scale two-phase copper TTV | [700 W baseline](Baselines/H100/ttv_interpack.stk); [power sweep](supplemental/h100-power-sweep/) | Copper case/saturation boundary and thermocouple proxy; exact 720 W manuscript variant not located |
-| H200 cold-plate specification | [H200 source/contact probe](Baselines/H200/h200_stratum_htc_probe.stk) | Compare the contact plane after shifting the archived 300 K reference to 38 °C; specification consistency |
-| Stratum-S / Icepak | [Stratum-S liquid](Baselines/Stratum-S/stratum_S_v2_liquid.stk) | Stack, orthotropic composite, source placement, and fixed plate input |
-| Stratum-L H100-scale | Not located | Do not equate the Stratum-S or unrelated H100 TTV with this checkpoint |
-| Glass µCH/Cu-TGV experimental vehicle | Not located | Package-scale HyFlexPIM is a different geometry and CFD anchor |
-| Direct-contact Cu-pillar vehicle | [Corrected 1 mm active-region input](supplemental/cu-pillar/estc_cupillar_pinfin_active1mm_p111.stk), [p100 alternative](supplemental/cu-pillar/estc_cupillar_pinfin_active1mm_p100.stk) | Calibrated geometry/velocity; identify calibration versus evaluation before quoting error |
-| Silicon interlayer µCH | [Calibrated-lid baseline](supplemental/silicon-interlayer/ibm_intra_100W_calibrated.stk), [19–22 mL/min sweep](supplemental/silicon-interlayer/) | Advection, chip ordering, flow sensitivity; exact Table II variant not asserted |
-| HyFlexPIM Cu-pillar / Icepak | [Pin-fin input](Baselines/HyFlexPIM/hfp_chiplet_pinfin.stk) | Package-scale pin-fin comparison; runner relocates its old absolute floorplan path |
-| HyFlexPIM µCH/Cu-TGV / Icepak | [Frozen CFD anchor](supplemental/coefficient-comparison/hfp_tgv_E1c_anchored.stk) | Matched conjugate-CFD checkpoint; [circular](supplemental/coefficient-comparison/hfp_tgv_E1a_hausen.stk) / [square](supplemental/coefficient-comparison/hfp_tgv_E1b_hausen_square.stk) closures isolate coefficient sensitivity |
-| Photonic package field | [2.5D baseline](Baselines/pic-sohrab/cpo_2p5d.stk), [3D comparison](supplemental/photonic/cpo_3d.stk) | Range and vertical-stacking trend; no precise scalar reference peak supplied |
-
-These distinctions matter for the manuscript's aggregate **2.6%** claim: this archive does not independently rederive that statistic because exact inputs for every scalar checkpoint are not available. The H200 specification check and photonic range check are different kinds of evidence from a measured scalar error.
-
-## Run
+Each Table II row has its own inputs, reference, expected value, physical observation plane, and numerical tolerance.
 
 ```bash
-python3 tools/run_case.py validation/Baselines/H100/ttv_interpack.stk
-python3 tools/run_case.py validation/supplemental/coefficient-comparison/hfp_tgv_E1c_anchored.stk
+python3 tools/reproduce.py
+python3 tools/reproduce.py --recorded
 ```
 
-Run from the repository root. The wrapper creates a new isolated directory, copies each required `.flp`, fixes legacy path spelling in the staged copy, and sends generated outputs into its `outputs/` folder. Original input and archived result bytes remain intact. Use `--run-dir runs/unique-name` for a repeated run.
+The release checks reproduce all ten model values within **0.10 K**, and the eight-scalar aggregate is **2.598%**, rounded to **2.6%**. H200 is a specification check and the photonic row is a range comparison; both are excluded from that aggregate.
 
-[Calibration protocol](../docs/calibration.md) · [Academic sources](../docs/references.md) · [Release verification](../docs/reproduction-status.md)
+| Checkpoint | Model / reference (°C) | Metric | Evidence |
+|---|---:|---|---|
+| [H100-scale copper TTV](h100-ttv/README.md) | 64.83 / 64.90 | case surface | held-out power prediction |
+| [H200-scale plate boundary](h200-plate/README.md) | 61.73 / 65.00 | max plate contact | specification consistency |
+| [Stratum-L cold plate](stratum-l/README.md) | 80.97 / 86.00 | die peak | architecture cross-validation |
+| [Stratum-S cold plate](stratum-s/README.md) | 55.47 / 55.18 | die peak | matched CFD cross-validation |
+| [Glass microchannel + Cu-TGV](glass-microchannel/README.md) | 86.41 / 83.30 | die peak | experimental comparison with assumed HTC |
+| [Cu-pillar pin-fin vehicle](cu-pillar/README.md) | 77.63 / 78.60 | die peak | experimental comparison |
+| [Silicon interlayer microchannels](silicon-interlayer/README.md) | 86.51 / 84.70 | bottom-die peak | flow-conditioned CFD comparison |
+| [HyFlexPIM Cu-pillar pin-fin](hyflex-pinfin/README.md) | 52.17 / 55.80 | die peak | CFD cross-validation |
+| [HyFlexPIM microchannel + Cu-TGV](hyflex-microchannel/README.md) | 97.51 / 98.20 | die peak | anchored CFD comparison |
+| [Photonic PIC map](photonic/README.md) | 41.84 / 40.00 | PIC peak | range / topology comparison |
+
+[Checked summary CSV](summary.csv) · [Checked release result and hashes](verified-results.json) · [Reference/fit assumptions](../docs/calibration.md) · [Execution and archive notes](../docs/reproduction-status.md).
+
+The numerical tolerance checks repeatability of a released model. It is separate from experimental agreement. The silicon row uses the original 22 mL/min/layer condition; its folder preserves the declared-flow baseline and sweep so that the condition remains explicit. Raw baseline fields and old exploratory inputs are stored in the byte-identical archive release.

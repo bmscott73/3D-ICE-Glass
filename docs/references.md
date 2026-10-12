@@ -43,7 +43,7 @@ S. S. Sofla et al., **Physics-Informed Neural Network Approach for Fast Predicti
 <a id="ttv"></a>
 ### Two-phase copper test vehicle
 
-A. Narayanan, Q. Wang, S. Ozguc, and R. W. Bonner III, **Investigation of server-level direct-to-chip two-phase cooling solution for high-power GPUs**, ASME InterPACK 2024, V001T02A009. [DOI](https://doi.org/10.1115/IPACK2024-141261). The imported model checks a copper case/saturation abstraction; the local baseline is the 700 W closure. See its detailed [stack comments](../validation/Baselines/H100/ttv_interpack.stk).
+A. Narayanan, Q. Wang, S. Ozguc, and R. W. Bonner III, **Investigation of server-level direct-to-chip two-phase cooling solution for high-power GPUs**, ASME InterPACK 2024, V001T02A009. [DOI](https://doi.org/10.1115/IPACK2024-141261). The imported model checks a copper case/saturation abstraction; the active checkpoint is the held-out 720 W case. See its detailed [stack comments](../validation/h100-ttv/inputs/ttv_pred_720W.stk).
 
 <a id="plate"></a>
 ### Single-phase H200-class plate specification
@@ -53,12 +53,12 @@ ToneCooling, **NVIDIA H200 Liquid Cold Plate GPU + Switch Cooling Board**, manuf
 <a id="glass-cooling"></a>
 ### Glass microchannels and direct-contact copper pillars
 
-J. W. Kim, R. Bhattacharjee, and M. Swaminathan, **Advanced glass package with direct-contact copper pillar and monolithically integrated microfluidic channels for 3D system integration**, ESTC 2026, as cited in the supplied manuscript [21]. The manuscript labels this reference “to appear”; no final public DOI was supplied or verified. The [Cu-pillar inputs](../validation/supplemental/cu-pillar/) are included. The separate 248 W/cm² glass-microchannel test vehicle was not located; package-scale HyFlexPIM models must not be substituted for it.
+J. W. Kim, R. Bhattacharjee, and M. Swaminathan, **Advanced glass package with direct-contact copper pillar and monolithically integrated microfluidic channels for 3D system integration**, ESTC 2026, as cited in the paper [21]. The manuscript labels this reference “to appear”; no final public DOI was supplied or verified. The [Cu-pillar inputs](../validation/cu-pillar/inputs/) are included. The [248 W/cm² glass-microchannel vehicle](../validation/glass-microchannel/README.md) is also included, with its assumed effective coefficient documented.
 
 <a id="silicon-cooling"></a>
 ### Silicon interlayer cooling
 
-R. Miyazawa, H. Mori, A. Jain, M. Farooq, and T. Hisada, **CFD Simulation Analysis of Inter/Intra Chip Liquid Cooling for 3D Stacked ICs**, ITherm 2023. [DOI](https://doi.org/10.1109/ITHERM55368.2023.10177558). The supplemental directory retains the calibrated-lid model and 19–22 mL/min sensitivity cases. The exact variant used for the manuscript's 86.51 °C checkpoint is not inferred from the target temperature.
+R. Miyazawa, H. Mori, A. Jain, M. Farooq, and T. Hisada, **CFD Simulation Analysis of Inter/Intra Chip Liquid Cooling for 3D Stacked ICs**, ITherm 2023. [DOI](https://doi.org/10.1109/ITHERM55368.2023.10177558). The supplemental directory retains the calibrated-lid model and 19–22 mL/min sensitivity cases. The [paper checkpoint](../validation/silicon-interlayer/README.md) uses the original 22 mL/min/layer input, with its flow convention disclosed.
 
 <a id="air"></a>
 ### Secondary forced-air sink
@@ -68,8 +68,8 @@ Advanced Thermal Solutions, **ATS-NVP-3275-C5-R0**, datasheet Rev. R9, February 
 <a id="hausen"></a>
 ### Correlation comparison
 
-H. Hausen, **Darstellung des Wärmeüberganges in Rohren durch verallgemeinerte Potenzbeziehungen**, VDI Beiheft Verfahrenstechnik, no. 4, 1943, as cited in the supplied manuscript [24]. The [released comparison stacks](../validation/supplemental/coefficient-comparison/) encode the circular, square-duct, and conjugate-CFD closures. Read the exact active coefficients rather than rounded discussion values.
+H. Hausen, **Darstellung des Wärmeüberganges in Rohren durch verallgemeinerte Potenzbeziehungen**, VDI Beiheft Verfahrenstechnik, no. 4, 1943, as cited in the paper [24]. The [released comparison stacks](../validation/hyflex-microchannel/inputs/) encode the circular, square-duct, and conjugate-CFD closures. Read the exact active coefficients rather than rounded discussion values.
 
 ## Property envelope and optical context
 
-The supplied manuscript cites the **Open Compute Project Guidelines for using propylene glycol based heat transfer fluids in single-phase cold plate based liquid cooled racks** (2024), **Dow DOWFROST aqueous-solution physical properties** (2024), Dittus–Boelter (1930), and Padmaraju/Bergman, **Resolving the thermal challenges for silicon microring resonator devices**, *Nanophotonics* (2014). The exact property ratios and transfer restrictions used here are stated in [calibration.md](calibration.md); vendor property curves are not bundled, and the demo's tracking-rate line is a configurable illustrative reference.
+The paper cites the **Open Compute Project Guidelines for using propylene glycol based heat transfer fluids in single-phase cold plate based liquid cooled racks** (2024), **Dow DOWFROST aqueous-solution physical properties** (2024), Dittus–Boelter (1930), and Padmaraju/Bergman, **Resolving the thermal challenges for silicon microring resonator devices**, *Nanophotonics* (2014). The exact property ratios and transfer restrictions used here are stated in [calibration.md](calibration.md); vendor property curves are not bundled, and the demo's tracking-rate line is a configurable illustrative reference.

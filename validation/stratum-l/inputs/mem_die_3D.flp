@@ -1,0 +1,39 @@
+// 3D-ICE-Glass | mem_die_3D.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 7 rectangles; first-sample power 612 W; 9 power sample(s); powered footprint 724.5 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+MEM0 :
+    position  0, 0 ;
+    dimension 10500, 11500 ;
+    power values 102, 102, 102, 102, 102, 102, 102, 102, 102 ;
+
+MEM1 :
+    position  0, 11500 ;
+    dimension 10500, 11500 ;
+    power values 102, 102, 102, 102, 102, 102, 102, 102, 102 ;
+
+MEM2 :
+    position  0, 23000 ;
+    dimension 10500, 11500 ;
+    power values 102, 102, 102, 102, 102, 102, 102, 102, 102 ;
+
+GPU1 :
+    position  10500, 0 ;
+    dimension 25600, 34500 ;
+    power values 0, 0, 0, 0, 0, 0, 0, 0, 0 ;
+
+MEM3 :
+    position  36100, 23000 ;
+    dimension 10500, 11500 ;
+    power values 102, 102, 102, 102, 102, 102, 102, 102, 102 ;
+
+MEM4 :
+    position  36100, 11500 ;
+    dimension 10500, 11500 ;
+    power values 102, 102, 102, 102, 102, 102, 102, 102, 102 ;
+
+MEM5 :
+    position  36100, 0 ;
+    dimension 10500, 11500 ;
+    power values 102, 102, 102, 102, 102, 102, 102, 102, 102 ;

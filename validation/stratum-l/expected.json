@@ -1,0 +1,17 @@
+{
+  "id": "stratum-l",
+  "name": "Stratum-L cold plate",
+  "stack": "validation/stratum-l/inputs/stratum_L_steady_125.stk",
+  "expected_C": 80.97,
+  "reference_C": 86.0,
+  "aggregate": true,
+  "metric": "die peak",
+  "outputs": [
+    "stratumL_logic_max.txt",
+    "stratumL_mem_max.txt"
+  ],
+  "kind": "floorplan",
+  "correction_K": 0,
+  "assessment": "architecture cross-validation",
+  "tolerance_C": 0.1
+}

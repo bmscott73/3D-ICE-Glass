@@ -1,0 +1,8 @@
+{
+  "source": "https://tonecooling.com/liquid-cold-plates/nvidia-h200-liquid-cold-plate/",
+  "reference_C": 65.0,
+  "metric": "max plate contact",
+  "assessment": "specification consistency",
+  "assumptions": "700 W; 38 C inlet; frozen 40,800 W/m2K boundary over 1259.28 mm2. Contact-plane map, not source/junction. Active inlet is 311.15 K. This is an exact 11.15 K reference shift of the archived constant-property model, with no HTC refit. A 65 C upper limit is not a measured temperature.",
+  "academic_link": "../../docs/references.md#plate"
+}

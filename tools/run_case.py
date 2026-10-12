@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage an archived case in an isolated directory and run stock 3D-ICE."""
+"""Stage a native case in an isolated directory and run stock 3D-ICE."""
 import argparse
 import json
 import math

@@ -1,0 +1,43 @@
+// 3D-ICE-Glass | ttv_pred_720W.stk | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// Canvas 26000 x 35000 um; grid 250 x 250 um.
+// Source power: first 720 W; range 720..720 W; 1 sample(s).
+// Top boundary: h=4.4186e-08 W/um2K (44186 W/m2K), reference=320.07 K.
+// Temperatures in emulator outputs are kelvin; time is seconds.
+// Model data: CC-BY-4.0. References and observation planes: checkpoint README / docs/case-index.md.
+
+material COPPER :
+   thermal conductivity     4.00e-04 ;
+   volumetric heat capacity 3.45e-12 ;
+
+top heat sink :
+   heat transfer coefficient 4.4186e-08 ;
+   temperature               320.07 ;
+
+dimensions :
+   chip length 26000, width 35000 ;
+   cell length 250,   width 250 ;
+   non-uniform false ;
+
+layer CASE_PROBE :
+   height   10 ;
+   material COPPER ;
+
+die TTV_BLOCK :
+   layer  1985 COPPER ;
+   source    5 COPPER ;
+
+stack :
+   layer CASE CASE_PROBE ;
+   die   TTV  TTV_BLOCK  floorplan "ttv_heater_p720.flp" ;
+
+solver :
+   steady ;
+   initial temperature 320.07 ;
+   numofcores 12 ;
+
+output :
+   Tflp( TTV,  "outputs/pred_720W_tcproxy_max.txt", maximum, final ) ;
+   Tflp( TTV,  "outputs/pred_720W_tcproxy_avg.txt", average, final ) ;
+   Tmap( CASE, "outputs/pred_720W_case_tmap.txt",   final ) ;
+   T(    CASE, 13000, 17500, "outputs/pred_720W_case_ctr.txt", final ) ;

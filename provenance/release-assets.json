@@ -1,0 +1,18 @@
+{
+  "tag": "archive-byte-identical-2026-10-11",
+  "assets": [
+    {
+      "name": "baselines-original-outputs.tar.gz",
+      "sha256": "5b6a3f9e933a3c10da285cc75ea66e99f09b7c70cd06bcb3434ccdc931380262",
+      "bytes": 5223106,
+      "download_url": "https://github.com/bmscott73/3D-ICE-Glass/releases/download/archive-byte-identical-2026-10-11/baselines-original-outputs.tar.gz"
+    },
+    {
+      "name": "original-generators.tar.gz",
+      "sha256": "4fbefac020d2d2fa716f302cf1c9f8dabc0d0e6246050c9ea29aac83249d5f9b",
+      "bytes": 38928,
+      "download_url": "https://github.com/bmscott73/3D-ICE-Glass/releases/download/archive-byte-identical-2026-10-11/original-generators.tar.gz"
+    }
+  ],
+  "html_url": "https://github.com/bmscott73/3D-ICE-Glass/releases/tag/archive-byte-identical-2026-10-11"
+}

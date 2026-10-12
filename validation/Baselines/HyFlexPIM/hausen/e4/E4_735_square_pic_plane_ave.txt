@@ -1,3 +1,0 @@
-% Average temperatures for the floorplan of the die PIC_PLANE
-% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 FILL_9(K) 	 FILL_10(K) 	 COMB_SRC(K) 	 PIC_ROUTE(K) 	 BRIDGE(K) 	 PIC_MRR(K) 	 PIC_WG_S(K) 	 PIC_WG_N(K) 	 
-0.000 	 316.070 	 313.023 	 343.022 	 324.850 	 344.897 	 333.124 	 327.073 	 346.576 	 317.947 	 353.489 	 327.124 	 318.552 	 327.597 	 324.990 	 330.061 	 320.398 	 326.744 	 

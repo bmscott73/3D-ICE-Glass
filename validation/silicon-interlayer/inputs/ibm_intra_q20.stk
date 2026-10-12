@@ -1,0 +1,108 @@
+// 3D-ICE-Glass | ibm_intra_q20.stk | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// Canvas 9975 x 10000 um; grid 75 x 100 um.
+// Source power: first 200 W; range 200..200 W; 1 sample(s).
+// Top boundary: h=1.292e-08 W/um2K (12920 W/m2K), reference=293.15 K.
+// Embedded cooling 4rm: flow/velocity=20.0 mL/min; inlet=293.15 K; h=side 3.08e-08 , top 3.08e-08 , bottom 3.08e-08.
+// Temperatures in emulator outputs are kelvin; time is seconds.
+// Model data: CC-BY-4.0. References and observation planes: checkpoint README / docs/case-index.md.
+
+material SILICON :
+   thermal conductivity     1.47e-4 ;
+   volumetric heat capacity 1.628e-12 ;
+
+material COPPER :
+   thermal conductivity     3.85e-4 ;
+   volumetric heat capacity 3.45e-12 ;
+
+material TIM4 :
+   thermal conductivity     4.00e-6 ;
+   volumetric heat capacity 2.00e-12 ;
+
+material INTERCONNECT :
+   thermal conductivity     5.00e-6 ;
+   volumetric heat capacity 2.00e-12 ;
+
+material SIO2 :
+   thermal conductivity     1.40e-6 ;
+   volumetric heat capacity 1.70e-12 ;
+
+material SUBSTRATE :
+   thermal conductivity     5.00e-7 ;
+   volumetric heat capacity 2.00e-12 ;
+
+top heat sink :
+   heat transfer coefficient 1.292e-08 ;
+   temperature               293.15 ;
+
+microchannel 4rm :
+   height 75 ;
+   channel length    75 ;
+   wall    length    75 ;
+   first wall length 75 ;
+   wall material SILICON ;
+   coolant flow rate 20 ;
+   coolant heat transfer coefficient side   3.08e-08 ,
+                                     top    3.08e-08 ,
+                                     bottom 3.08e-08 ;
+   coolant volumetric heat capacity 4.172e-12 ;
+   coolant incoming temperature 293.15 ;
+
+dimensions :
+   chip length 9975,  width 10000 ;
+   cell length 75,    width 100 ;
+   non-uniform false ;
+
+layer CU_LID :
+   height   2000 ;
+   material COPPER ;
+
+layer TIM_L :
+   height   24 ;
+   material TIM4 ;
+
+layer C2C :
+   height   25 ;
+   material INTERCONNECT ;
+
+layer C2S :
+   height   75 ;
+   material INTERCONNECT ;
+
+layer SUB :
+   height   1000 ;
+   material SUBSTRATE ;
+
+die TOP_DIE :
+   layer  65 SILICON ;
+   source  5 SILICON ;
+   layer   5 SIO2 ;
+
+die BOT_DIE :
+   layer  65 SILICON ;
+   source  5 SILICON ;
+   layer   5 SIO2 ;
+
+stack :
+   layer   LID     CU_LID ;
+   layer   TIML    TIM_L ;
+   channel CH_TOP ;
+   die     TCHIP   TOP_DIE   floorplan "tchip_ibm.flp" ;
+   layer   C2CL    C2C ;
+   channel CH_BOT ;
+   die     BCHIP   BOT_DIE   floorplan "bchip_ibm.flp" ;
+   layer   C2SL    C2S ;
+   layer   SUBL    SUB ;
+
+solver :
+   steady ;
+   initial temperature 293.15 ;
+   numofcores 12 ;
+
+output :
+   Tflp(     TCHIP,  "outputs/ibm_intra_q20_tc_max.txt",  maximum, final ) ;
+   Tflp(     TCHIP,  "outputs/ibm_intra_q20_tc_avg.txt",  average, final ) ;
+   Tflp(     BCHIP,  "outputs/ibm_intra_q20_bc_max.txt",  maximum, final ) ;
+   Tflp(     BCHIP,  "outputs/ibm_intra_q20_bc_avg.txt",  average, final ) ;
+   Tcoolant( CH_TOP, "outputs/ibm_intra_q20_out_top.txt", maximum, final ) ;
+   Tcoolant( CH_BOT, "outputs/ibm_intra_q20_out_bot.txt", maximum, final ) ;

@@ -1,0 +1,9 @@
+// 3D-ICE-Glass | estc_cupillar_active1mm_p111.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 1 rectangles; first-sample power 5.02 W; 1 power sample(s); powered footprint 1 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+TTC_HEATER :
+    position 0, 0 ;
+    dimension 1000, 1000 ;
+    power values 5.02 ;

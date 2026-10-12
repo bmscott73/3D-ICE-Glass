@@ -4,3 +4,5 @@ __pycache__/
 .venv/
 build/
 runs/
+validation/**/inputs/outputs/
+models/**/outputs/

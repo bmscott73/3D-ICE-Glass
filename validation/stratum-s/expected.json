@@ -1,0 +1,17 @@
+{
+  "id": "stratum-s",
+  "name": "Stratum-S cold plate",
+  "stack": "validation/stratum-s/inputs/stratum_S_v2_liquid.stk",
+  "expected_C": 55.47,
+  "reference_C": 55.18,
+  "aggregate": true,
+  "metric": "die peak",
+  "outputs": [
+    "S_v2_liquid_top_max.txt",
+    "S_v2_liquid_bot_max.txt"
+  ],
+  "kind": "floorplan",
+  "correction_K": 0,
+  "assessment": "matched CFD cross-validation",
+  "tolerance_C": 0.1
+}

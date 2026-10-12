@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-11",
+  "case": "models/panel/warm-loop/pan-tdp-575.stk",
+  "source_matches_active_physics": true,
+  "component_peaks_C": {
+    "pan-tdp-575_pic_plane_max.txt": 91.22900000000004,
+    "pan-tdp-575_die_pic_max.txt": 91.291,
+    "pan-tdp-575_die_mem_max.txt": 91.262,
+    "pan-tdp-575_die_logic_max.txt": 91.29700000000003
+  },
+  "package_peak_C": 91.29700000000003,
+  "memory_map": {
+    "peak_C": 91.262,
+    "shape": [
+      122,
+      449
+    ],
+    "hottest_cell_xy": [
+      402,
+      47
+    ]
+  },
+  "engine": "research Linux x86-64, uniform input, EPFL e0bb685, 2 threads",
+  "map_sha256": "f26395a4527d3f76ebaef78fdcdc328202444a93de9d7c99a3f966c941df4266"
+}

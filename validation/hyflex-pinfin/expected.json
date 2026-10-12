@@ -1,0 +1,16 @@
+{
+  "id": "hyflex-pinfin",
+  "name": "HyFlexPIM Cu-pillar pin-fin",
+  "stack": "validation/hyflex-pinfin/inputs/hfp_chiplet_pinfin.stk",
+  "expected_C": 52.17,
+  "reference_C": 55.8,
+  "aggregate": true,
+  "metric": "die peak",
+  "outputs": [
+    "chiplet_pinfin_max.txt"
+  ],
+  "kind": "floorplan",
+  "correction_K": 0,
+  "assessment": "CFD cross-validation",
+  "tolerance_C": 0.1
+}

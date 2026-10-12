@@ -1,3 +1,0 @@
-% Minimum temperatures for the floorplan of the die DIE_EMB
-% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 EMB_M3D_0(K) 	 EMB_M3D_1(K) 	 EMB_M3D_2(K) 	 EMB_M3D_3(K) 	 
-0.000 	 309.447 	 309.806 	 326.098 	 326.834 	 317.309 	 313.979 	 337.733 	 337.480 	 313.718 	 327.832 	 338.556 	 324.955 	 335.684 	 

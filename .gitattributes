@@ -1,4 +1,2 @@
 vendor/3d-ice/** linguist-vendored
-validation/Baselines/**/outputs/** linguist-generated
-validation/Baselines/**/e4/** linguist-generated
-demo/reference/outputs/** linguist-generated
+transient/reference/outputs/** linguist-generated

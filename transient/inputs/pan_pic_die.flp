@@ -1,0 +1,74 @@
+// 3D-ICE-Glass | pan_pic_die.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 14 rectangles; first-sample power 9.15 W; 1 power sample(s); powered footprint 48 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+FILL_0 :
+    position  0, 0 ;
+    dimension 89800, 1000 ;
+    power values 0 ;
+
+FILL_1 :
+    position  0, 1000 ;
+    dimension 25000, 1200 ;
+    power values 0 ;
+
+FILL_2 :
+    position  29000, 1000 ;
+    dimension 60800, 1200 ;
+    power values 0 ;
+
+FILL_3 :
+    position  0, 2200 ;
+    dimension 25000, 2800 ;
+    power values 0 ;
+
+FILL_4 :
+    position  29000, 2200 ;
+    dimension 23000, 2800 ;
+    power values 0 ;
+
+FILL_5 :
+    position  56000, 2200 ;
+    dimension 20000, 2800 ;
+    power values 0 ;
+
+FILL_6 :
+    position  80000, 2200 ;
+    dimension 9800, 2800 ;
+    power values 0 ;
+
+FILL_7 :
+    position  0, 5000 ;
+    dimension 52000, 1200 ;
+    power values 0 ;
+
+FILL_8 :
+    position  56000, 5000 ;
+    dimension 20000, 1200 ;
+    power values 0 ;
+
+FILL_9 :
+    position  80000, 5000 ;
+    dimension 9800, 1200 ;
+    power values 0 ;
+
+FILL_10 :
+    position  0, 6200 ;
+    dimension 89800, 18200 ;
+    power values 0 ;
+
+PIC_X :
+    position  25000, 1000 ;
+    dimension 4000, 4000 ;
+    power values 3.05 ;
+
+PIC_A :
+    position  52000, 2200 ;
+    dimension 4000, 4000 ;
+    power values 3.05 ;
+
+PIC_B :
+    position  76000, 2200 ;
+    dimension 4000, 4000 ;
+    power values 3.05 ;

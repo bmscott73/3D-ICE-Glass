@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-11",
+  "files": [
+    {
+      "path": "transient/figures/smoke-check.json",
+      "sha256": "ad47075c7d48842bff1500ecc0f3b46387a0890d099ae2b060e0521f03effce1",
+      "bytes": 260,
+      "source": "archive-byte-identical-2026-10-11:demo/figures/smoke-check.json",
+      "source_sha256": "ad47075c7d48842bff1500ecc0f3b46387a0890d099ae2b060e0521f03effce1"
+    },
+    {
+      "path": "transient/figures/smoke-fine-check.json",
+      "sha256": "0c257e2141be5c661830049cfd6d38078e1082fe325223e571e5f347b5491a69",
+      "bytes": 262,
+      "source": "archive-byte-identical-2026-10-11:demo/figures/smoke-fine-check.json",
+      "source_sha256": "0c257e2141be5c661830049cfd6d38078e1082fe325223e571e5f347b5491a69"
+    },
+    {
+      "path": "transient/figures/smoke-fine.png",
+      "sha256": "0ade187e297671e7d95404dccea62ce82821a9ae4d23d395826f28f5f7213862",
+      "bytes": 75143,
+      "source": "archive-byte-identical-2026-10-11:demo/figures/smoke-fine.png",
+      "source_sha256": "0ade187e297671e7d95404dccea62ce82821a9ae4d23d395826f28f5f7213862"
+    },
+    {
+      "path": "transient/figures/smoke.png",
+      "sha256": "442d9a765288c6fa97b60e25cdbaa331095ffc08804bc1944496f9cf4d443e54",
+      "bytes": 74498,
+      "source": "archive-byte-identical-2026-10-11:demo/figures/smoke.png",
+      "source_sha256": "442d9a765288c6fa97b60e25cdbaa331095ffc08804bc1944496f9cf4d443e54"
+    },
+    {
+      "path": "transient/figures/transient-full.png",
+      "sha256": "d9feae13504347726e4c8c01ce5ec5348a7d1593c1f95615ba4e80973a3d0682",
+      "bytes": 347194,
+      "source": "archive-byte-identical-2026-10-11:demo/figures/transient-full.png",
+      "source_sha256": "d9feae13504347726e4c8c01ce5ec5348a7d1593c1f95615ba4e80973a3d0682"
+    },
+    {
+      "path": "transient/figures/transient-zoom.png",
+      "sha256": "ceb17fba81660c56ba68b462d0014766de5a69cdbb7a36ab68ae493bfd2df3ea",
+      "bytes": 236943,
+      "source": "archive-byte-identical-2026-10-11:demo/figures/transient-zoom.png",
+      "source_sha256": "ceb17fba81660c56ba68b462d0014766de5a69cdbb7a36ab68ae493bfd2df3ea"
+    }
+  ]
+}

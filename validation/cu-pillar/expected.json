@@ -1,0 +1,16 @@
+{
+  "id": "cu-pillar",
+  "name": "Cu-pillar pin-fin vehicle",
+  "stack": "validation/cu-pillar/inputs/estc_cupillar_pinfin_active1mm_p111.stk",
+  "expected_C": 77.63,
+  "reference_C": 78.6,
+  "aggregate": true,
+  "metric": "die peak",
+  "outputs": [
+    "cupillar_active1mm_p111_tj_max_K_7.5.txt"
+  ],
+  "kind": "floorplan",
+  "correction_K": 0,
+  "assessment": "experimental comparison",
+  "tolerance_C": 0.1
+}

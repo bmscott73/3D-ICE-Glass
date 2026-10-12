@@ -1,0 +1,8 @@
+{
+  "source": "https://doi.org/10.1109/ECTC51846.2026.00170",
+  "reference_C": 40.0,
+  "metric": "PIC peak",
+  "assessment": "range / topology comparison",
+  "assumptions": "Compare named PIC footprints in the 2.5D package. The reference 40 C is a field/colorbar bound rather than a matched measured scalar peak. Excluded from the eight-point percentage aggregate. The 3D package variant is included for a stacking trend check.",
+  "academic_link": "../../docs/references.md#pic"
+}

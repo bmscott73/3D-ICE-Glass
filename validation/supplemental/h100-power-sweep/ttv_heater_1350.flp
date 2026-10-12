@@ -1,9 +1,0 @@
-// ttv_heater.flp -- InterPACK TTV heated area, uniform 700 W
-// Narayanan et al., IPACK2024-141261: copper heater block, heated die area
-// ~26 x 35 mm, cartridge heaters, PEEK support and insulation (-> adiabatic sides).
-// NOTE: 910 mm2 = 76.9 W/cm2. The REAL GH100 die is 811 mm2 = 86.3 W/cm2 at the
-// same 700 W, so the TTV runs a LOWER flux than the chip it mimics.
-TTV_HEAT :
-   position 0, 0 ;
-   dimension 26000, 35000 ;
-   power values 1350.0 ;

@@ -1,0 +1,94 @@
+// 3D-ICE-Glass | hfp_chiplet_duty.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 18 rectangles; first-sample power 140.7 W; 1 power sample(s); powered footprint 454.14 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+PU0_DIG_A :
+    position  0, 8700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU0_ANA :
+    position  0, 12400 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU0_DIG_B :
+    position  0, 13700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU1_DIG_A :
+    position  8700, 8700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU1_ANA :
+    position  8700, 12400 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU1_DIG_B :
+    position  8700, 13700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU2_DIG_A :
+    position  17400, 8700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU2_ANA :
+    position  17400, 12400 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU2_DIG_B :
+    position  17400, 13700 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU3_DIG_A :
+    position  0, 0 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU3_ANA :
+    position  0, 3700 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU3_DIG_B :
+    position  0, 5000 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU4_DIG_A :
+    position  8700, 0 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU4_ANA :
+    position  8700, 3700 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU4_DIG_B :
+    position  8700, 5000 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU5_DIG_A :
+    position  17400, 0 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;
+
+PU5_ANA :
+    position  17400, 3700 ;
+    dimension 8700, 1300 ;
+    power values 21.488 ;
+
+PU5_DIG_B :
+    position  17400, 5000 ;
+    dimension 8700, 3700 ;
+    power values 0.981 ;

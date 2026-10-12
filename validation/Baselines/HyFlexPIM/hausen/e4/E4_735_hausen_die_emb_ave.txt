@@ -1,3 +1,0 @@
-% Average temperatures for the floorplan of the die DIE_EMB
-% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 EMB_M3D_0(K) 	 EMB_M3D_1(K) 	 EMB_M3D_2(K) 	 EMB_M3D_3(K) 	 
-0.000 	 316.583 	 317.547 	 336.690 	 338.367 	 331.513 	 322.442 	 345.284 	 346.596 	 328.850 	 346.131 	 355.189 	 345.171 	 353.721 	 

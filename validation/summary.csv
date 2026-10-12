@@ -1,0 +1,11 @@
+id,name,metric,expected_C,actual_C,reference_C,delta_C,tolerance_C,status,aggregate
+h100-ttv,H100-scale copper TTV,case surface,64.83,64.8261098901099,64.9,-0.07389010989010103,0.1,PASS,True
+h200-plate,H200-scale plate boundary,max plate contact,61.73,61.733000000000004,65.0,-3.266999999999996,0.1,PASS,False
+stratum-l,Stratum-L cold plate,die peak,80.97,80.96900000000005,86.0,-5.030999999999949,0.1,PASS,True
+stratum-s,Stratum-S cold plate,die peak,55.47,55.46600000000001,55.18,0.28600000000000847,0.1,PASS,True
+glass-microchannel,Glass microchannel + Cu-TGV,die peak,86.41,86.40500000000003,83.3,3.1050000000000324,0.1,PASS,True
+cu-pillar,Cu-pillar pin-fin vehicle,die peak,77.63,77.632,78.6,-0.9679999999999893,0.1,PASS,True
+silicon-interlayer,Silicon interlayer microchannels,bottom-die peak,86.51,86.50600000000003,84.7,1.8060000000000258,0.1,PASS,True
+hyflex-pinfin,HyFlexPIM Cu-pillar pin-fin,die peak,52.17,52.16500000000002,55.8,-3.6349999999999767,0.1,PASS,True
+hyflex-microchannel,HyFlexPIM microchannel + Cu-TGV,die peak,97.51,97.51400000000001,98.2,-0.6859999999999928,0.1,PASS,True
+photonic,Photonic PIC map,PIC peak,41.84,41.83800000000002,40.0,1.8380000000000223,0.1,PASS,False

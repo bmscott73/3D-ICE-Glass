@@ -1,0 +1,109 @@
+// 3D-ICE-Glass | pan-tdp-735.stk | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// Canvas 89800 x 24400 um; grid 200 x 200 um.
+// Source power: first 1361.01 W; range 1361.01..1361.01 W; 1 sample(s).
+// Top boundary: h=2.999e-08 W/um2K (29990 W/m2K), reference=308 K.
+// Temperatures in emulator outputs are kelvin; time is seconds.
+// Model data: CC-BY-4.0. References and observation planes: checkpoint README / docs/case-index.md.
+
+material SILICON :
+    thermal conductivity     1.30e-04 ;
+    volumetric heat capacity 1.75e-12 ;
+material TIM :
+    thermal conductivity     4.00e-06 ;
+    volumetric heat capacity 4.00e-12 ;
+material COPPER :
+    thermal conductivity     4.00e-04 ;
+    volumetric heat capacity 3.45e-12 ;
+material HYBRID_BOND :
+    thermal conductivity     1.21e-04 ;
+    volumetric heat capacity 2.14e-12 ;
+material UBUMP_UF :
+    thermal conductivity     2.00e-05 ;
+    volumetric heat capacity 2.50e-12 ;
+material GLASS :
+    thermal conductivity     1.40e-06 ;
+    volumetric heat capacity 1.60e-12 ;
+material TGV_GLASS_COMPOSITE :
+    thermal conductivity     1.00e-06, 1.00e-06, 7.9204e-05 ;
+    volumetric heat capacity 1.96e-12 ;
+
+top heat sink :
+    heat transfer coefficient 2.999e-08 ;
+    temperature 308 ;
+
+dimensions :
+    chip length 89800, width 24400 ;
+    cell length 200,   width 200 ;
+    non-uniform false ;
+
+layer CP_BASE_L :
+    height   2000 ;
+    material COPPER ;
+layer TIM_L :
+    height   20 ;
+    material TIM ;
+layer HB_L :
+    height   1 ;
+    material HYBRID_BOND ;
+layer CUCU_PIC_L :
+    height   20 ;
+    material UBUMP_UF ;
+layer PIC_BUMP_L :
+    height   40 ;
+    material UBUMP_UF ;
+layer IPOSER_TGV_L :
+    height   110 ;
+    material TGV_GLASS_COMPOSITE ;
+layer IPOSER_CORE_L :
+    height   150 ;
+    material GLASS ;
+
+die DIE_MEM_D :
+    layer  145 SILICON ;
+    source   5 SILICON ;
+die DIE_LOGIC_D :
+    source   5 SILICON ;
+    layer   95 SILICON ;
+die DIE_PIC_D :
+    source   5 GLASS ;
+    layer   95 GLASS ;
+die PIC_PLANE_D :
+    source  20 GLASS ;
+
+stack :
+    layer   CP_BASE     CP_BASE_L ;
+    layer   TIM_TOP     TIM_L ;
+    die     DIE_MEM     DIE_MEM_D    floorplan "pan_mem_tdp.flp" ;
+    layer   HB_DRAM     HB_L ;
+    die     DIE_LOGIC   DIE_LOGIC_D  floorplan "pan_logic_tdp.flp" ;
+    layer   CUCU_PIC    CUCU_PIC_L ;
+    die     DIE_PIC     DIE_PIC_D    floorplan "pan_pic_die.flp" ;
+    layer   PIC_BUMP    PIC_BUMP_L ;
+    die     PIC_PLANE   PIC_PLANE_D  floorplan "pan_pic.flp" ;
+    layer   IPOSER_TGV  IPOSER_TGV_L ;
+    layer   IPOSER_CORE IPOSER_CORE_L ;
+
+solver :
+    steady ;
+    initial temperature 308.0 ;
+    numofcores 12 ;
+
+output :
+    Tflp( DIE_MEM, "outputs/pan-tdp-735_die_mem_max.txt", maximum, final ) ;
+    Tflp( DIE_MEM, "outputs/pan-tdp-735_die_mem_ave.txt", average, final ) ;
+    Tflp( DIE_MEM, "outputs/pan-tdp-735_die_mem_min.txt", minimum, final ) ;
+    Tflp( DIE_LOGIC, "outputs/pan-tdp-735_die_logic_max.txt", maximum, final ) ;
+    Tflp( DIE_LOGIC, "outputs/pan-tdp-735_die_logic_ave.txt", average, final ) ;
+    Tflp( DIE_LOGIC, "outputs/pan-tdp-735_die_logic_min.txt", minimum, final ) ;
+    Tflp( DIE_PIC, "outputs/pan-tdp-735_die_pic_max.txt", maximum, final ) ;
+    Tflp( DIE_PIC, "outputs/pan-tdp-735_die_pic_ave.txt", average, final ) ;
+    Tflp( DIE_PIC, "outputs/pan-tdp-735_die_pic_min.txt", minimum, final ) ;
+    Tflp( PIC_PLANE, "outputs/pan-tdp-735_pic_plane_max.txt", maximum, final ) ;
+    Tflp( PIC_PLANE, "outputs/pan-tdp-735_pic_plane_ave.txt", average, final ) ;
+    Tflp( PIC_PLANE, "outputs/pan-tdp-735_pic_plane_min.txt", minimum, final ) ;
+    Tmap( DIE_MEM, "outputs/pan-tdp-735_die_mem_tmap.txt", final ) ;
+    Tmap( DIE_LOGIC, "outputs/pan-tdp-735_die_logic_tmap.txt", final ) ;
+    Tmap( DIE_PIC, "outputs/pan-tdp-735_die_pic_tmap.txt", final ) ;
+    Tmap( PIC_PLANE, "outputs/pan-tdp-735_pic_plane_tmap.txt", final ) ;
+    Tmap( CP_BASE, "outputs/pan-tdp-735_cp_base_tmap.txt", final ) ;

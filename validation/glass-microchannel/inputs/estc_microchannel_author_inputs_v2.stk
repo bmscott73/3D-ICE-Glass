@@ -1,0 +1,95 @@
+// 3D-ICE-Glass | estc_microchannel_author_inputs_v2.stk | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// Canvas 2800 x 2800 um; grid 100 x 100 um.
+// Source power: first 16.2529 W; range 16.2529..16.2529 W; 1 sample(s).
+// External faces: adiabatic; coolant channel is the heat-removal boundary.
+// Embedded cooling 2rm: flow/velocity=25.46 mL/min; inlet=295.15 K; h=top 5.00e-08, bottom 5.00e-08.
+// Temperatures in emulator outputs are kelvin; time is seconds.
+// Model data: CC-BY-4.0. References and observation planes: checkpoint README / docs/case-index.md.
+
+material SILICON :
+    thermal conductivity    1.30e-04 ;
+    volumetric heat capacity 1.63e-12 ;
+
+material GLASS :
+    thermal conductivity    1.00e-06 ;
+    volumetric heat capacity 1.60e-12 ;
+
+material COPPER :
+    thermal conductivity    4.00e-04 ;
+    volumetric heat capacity 3.45e-12 ;
+
+material ABF :
+    thermal conductivity    3.00e-07 ;
+    volumetric heat capacity 1.60e-12 ;
+
+material INTERFACE :
+    thermal conductivity    2.00e-06 ;
+    volumetric heat capacity 2.00e-12 ;
+
+material TGV_GLASS_COMPOSITE :
+    thermal conductivity    1.00e-06, 1.00e-06, 7.90e-05 ;
+    volumetric heat capacity 1.96e-12 ;
+
+microchannel 2rm :
+    height 150 ;
+    channel length 100 ;
+    wall length 200 ;
+    wall material GLASS ;
+    coolant flow rate 25.46 ;
+    coolant heat transfer coefficient
+        top    5.00e-08,
+        bottom 5.00e-08 ;
+    coolant volumetric heat capacity 4.18e-12 ;
+    coolant incoming temperature 295.15 ;
+
+dimensions :
+    chip length 2800, width 2800 ;
+    cell length 100, width 100 ;
+    non-uniform false ;
+
+layer ABF_ELECTRICAL :
+    height 30 ;
+    material ABF ;
+
+layer DIE_ATTACH :
+    height 10 ;
+    material INTERFACE ;
+
+layer GLASS_MIDDLE_TGVS :
+    height 300 ;
+    material TGV_GLASS_COMPOSITE ;
+
+layer CU_HEAT_SPREADER :
+    height 10 ;
+    material COPPER ;
+
+layer GLASS_BOTTOM_BASE :
+    height 150 ;
+    material GLASS ;
+
+die TTC_DIE :
+    layer 290 SILICON ;
+    source 10 SILICON ;
+
+stack :
+    layer ABF_TOP ABF_ELECTRICAL ;
+    die TTC TTC_DIE floorplan "./estc_microchannel_author_inputs_v2.flp" ;
+    layer ATTACH DIE_ATTACH ;
+    layer TGVS GLASS_MIDDLE_TGVS ;
+    layer RDL CU_HEAT_SPREADER ;
+    channel UCH ;
+    layer BASE GLASS_BOTTOM_BASE ;
+
+solver :
+    steady ;
+    initial temperature 295.15 ;
+    numofcores 2 ;
+
+output :
+    Tflp( TTC, "outputs/microchannel_v2_tj_max_K.txt", maximum, final ) ;
+    Tflp( TTC, "outputs/microchannel_v2_tj_avg_K.txt", average, final ) ;
+    Tmap( TTC, "outputs/microchannel_v2_ttc_tmap_K.txt", final ) ;
+    Tmap( RDL, "outputs/microchannel_v2_rdl_tmap_K.txt", final ) ;
+    Tcoolant( UCH, "outputs/microchannel_v2_outlet_coolant_K.txt", maximum, final ) ;
+    T3d( "outputs/microchannel_v2_3d_final.vtk", final ) ;

@@ -1,0 +1,17 @@
+{
+  "id": "photonic",
+  "name": "Photonic PIC map",
+  "stack": "validation/photonic/inputs/cpo_2p5d.stk",
+  "expected_C": 41.84,
+  "reference_C": 40.0,
+  "aggregate": false,
+  "metric": "PIC peak",
+  "outputs": [
+    "cpo25_pic_max.txt"
+  ],
+  "kind": "floorplan",
+  "elements_prefix": "PIC_",
+  "correction_K": 0,
+  "assessment": "range / topology comparison",
+  "tolerance_C": 0.1
+}

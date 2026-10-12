@@ -1,3 +1,0 @@
-% Average temperatures for the floorplan of the die DIE_BOT
-% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 LOGIC0(K) 	 FILL_UNDER_OPT_IO(K) 	 FILL_UNDER_GPU0(K) 	 
-0.000 	 317.061 	 314.257 	 332.528 	 319.363 	 325.751 	 336.021 	 318.547 	 341.184 	 326.216 	 329.931 	 329.868 	 339.306 	 

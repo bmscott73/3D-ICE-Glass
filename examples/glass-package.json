@@ -1,0 +1,56 @@
+{
+  "name": "glass-package",
+  "purpose": "Small illustrative glass package; no claim of an independent validation checkpoint.",
+  "chip_um": [
+    4000,
+    4000
+  ],
+  "cell_um": [
+    200,
+    200
+  ],
+  "cooling": {
+    "top": "water-plate",
+    "reference_K": 300
+  },
+  "layers": [
+    {
+      "id": "CP_BASE",
+      "material": "copper",
+      "height_um": 2000
+    },
+    {
+      "id": "TGVS",
+      "material": "tgv-glass",
+      "height_um": 100
+    },
+    {
+      "id": "GLASS",
+      "material": "glass",
+      "height_um": 200
+    },
+    {
+      "id": "HEATER",
+      "kind": "die",
+      "material": "silicon",
+      "source_um": 5,
+      "passive_above_um": 95,
+      "blocks": [
+        {
+          "name": "HEATER",
+          "position_um": [
+            1000,
+            1000
+          ],
+          "size_um": [
+            2000,
+            2000
+          ],
+          "power_W": [
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "source": "Ansys Icepak matched HyFlexPIM package (paper Table II)",
+  "reference_C": 55.8,
+  "metric": "die peak",
+  "assessment": "CFD cross-validation",
+  "assumptions": "140.7 W duty-weighted floorplan; 26.1 x 17.4 mm; pin-fin Darcy velocity 1e6 um/s. Pin-fin declaration precedes dimensions in native 3D-ICE grammar. Legacy absolute paths are removed. No source, geometry or boundary coefficient was fitted during reorganization.",
+  "academic_link": "../../docs/references.md#hyflex"
+}

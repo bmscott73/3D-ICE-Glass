@@ -1,0 +1,49 @@
+// 3D-ICE-Glass | die_bot_S_v2.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 9 rectangles; first-sample power 42.67 W; 1 power sample(s); powered footprint 121 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+FILL_LEFT :
+    position  0, 0 ;
+    dimension 2000, 31800 ;
+    power values 0 ;
+
+FILL_M3D_BOT :
+    position  2000, 0 ;
+    dimension 11000, 10400 ;
+    power values 0 ;
+
+LOGIC0 :
+    position  2000, 10400 ;
+    dimension 11000, 11000 ;
+    power values 42.67 ;
+
+FILL_M3D_TOP :
+    position  2000, 21400 ;
+    dimension 11000, 10400 ;
+    power values 0 ;
+
+FILL_GAP :
+    position  13000, 0 ;
+    dimension 2000, 31800 ;
+    power values 0 ;
+
+FILL_GPU_BOT :
+    position  15000, 0 ;
+    dimension 22600, 2000 ;
+    power values 0 ;
+
+FILL_UNDER_GPU :
+    position  15000, 2000 ;
+    dimension 22600, 27800 ;
+    power values 0 ;
+
+FILL_GPU_TOP :
+    position  15000, 29800 ;
+    dimension 22600, 2000 ;
+    power values 0 ;
+
+FILL_RIGHT :
+    position  37600, 0 ;
+    dimension 2000, 31800 ;
+    power values 0 ;

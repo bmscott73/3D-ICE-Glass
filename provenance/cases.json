@@ -72,58 +72,6 @@
     ]
   },
   {
-    "stack": "models/dual-side/air/d2air-3ms.stk",
-    "floorplans": [
-      "models/dual-side/air/die_xpu_dual.flp",
-      "models/dual-side/air/pic_plane_dual.flp",
-      "models/dual-side/air/die_logic_dual.flp",
-      "models/dual-side/air/die_mem_dual.flp"
-    ],
-    "references": [
-      "stratum",
-      "plate",
-      "air"
-    ],
-    "grid_um": [
-      "100",
-      "100"
-    ],
-    "boundaries": [
-      "top h=3.1008e-08, T=300 K",
-      "bottom h=3.054e-09, T=300 K"
-    ],
-    "first_sample_power_W": 405.27,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "models/dual-side/air/d2air-4ms.stk",
-    "floorplans": [
-      "models/dual-side/air/die_xpu_dual.flp",
-      "models/dual-side/air/pic_plane_dual.flp",
-      "models/dual-side/air/die_logic_dual.flp",
-      "models/dual-side/air/die_mem_dual.flp"
-    ],
-    "references": [
-      "stratum",
-      "plate",
-      "air"
-    ],
-    "grid_um": [
-      "100",
-      "100"
-    ],
-    "boundaries": [
-      "top h=3.1008e-08, T=300 K",
-      "bottom h=3.453e-9, T=300 K"
-    ],
-    "first_sample_power_W": 405.27,
-    "power_samples": [
-      1
-    ]
-  },
-  {
     "stack": "models/dual-side/warm-loop/d2air-4ms-575.stk",
     "floorplans": [
       "models/dual-side/warm-loop/die_xpu_dual.flp",
@@ -150,7 +98,7 @@
     ]
   },
   {
-    "stack": "models/dual-side/warm-loop/d2air-4ms-735-new.stk",
+    "stack": "models/dual-side/warm-loop/d2air-4ms-735.stk",
     "floorplans": [
       "models/dual-side/warm-loop/die_xpu_dual.flp",
       "models/dual-side/warm-loop/pic_plane_dual.flp",
@@ -435,38 +383,12 @@
     ]
   },
   {
-    "stack": "models/panel/provisioning/pan-std.stk",
-    "floorplans": [
-      "models/panel/provisioning/pan_mem.flp",
-      "models/panel/provisioning/pan_logic.flp",
-      "models/panel/provisioning/pan_pic_die.flp",
-      "models/panel/provisioning/pan_pic.flp"
-    ],
-    "references": [
-      "panel",
-      "stratum",
-      "plate",
-      "pic"
-    ],
-    "grid_um": [
-      "200",
-      "200"
-    ],
-    "boundaries": [
-      "top h=4.08e-08, T=300 K"
-    ],
-    "first_sample_power_W": 942.03,
-    "power_samples": [
-      1
-    ]
-  },
-  {
     "stack": "models/panel/provisioning/pan-tdp.stk",
     "floorplans": [
       "models/panel/provisioning/pan_mem_tdp.flp",
       "models/panel/provisioning/pan_logic_tdp.flp",
-      "models/panel/provisioning/pan_pic_die.flp",
-      "models/panel/provisioning/pan_pic.flp"
+      "models/panel/provisioning/../trace-floor/pan_pic_die.flp",
+      "models/panel/provisioning/../trace-floor/pan_pic.flp"
     ],
     "references": [
       "panel",
@@ -491,8 +413,8 @@
     "floorplans": [
       "models/panel/provisioning/pan_mem_wl.flp",
       "models/panel/provisioning/pan_logic_wl.flp",
-      "models/panel/provisioning/pan_pic_die.flp",
-      "models/panel/provisioning/pan_pic.flp"
+      "models/panel/provisioning/../trace-floor/pan_pic_die.flp",
+      "models/panel/provisioning/../trace-floor/pan_pic.flp"
     ],
     "references": [
       "panel",
@@ -617,9 +539,45 @@
     ]
   },
   {
-    "stack": "validation/Baselines/H100/ttv_interpack.stk",
+    "stack": "validation/cu-pillar/inputs/estc_cupillar_pinfin_active1mm_p111.stk",
     "floorplans": [
-      "validation/Baselines/H100/ttv_heater.flp"
+      "validation/cu-pillar/inputs/estc_cupillar_active1mm_p111.flp"
+    ],
+    "references": [
+      "glass-cooling"
+    ],
+    "grid_um": [
+      "50",
+      "50"
+    ],
+    "boundaries": [],
+    "first_sample_power_W": 5.02,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "validation/glass-microchannel/inputs/estc_microchannel_author_inputs_v2.stk",
+    "floorplans": [
+      "validation/glass-microchannel/inputs/estc_microchannel_author_inputs_v2.flp"
+    ],
+    "references": [
+      "glass-cooling"
+    ],
+    "grid_um": [
+      "100",
+      "100"
+    ],
+    "boundaries": [],
+    "first_sample_power_W": 16.252928,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "validation/h100-ttv/inputs/ttv_pred_510W.stk",
+    "floorplans": [
+      "validation/h100-ttv/inputs/ttv_heater_p510.flp"
     ],
     "references": [
       "ttv"
@@ -629,17 +587,57 @@
       "250"
     ],
     "boundaries": [
-      "top h=4.3956e-08, T=320.65 K"
+      "top h=4.4186e-08, T=314.24 K"
     ],
-    "first_sample_power_W": 700.0,
+    "first_sample_power_W": 510.0,
     "power_samples": [
       1
     ]
   },
   {
-    "stack": "validation/Baselines/H200/h200_stratum_htc_probe.stk",
+    "stack": "validation/h100-ttv/inputs/ttv_pred_720W.stk",
     "floorplans": [
-      "validation/Baselines/H200/h200_stratum_htc_probe.flp"
+      "validation/h100-ttv/inputs/ttv_heater_p720.flp"
+    ],
+    "references": [
+      "ttv"
+    ],
+    "grid_um": [
+      "250",
+      "250"
+    ],
+    "boundaries": [
+      "top h=4.4186e-08, T=320.07 K"
+    ],
+    "first_sample_power_W": 720.0,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "validation/h100-ttv/inputs/ttv_pred_920W.stk",
+    "floorplans": [
+      "validation/h100-ttv/inputs/ttv_heater_p920.flp"
+    ],
+    "references": [
+      "ttv"
+    ],
+    "grid_um": [
+      "250",
+      "250"
+    ],
+    "boundaries": [
+      "top h=4.4186e-08, T=324.94 K"
+    ],
+    "first_sample_power_W": 920.0,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "validation/h200-plate/inputs/h200_stratum_htc_probe.stk",
+    "floorplans": [
+      "validation/h200-plate/inputs/h200_stratum_htc_probe.flp"
     ],
     "references": [
       "plate"
@@ -649,7 +647,7 @@
       "100"
     ],
     "boundaries": [
-      "top h=4.08e-08, T=300 K"
+      "top h=4.08e-08, T=311.15 K"
     ],
     "first_sample_power_W": 700.0,
     "power_samples": [
@@ -657,140 +655,257 @@
     ]
   },
   {
-    "stack": "validation/Baselines/HyFlexPIM/hausen/emb-E4-dell.stk",
+    "stack": "validation/hyflex-microchannel/inputs/hfp_tgv_E1a_hausen.stk",
     "floorplans": [
-      "validation/Baselines/HyFlexPIM/hausen/die_top_bridge.flp",
-      "validation/Baselines/HyFlexPIM/hausen/die_bot_bridge.flp",
-      "validation/Baselines/HyFlexPIM/hausen/die_emb_E4.flp",
-      "validation/Baselines/HyFlexPIM/hausen/pic_plane_bridge.flp"
+      "validation/hyflex-microchannel/inputs/hfp_chiplet_duty.flp"
     ],
     "references": [
       "hyflex",
-      "glass-cooling",
       "hausen"
+    ],
+    "grid_um": [
+      "100",
+      "100"
+    ],
+    "boundaries": [],
+    "first_sample_power_W": 140.7,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "validation/hyflex-microchannel/inputs/hfp_tgv_E1b_hausen_square.stk",
+    "floorplans": [
+      "validation/hyflex-microchannel/inputs/hfp_chiplet_duty.flp"
+    ],
+    "references": [
+      "hyflex",
+      "hausen"
+    ],
+    "grid_um": [
+      "100",
+      "100"
+    ],
+    "boundaries": [],
+    "first_sample_power_W": 140.7,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "validation/hyflex-microchannel/inputs/hfp_tgv_E1c_anchored.stk",
+    "floorplans": [
+      "validation/hyflex-microchannel/inputs/hfp_chiplet_duty.flp"
+    ],
+    "references": [
+      "hyflex",
+      "hausen"
+    ],
+    "grid_um": [
+      "100",
+      "100"
+    ],
+    "boundaries": [],
+    "first_sample_power_W": 140.7,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "validation/hyflex-pinfin/inputs/hfp_chiplet_pinfin.stk",
+    "floorplans": [
+      "validation/hyflex-pinfin/inputs/hfp_chiplet_duty.flp"
+    ],
+    "references": [
+      "hyflex",
+      "glass-cooling"
+    ],
+    "grid_um": [
+      "100",
+      "100"
+    ],
+    "boundaries": [],
+    "first_sample_power_W": 140.7,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "validation/photonic/inputs/cpo_2p5d.stk",
+    "floorplans": [
+      "validation/photonic/inputs/tier1_2p5d.flp",
+      "validation/photonic/inputs/tier2_cpu.flp",
+      "validation/photonic/inputs/pic_plane.flp"
+    ],
+    "references": [
+      "pic"
     ],
     "grid_um": [
       "100",
       "100"
     ],
     "boundaries": [
-      "top h=3.101e-08, T=308.0 K"
+      "top h=4.08e-08, T=300 K"
     ],
-    "first_sample_power_W": 983.95,
+    "first_sample_power_W": 524.5,
     "power_samples": [
       1
     ]
   },
   {
-    "stack": "validation/Baselines/HyFlexPIM/hausen/emb-E4-std.stk",
+    "stack": "validation/photonic/inputs/cpo_3d.stk",
     "floorplans": [
-      "validation/Baselines/HyFlexPIM/hausen/die_top_bridge.flp",
-      "validation/Baselines/HyFlexPIM/hausen/die_bot_bridge.flp",
-      "validation/Baselines/HyFlexPIM/hausen/die_emb_E4.flp",
-      "validation/Baselines/HyFlexPIM/hausen/pic_plane_bridge.flp"
+      "validation/photonic/inputs/tier1_3d.flp",
+      "validation/photonic/inputs/tier2_cpu.flp",
+      "validation/photonic/inputs/pic_plane.flp"
     ],
     "references": [
-      "hyflex",
-      "glass-cooling",
-      "hausen"
+      "pic"
     ],
     "grid_um": [
       "100",
       "100"
     ],
     "boundaries": [
-      "top h=4.08e-08, T=300.0 K"
+      "top h=4.08e-08, T=300 K"
     ],
-    "first_sample_power_W": 983.95,
+    "first_sample_power_W": 524.5,
     "power_samples": [
       1
     ]
   },
   {
-    "stack": "validation/Baselines/HyFlexPIM/hfp_chiplet_4rm_glasswall.stk",
+    "stack": "validation/silicon-interlayer/inputs/ibm_intra_100W_calibrated.stk",
     "floorplans": [
-      "validation/Baselines/HyFlexPIM/hfp_chiplet_duty.flp"
+      "validation/silicon-interlayer/inputs/tchip_ibm.flp",
+      "validation/silicon-interlayer/inputs/bchip_ibm.flp"
     ],
     "references": [
-      "hyflex",
-      "glass-cooling",
-      "hausen"
+      "silicon-cooling"
     ],
     "grid_um": [
-      "100",
+      "75",
       "100"
     ],
-    "boundaries": [],
-    "first_sample_power_W": 140.7,
+    "boundaries": [
+      "top h=1.292e-08, T=293.15 K"
+    ],
+    "first_sample_power_W": 200.0,
     "power_samples": [
       1
     ]
   },
   {
-    "stack": "validation/Baselines/HyFlexPIM/hfp_chiplet_4rm_glasswall_v4.stk",
+    "stack": "validation/silicon-interlayer/inputs/ibm_intra_q19.stk",
     "floorplans": [
-      "validation/Baselines/HyFlexPIM/hfp_chiplet_duty.flp"
+      "validation/silicon-interlayer/inputs/tchip_ibm.flp",
+      "validation/silicon-interlayer/inputs/bchip_ibm.flp"
     ],
     "references": [
-      "hyflex",
-      "glass-cooling",
-      "hausen"
+      "silicon-cooling"
     ],
     "grid_um": [
-      "100",
+      "75",
       "100"
     ],
-    "boundaries": [],
-    "first_sample_power_W": 140.7,
+    "boundaries": [
+      "top h=1.292e-08, T=293.15 K"
+    ],
+    "first_sample_power_W": 200.0,
     "power_samples": [
       1
     ]
   },
   {
-    "stack": "validation/Baselines/HyFlexPIM/hfp_chiplet_4rm_tgvwall_v4.stk",
+    "stack": "validation/silicon-interlayer/inputs/ibm_intra_q20.stk",
     "floorplans": [
-      "validation/Baselines/HyFlexPIM/hfp_chiplet_duty.flp"
+      "validation/silicon-interlayer/inputs/tchip_ibm.flp",
+      "validation/silicon-interlayer/inputs/bchip_ibm.flp"
     ],
     "references": [
-      "hyflex",
-      "glass-cooling",
-      "hausen"
+      "silicon-cooling"
     ],
     "grid_um": [
-      "100",
+      "75",
       "100"
     ],
-    "boundaries": [],
-    "first_sample_power_W": 140.7,
+    "boundaries": [
+      "top h=1.292e-08, T=293.15 K"
+    ],
+    "first_sample_power_W": 200.0,
     "power_samples": [
       1
     ]
   },
   {
-    "stack": "validation/Baselines/HyFlexPIM/hfp_chiplet_pinfin.stk",
+    "stack": "validation/silicon-interlayer/inputs/ibm_intra_q21.stk",
     "floorplans": [
-      "validation/Baselines/HyFlexPIM/hfp_chiplet_duty.flp"
+      "validation/silicon-interlayer/inputs/tchip_ibm.flp",
+      "validation/silicon-interlayer/inputs/bchip_ibm.flp"
     ],
     "references": [
-      "hyflex",
-      "glass-cooling",
-      "hausen"
+      "silicon-cooling"
     ],
     "grid_um": [
-      "100",
+      "75",
       "100"
     ],
-    "boundaries": [],
-    "first_sample_power_W": 140.7,
+    "boundaries": [
+      "top h=1.292e-08, T=293.15 K"
+    ],
+    "first_sample_power_W": 200.0,
     "power_samples": [
       1
     ]
   },
   {
-    "stack": "validation/Baselines/Stratum-S/stratum_S_v2_liquid.stk",
+    "stack": "validation/silicon-interlayer/inputs/ibm_intra_q22.stk",
     "floorplans": [
-      "validation/Baselines/Stratum-S/die_top_S_v2.flp",
-      "validation/Baselines/Stratum-S/die_bot_S_v2.flp"
+      "validation/silicon-interlayer/inputs/tchip_ibm.flp",
+      "validation/silicon-interlayer/inputs/bchip_ibm.flp"
+    ],
+    "references": [
+      "silicon-cooling"
+    ],
+    "grid_um": [
+      "75",
+      "100"
+    ],
+    "boundaries": [
+      "top h=1.292e-08, T=293.15 K"
+    ],
+    "first_sample_power_W": 200.0,
+    "power_samples": [
+      1
+    ]
+  },
+  {
+    "stack": "validation/stratum-l/inputs/stratum_L_steady_125.stk",
+    "floorplans": [
+      "validation/stratum-l/inputs/mem_die_3D.flp",
+      "validation/stratum-l/inputs/logic_die_3D.flp"
+    ],
+    "references": [
+      "stratum",
+      "pic"
+    ],
+    "grid_um": [
+      "125",
+      "125"
+    ],
+    "boundaries": [
+      "top h=2.78e-08, T=300 K"
+    ],
+    "first_sample_power_W": 1152.0,
+    "power_samples": [
+      9
+    ]
+  },
+  {
+    "stack": "validation/stratum-s/inputs/stratum_S_v2_liquid.stk",
+    "floorplans": [
+      "validation/stratum-s/inputs/die_top_S_v2.flp",
+      "validation/stratum-s/inputs/die_bot_S_v2.flp"
     ],
     "references": [
       "stratum",
@@ -809,337 +924,12 @@
     ]
   },
   {
-    "stack": "validation/Baselines/pic-sohrab/cpo_2p5d.stk",
+    "stack": "transient/inputs/pan-tdp-735.stk",
     "floorplans": [
-      "validation/Baselines/pic-sohrab/tier1_2p5d.flp",
-      "validation/Baselines/pic-sohrab/tier2_cpu.flp",
-      "validation/Baselines/pic-sohrab/pic_plane.flp"
-    ],
-    "references": [
-      "pic"
-    ],
-    "grid_um": [
-      "100",
-      "100"
-    ],
-    "boundaries": [
-      "top h=4.08e-08, T=300 K"
-    ],
-    "first_sample_power_W": 524.5,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/coefficient-comparison/hfp_tgv_E1a_hausen.stk",
-    "floorplans": [
-      "validation/supplemental/coefficient-comparison/hfp_chiplet_duty.flp"
-    ],
-    "references": [
-      "hyflex",
-      "glass-cooling",
-      "hausen"
-    ],
-    "grid_um": [
-      "100",
-      "100"
-    ],
-    "boundaries": [],
-    "first_sample_power_W": 140.7,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/coefficient-comparison/hfp_tgv_E1b_hausen_square.stk",
-    "floorplans": [
-      "validation/supplemental/coefficient-comparison/hfp_chiplet_duty.flp"
-    ],
-    "references": [
-      "hyflex",
-      "glass-cooling",
-      "hausen"
-    ],
-    "grid_um": [
-      "100",
-      "100"
-    ],
-    "boundaries": [],
-    "first_sample_power_W": 140.7,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/coefficient-comparison/hfp_tgv_E1c_anchored.stk",
-    "floorplans": [
-      "validation/supplemental/coefficient-comparison/hfp_chiplet_duty.flp"
-    ],
-    "references": [
-      "hyflex",
-      "glass-cooling",
-      "hausen"
-    ],
-    "grid_um": [
-      "100",
-      "100"
-    ],
-    "boundaries": [],
-    "first_sample_power_W": 140.7,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/cu-pillar/estc_cupillar_pinfin_active1mm_p100.stk",
-    "floorplans": [
-      "validation/supplemental/cu-pillar/estc_cupillar_active1mm_p100.flp"
-    ],
-    "references": [
-      "glass-cooling"
-    ],
-    "grid_um": [
-      "50",
-      "50"
-    ],
-    "boundaries": [],
-    "first_sample_power_W": 5.02,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/cu-pillar/estc_cupillar_pinfin_active1mm_p111.stk",
-    "floorplans": [
-      "validation/supplemental/cu-pillar/estc_cupillar_active1mm_p111.flp"
-    ],
-    "references": [
-      "glass-cooling"
-    ],
-    "grid_um": [
-      "50",
-      "50"
-    ],
-    "boundaries": [],
-    "first_sample_power_W": 5.02,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/h100-power-sweep/ttv_interpack_1350W.stk",
-    "floorplans": [
-      "validation/supplemental/h100-power-sweep/ttv_heater_1350.flp"
-    ],
-    "references": [
-      "ttv"
-    ],
-    "grid_um": [
-      "250",
-      "250"
-    ],
-    "boundaries": [
-      "top h=4.3956e-08, T=320.65 K"
-    ],
-    "first_sample_power_W": 1350.0,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/h100-power-sweep/ttv_interpack_500W.stk",
-    "floorplans": [
-      "validation/supplemental/h100-power-sweep/ttv_heater_500.flp"
-    ],
-    "references": [
-      "ttv"
-    ],
-    "grid_um": [
-      "250",
-      "250"
-    ],
-    "boundaries": [
-      "top h=4.3956e-08, T=320.65 K"
-    ],
-    "first_sample_power_W": 500.0,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/h100-power-sweep/ttv_interpack_900W.stk",
-    "floorplans": [
-      "validation/supplemental/h100-power-sweep/ttv_heater_900.flp"
-    ],
-    "references": [
-      "ttv"
-    ],
-    "grid_um": [
-      "250",
-      "250"
-    ],
-    "boundaries": [
-      "top h=4.3956e-08, T=320.65 K"
-    ],
-    "first_sample_power_W": 900.0,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/h100-power-sweep/ttv_interpack_parasitic.stk",
-    "floorplans": [
-      "validation/supplemental/h100-power-sweep/ttv_heater_665.flp"
-    ],
-    "references": [
-      "ttv"
-    ],
-    "grid_um": [
-      "250",
-      "250"
-    ],
-    "boundaries": [
-      "top h=4.3956e-08, T=320.65 K"
-    ],
-    "first_sample_power_W": 665.0,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/photonic/cpo_3d.stk",
-    "floorplans": [
-      "validation/supplemental/photonic/tier1_3d.flp",
-      "validation/supplemental/photonic/tier2_cpu.flp",
-      "validation/supplemental/photonic/pic_plane.flp"
-    ],
-    "references": [
-      "pic"
-    ],
-    "grid_um": [
-      "100",
-      "100"
-    ],
-    "boundaries": [
-      "top h=4.08e-08, T=300 K"
-    ],
-    "first_sample_power_W": 524.5,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/silicon-interlayer/ibm_intra_100W_calibrated.stk",
-    "floorplans": [
-      "validation/supplemental/silicon-interlayer/tchip_ibm.flp",
-      "validation/supplemental/silicon-interlayer/bchip_ibm.flp"
-    ],
-    "references": [
-      "silicon-cooling"
-    ],
-    "grid_um": [
-      "75",
-      "100"
-    ],
-    "boundaries": [
-      "top h=1.292e-08, T=293.15 K"
-    ],
-    "first_sample_power_W": 200.0,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/silicon-interlayer/ibm_intra_q19.stk",
-    "floorplans": [
-      "validation/supplemental/silicon-interlayer/tchip_ibm.flp",
-      "validation/supplemental/silicon-interlayer/bchip_ibm.flp"
-    ],
-    "references": [
-      "silicon-cooling"
-    ],
-    "grid_um": [
-      "75",
-      "100"
-    ],
-    "boundaries": [
-      "top h=1.292e-08, T=293.15 K"
-    ],
-    "first_sample_power_W": 200.0,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/silicon-interlayer/ibm_intra_q20.stk",
-    "floorplans": [
-      "validation/supplemental/silicon-interlayer/tchip_ibm.flp",
-      "validation/supplemental/silicon-interlayer/bchip_ibm.flp"
-    ],
-    "references": [
-      "silicon-cooling"
-    ],
-    "grid_um": [
-      "75",
-      "100"
-    ],
-    "boundaries": [
-      "top h=1.292e-08, T=293.15 K"
-    ],
-    "first_sample_power_W": 200.0,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/silicon-interlayer/ibm_intra_q21.stk",
-    "floorplans": [
-      "validation/supplemental/silicon-interlayer/tchip_ibm.flp",
-      "validation/supplemental/silicon-interlayer/bchip_ibm.flp"
-    ],
-    "references": [
-      "silicon-cooling"
-    ],
-    "grid_um": [
-      "75",
-      "100"
-    ],
-    "boundaries": [
-      "top h=1.292e-08, T=293.15 K"
-    ],
-    "first_sample_power_W": 200.0,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "validation/supplemental/silicon-interlayer/ibm_intra_q22.stk",
-    "floorplans": [
-      "validation/supplemental/silicon-interlayer/tchip_ibm.flp",
-      "validation/supplemental/silicon-interlayer/bchip_ibm.flp"
-    ],
-    "references": [
-      "silicon-cooling"
-    ],
-    "grid_um": [
-      "75",
-      "100"
-    ],
-    "boundaries": [
-      "top h=1.292e-08, T=293.15 K"
-    ],
-    "first_sample_power_W": 200.0,
-    "power_samples": [
-      1
-    ]
-  },
-  {
-    "stack": "demo/inputs/pan-tdp-735.stk",
-    "floorplans": [
-      "demo/inputs/pan_mem_tdp.flp",
-      "demo/inputs/pan_logic_tdp.flp",
-      "demo/inputs/pan_pic_die.flp",
-      "demo/inputs/pan_pic.flp"
+      "transient/inputs/pan_mem_tdp.flp",
+      "transient/inputs/pan_logic_tdp.flp",
+      "transient/inputs/pan_pic_die.flp",
+      "transient/inputs/pan_pic.flp"
     ],
     "references": [
       "panel",
@@ -1160,12 +950,12 @@
     ]
   },
   {
-    "stack": "demo/inputs/pan-tdp-735_1000-1010s_5ms.stk",
+    "stack": "transient/inputs/pan-tdp-735_1000-1010s_5ms.stk",
     "floorplans": [
-      "demo/inputs/pan_mem_tdp_1000-1010s_5ms.flp",
-      "demo/inputs/pan_logic_tdp_1000-1010s_5ms.flp",
-      "demo/inputs/pan_pic_die_1000-1010s_5ms.flp",
-      "demo/inputs/pan_pic_1000-1010s_5ms.flp"
+      "transient/inputs/pan_mem_tdp_1000-1010s_5ms.flp",
+      "transient/inputs/pan_logic_tdp_1000-1010s_5ms.flp",
+      "transient/inputs/pan_pic_die_1000-1010s_5ms.flp",
+      "transient/inputs/pan_pic_1000-1010s_5ms.flp"
     ],
     "references": [
       "panel",
@@ -1186,12 +976,12 @@
     ]
   },
   {
-    "stack": "demo/inputs/pan-tdp-735_mean_1000-1010s_5ms.stk",
+    "stack": "transient/inputs/pan-tdp-735_mean_1000-1010s_5ms.stk",
     "floorplans": [
-      "demo/inputs/pan_mem_tdp_mean_1000-1010s_5ms.flp",
-      "demo/inputs/pan_logic_tdp_mean_1000-1010s_5ms.flp",
-      "demo/inputs/pan_pic_die_mean_1000-1010s_5ms.flp",
-      "demo/inputs/pan_pic_mean_1000-1010s_5ms.flp"
+      "transient/inputs/pan_mem_tdp_mean_1000-1010s_5ms.flp",
+      "transient/inputs/pan_logic_tdp_mean_1000-1010s_5ms.flp",
+      "transient/inputs/pan_pic_die_mean_1000-1010s_5ms.flp",
+      "transient/inputs/pan_pic_mean_1000-1010s_5ms.flp"
     ],
     "references": [
       "panel",
@@ -1212,12 +1002,12 @@
     ]
   },
   {
-    "stack": "demo/inputs/pan-tdp-735_peak_1000-1010s_5ms.stk",
+    "stack": "transient/inputs/pan-tdp-735_peak_1000-1010s_5ms.stk",
     "floorplans": [
-      "demo/inputs/pan_mem_tdp_peak_1000-1010s_5ms.flp",
-      "demo/inputs/pan_logic_tdp_peak_1000-1010s_5ms.flp",
-      "demo/inputs/pan_pic_die_peak_1000-1010s_5ms.flp",
-      "demo/inputs/pan_pic_peak_1000-1010s_5ms.flp"
+      "transient/inputs/pan_mem_tdp_peak_1000-1010s_5ms.flp",
+      "transient/inputs/pan_logic_tdp_peak_1000-1010s_5ms.flp",
+      "transient/inputs/pan_pic_die_peak_1000-1010s_5ms.flp",
+      "transient/inputs/pan_pic_peak_1000-1010s_5ms.flp"
     ],
     "references": [
       "panel",

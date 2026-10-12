@@ -1,1381 +1,2029 @@
 [
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/runs/cp-h234.stk",
     "path": "models/co-planar/warm-loop/cp-h234.stk",
-    "role": "requested",
-    "sha256": "8a332176de46628072a40db8c76fb5974d0133c949d3f3d7cae97c8033bc25f6",
-    "bytes": 3815
+    "sha256": "5f36d6e60c514ad8504e93b17ca1a898b4d881c4032f295d62d826a1a9b6349b",
+    "bytes": 3437,
+    "source": "seelab-russell:~/chips/val-flps-exp/redo/runs/cp-h234.stk",
+    "source_sha256": "8a332176de46628072a40db8c76fb5974d0133c949d3f3d7cae97c8033bc25f6",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/runs/cp-h300.stk",
     "path": "models/co-planar/warm-loop/cp-h300.stk",
-    "role": "requested",
-    "sha256": "c54e2a6813cd341ab8577d8d6989934797a47e2ab20febe75d6e290ada64c886",
-    "bytes": 3796
+    "sha256": "e8fba4c190285559301224e58a0df3adcb98672d4537b43b600dc31a23a4776b",
+    "bytes": 3431,
+    "source": "seelab-russell:~/chips/val-flps-exp/redo/runs/cp-h300.stk",
+    "source_sha256": "c54e2a6813cd341ab8577d8d6989934797a47e2ab20febe75d6e290ada64c886",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/die_bot_bridge.flp",
     "path": "models/co-planar/warm-loop/die_bot_bridge.flp",
-    "role": "dependency",
-    "sha256": "a743e7841299477e28dea5216fd6815ed64536c3b4cf0fd9b828986e0c9122e1",
-    "bytes": 1421
+    "sha256": "b1a838b87f22607e8fed53656b39e59771321d6c4129fe671ec038e50be6be9d",
+    "bytes": 1315,
+    "source": "seelab-russell:~/chips/val-flps-exp/redo/die_bot_bridge.flp",
+    "source_sha256": "a743e7841299477e28dea5216fd6815ed64536c3b4cf0fd9b828986e0c9122e1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/die_top_bridge.flp",
     "path": "models/co-planar/warm-loop/die_top_bridge.flp",
-    "role": "dependency",
-    "sha256": "fcdfca51ab423db9781b6991fa01da3e557a02f30c15cc8d8aa3880afd0195cb",
-    "bytes": 1529
+    "sha256": "670f290bc1c513c279306e807c10159c68b93c16deb5f1061f03225fb544c4bb",
+    "bytes": 1297,
+    "source": "seelab-russell:~/chips/val-flps-exp/redo/die_top_bridge.flp",
+    "source_sha256": "fcdfca51ab423db9781b6991fa01da3e557a02f30c15cc8d8aa3880afd0195cb",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/pic_plane_bridge.flp",
     "path": "models/co-planar/warm-loop/pic_plane_bridge.flp",
-    "role": "dependency",
-    "sha256": "a314779d6295339c77e5a09a803472c49120a7d65beb53fd3cdfcc365b2cb7e6",
-    "bytes": 2169
+    "sha256": "6388fb7066e8115fe846dd20fe7dc522cdaeea3a8a541b35343aa26e1e3db911",
+    "bytes": 1723,
+    "source": "seelab-russell:~/chips/val-flps-exp/redo/pic_plane_bridge.flp",
+    "source_sha256": "a314779d6295339c77e5a09a803472c49120a7d65beb53fd3cdfcc365b2cb7e6",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/co-planar-runs/die_bot_bridge_memW.flp",
     "path": "models/co-planar/water/die_bot_bridge_memW.flp",
-    "role": "requested",
-    "sha256": "a743e7841299477e28dea5216fd6815ed64536c3b4cf0fd9b828986e0c9122e1",
-    "bytes": 1421
+    "sha256": "f244932ddc8a1699c9069ecf09349e7fefb8b0ae7c7df8ca301dbda30391d9f5",
+    "bytes": 1320,
+    "source": "seelab-russell:~/chips/val-flps-exp/co-planar-runs/die_bot_bridge_memW.flp",
+    "source_sha256": "a743e7841299477e28dea5216fd6815ed64536c3b4cf0fd9b828986e0c9122e1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/co-planar-runs/die_top_bridge_memW.flp",
     "path": "models/co-planar/water/die_top_bridge_memW.flp",
-    "role": "requested",
-    "sha256": "fcdfca51ab423db9781b6991fa01da3e557a02f30c15cc8d8aa3880afd0195cb",
-    "bytes": 1529
+    "sha256": "7492ad32ed982e944a7b9143346362957561927ccba7591d84c181ae1817444a",
+    "bytes": 1302,
+    "source": "seelab-russell:~/chips/val-flps-exp/co-planar-runs/die_top_bridge_memW.flp",
+    "source_sha256": "fcdfca51ab423db9781b6991fa01da3e557a02f30c15cc8d8aa3880afd0195cb",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/co-planar-runs/pic_plane_bridge_memW.flp",
     "path": "models/co-planar/water/pic_plane_bridge_memW.flp",
-    "role": "requested",
-    "sha256": "a314779d6295339c77e5a09a803472c49120a7d65beb53fd3cdfcc365b2cb7e6",
-    "bytes": 2169
+    "sha256": "e7aa9225f7fcde76884f9f6f63d6d78313c6d10ca65e7c3930fde6e72ef151f2",
+    "bytes": 1728,
+    "source": "seelab-russell:~/chips/val-flps-exp/co-planar-runs/pic_plane_bridge_memW.flp",
+    "source_sha256": "a314779d6295339c77e5a09a803472c49120a7d65beb53fd3cdfcc365b2cb7e6",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/co-planar-runs/static-standard.stk",
     "path": "models/co-planar/water/static-standard.stk",
-    "role": "requested",
-    "sha256": "30fdce10be9c58e3bae76faf68334cd78b770e60e7eea3e03bfd4cca57d677a8",
-    "bytes": 4107
+    "sha256": "a645eaf816422b4ebcd4e1aa370f5777112dbfa23fdc34241489932cdc2161f5",
+    "bytes": 3304,
+    "source": "seelab-russell:~/chips/val-flps-exp/co-planar-runs/static-standard.stk",
+    "source_sha256": "30fdce10be9c58e3bae76faf68334cd78b770e60e7eea3e03bfd4cca57d677a8",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/runs/d2air-3ms.stk",
-    "path": "models/dual-side/air/d2air-3ms.stk",
-    "role": "requested",
-    "sha256": "ce270b86b44858ef988c0f9e7710045ff496f1c1c4b868933375e2ca195beb8e",
-    "bytes": 5382
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/runs/d2air-4ms.stk",
-    "path": "models/dual-side/air/d2air-4ms.stk",
-    "role": "requested",
-    "sha256": "6662b5fb91c01ba11d78fe81fc9093a938553ccb91d5f118bcb743fd9359e218",
-    "bytes": 5381
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/die_logic_dual.flp",
-    "path": "models/dual-side/air/die_logic_dual.flp",
-    "role": "dependency",
-    "sha256": "dcede96176ca4077ae713707cbfe580a5ae821f4f3ee7acb844009c45b0a4592",
-    "bytes": 870
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/die_mem_dual.flp",
-    "path": "models/dual-side/air/die_mem_dual.flp",
-    "role": "dependency",
-    "sha256": "d7da3dc8400eacc74573a26421f05f2d4ad7dbac873e867554844a7ac26f615d",
-    "bytes": 657
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/die_xpu_dual.flp",
-    "path": "models/dual-side/air/die_xpu_dual.flp",
-    "role": "dependency",
-    "sha256": "5f4524708711cbb514109bcc370cd1c0ecd7392331de52cc14285cbd1249a922",
-    "bytes": 961
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/redo/pic_plane_dual.flp",
-    "path": "models/dual-side/air/pic_plane_dual.flp",
-    "role": "dependency",
-    "sha256": "7b1e97b8d437fe1694fbf082fd578db8d19f74a23338a4d6e9e84c46d610de7d",
-    "bytes": 1945
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/d2air-4ms-575.stk",
     "path": "models/dual-side/warm-loop/d2air-4ms-575.stk",
-    "role": "requested",
-    "sha256": "95cdb81302b0273e356c058f206e7559b4efd6bcda2a87879c590583e01b6029",
-    "bytes": 5740
+    "sha256": "1d168f16769874b0bb94fbb7227a6d74603fada072ed322746706419903c5473",
+    "bytes": 4068,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/d2air-4ms-575.stk",
+    "source_sha256": "95cdb81302b0273e356c058f206e7559b4efd6bcda2a87879c590583e01b6029",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "models/dual-side/warm-loop/d2air-4ms-735.stk",
+    "sha256": "3d6f1875a4e3764ddbefd42a870b3730c0d34e2aa72a410afb4bb5242bf29560",
+    "bytes": 4068,
     "source": "seelab-russell:~/chips/val-flps-exp/bounded/d2air-4ms-735-new.stk",
-    "path": "models/dual-side/warm-loop/d2air-4ms-735-new.stk",
-    "role": "requested",
-    "sha256": "0aa697c5f7f5eb6503254294bb99ff0a4a9703dd2467d9f006bc4a118fb02508",
-    "bytes": 5740
+    "source_sha256": "0aa697c5f7f5eb6503254294bb99ff0a4a9703dd2467d9f006bc4a118fb02508",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_logic_dual.flp",
     "path": "models/dual-side/warm-loop/die_logic_dual.flp",
-    "role": "dependency",
-    "sha256": "dcede96176ca4077ae713707cbfe580a5ae821f4f3ee7acb844009c45b0a4592",
-    "bytes": 870
+    "sha256": "4d75c5d5dee108bd80818b8c07f99a31832f38a46a7c7f87d0611074f5930d19",
+    "bytes": 696,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_logic_dual.flp",
+    "source_sha256": "dcede96176ca4077ae713707cbfe580a5ae821f4f3ee7acb844009c45b0a4592",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_mem_dual.flp",
     "path": "models/dual-side/warm-loop/die_mem_dual.flp",
-    "role": "dependency",
-    "sha256": "d7da3dc8400eacc74573a26421f05f2d4ad7dbac873e867554844a7ac26f615d",
-    "bytes": 657
+    "sha256": "921a86c2bd92f92983b421f42ad554c8d451968904012158d38f233e1588bab9",
+    "bytes": 688,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_mem_dual.flp",
+    "source_sha256": "d7da3dc8400eacc74573a26421f05f2d4ad7dbac873e867554844a7ac26f615d",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_xpu_dual.flp",
     "path": "models/dual-side/warm-loop/die_xpu_dual.flp",
-    "role": "dependency",
-    "sha256": "5f4524708711cbb514109bcc370cd1c0ecd7392331de52cc14285cbd1249a922",
-    "bytes": 961
+    "sha256": "cf5bf0a948cf795d2ec1b6217bcd9a792fa458c4c12518d311c912d2e841fb57",
+    "bytes": 774,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_xpu_dual.flp",
+    "source_sha256": "5f4524708711cbb514109bcc370cd1c0ecd7392331de52cc14285cbd1249a922",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pic_plane_dual.flp",
     "path": "models/dual-side/warm-loop/pic_plane_dual.flp",
-    "role": "dependency",
-    "sha256": "7b1e97b8d437fe1694fbf082fd578db8d19f74a23338a4d6e9e84c46d610de7d",
-    "bytes": 1945
+    "sha256": "2f36d669b668c2299af3334e45822f50dbb3ebc4b315aa7349d9341dd7f465ee",
+    "bytes": 1797,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pic_plane_dual.flp",
+    "source_sha256": "7b1e97b8d437fe1694fbf082fd578db8d19f74a23338a4d6e9e84c46d610de7d",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/d2-noplate.stk",
     "path": "models/dual-side/water/d2-noplate.stk",
-    "role": "requested",
-    "sha256": "45ff6904d482d472d5909a529f5b1e8a8998e9564710716e03032664500e27b4",
-    "bytes": 5238
+    "sha256": "d824d4def11623a695be9c057b844071aa8decdb64f70bf3d7e74ad9e8de535f",
+    "bytes": 4002,
+    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/d2-noplate.stk",
+    "source_sha256": "45ff6904d482d472d5909a529f5b1e8a8998e9564710716e03032664500e27b4",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/d2-standard.stk",
     "path": "models/dual-side/water/d2-standard.stk",
-    "role": "requested",
-    "sha256": "53cd889fe1148db8ad6ffc2037eea7d57651baf89b30f7039b57cfb159399adb",
-    "bytes": 5931
+    "sha256": "1efbec89b756a9a5e9d46f5ac15175e15f63aac8265cbd0c1c6acfb806a6343a",
+    "bytes": 4171,
+    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/d2-standard.stk",
+    "source_sha256": "53cd889fe1148db8ad6ffc2037eea7d57651baf89b30f7039b57cfb159399adb",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/die_logic_dual.flp",
     "path": "models/dual-side/water/die_logic_dual.flp",
-    "role": "requested",
-    "sha256": "dcede96176ca4077ae713707cbfe580a5ae821f4f3ee7acb844009c45b0a4592",
-    "bytes": 870
+    "sha256": "4d75c5d5dee108bd80818b8c07f99a31832f38a46a7c7f87d0611074f5930d19",
+    "bytes": 696,
+    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/die_logic_dual.flp",
+    "source_sha256": "dcede96176ca4077ae713707cbfe580a5ae821f4f3ee7acb844009c45b0a4592",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/die_mem_dual.flp",
     "path": "models/dual-side/water/die_mem_dual.flp",
-    "role": "requested",
-    "sha256": "d7da3dc8400eacc74573a26421f05f2d4ad7dbac873e867554844a7ac26f615d",
-    "bytes": 657
+    "sha256": "921a86c2bd92f92983b421f42ad554c8d451968904012158d38f233e1588bab9",
+    "bytes": 688,
+    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/die_mem_dual.flp",
+    "source_sha256": "d7da3dc8400eacc74573a26421f05f2d4ad7dbac873e867554844a7ac26f615d",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/die_xpu_dual.flp",
     "path": "models/dual-side/water/die_xpu_dual.flp",
-    "role": "requested",
-    "sha256": "5f4524708711cbb514109bcc370cd1c0ecd7392331de52cc14285cbd1249a922",
-    "bytes": 961
+    "sha256": "cf5bf0a948cf795d2ec1b6217bcd9a792fa458c4c12518d311c912d2e841fb57",
+    "bytes": 774,
+    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/die_xpu_dual.flp",
+    "source_sha256": "5f4524708711cbb514109bcc370cd1c0ecd7392331de52cc14285cbd1249a922",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/pic_plane_dual.flp",
     "path": "models/dual-side/water/pic_plane_dual.flp",
-    "role": "requested",
-    "sha256": "7b1e97b8d437fe1694fbf082fd578db8d19f74a23338a4d6e9e84c46d610de7d",
-    "bytes": 1945
+    "sha256": "2f36d669b668c2299af3334e45822f50dbb3ebc4b315aa7349d9341dd7f465ee",
+    "bytes": 1797,
+    "source": "seelab-russell:~/chips/val-flps-exp/dual-plate/pic_plane_dual.flp",
+    "source_sha256": "7b1e97b8d437fe1694fbf082fd578db8d19f74a23338a4d6e9e84c46d610de7d",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_bot_bridge.flp",
     "path": "models/interlayer/warm-loop/die_bot_bridge.flp",
-    "role": "dependency",
-    "sha256": "a743e7841299477e28dea5216fd6815ed64536c3b4cf0fd9b828986e0c9122e1",
-    "bytes": 1421
+    "sha256": "b1a838b87f22607e8fed53656b39e59771321d6c4129fe671ec038e50be6be9d",
+    "bytes": 1315,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_bot_bridge.flp",
+    "source_sha256": "a743e7841299477e28dea5216fd6815ed64536c3b4cf0fd9b828986e0c9122e1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_emb_E4.flp",
     "path": "models/interlayer/warm-loop/die_emb_E4.flp",
-    "role": "requested",
-    "sha256": "52b017c5252ce463474649f5f1ebdda393875c61075cc7a4aeabc1eeb591e5ad",
-    "bytes": 2116
+    "sha256": "9a1121808fd0dff306f66cd08f18c80a495e1374999e25b6b34762ed852c698c",
+    "bytes": 1412,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_emb_E4.flp",
+    "source_sha256": "52b017c5252ce463474649f5f1ebdda393875c61075cc7a4aeabc1eeb591e5ad",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_top_bridge.flp",
     "path": "models/interlayer/warm-loop/die_top_bridge.flp",
-    "role": "dependency",
-    "sha256": "fcdfca51ab423db9781b6991fa01da3e557a02f30c15cc8d8aa3880afd0195cb",
-    "bytes": 1529
+    "sha256": "670f290bc1c513c279306e807c10159c68b93c16deb5f1061f03225fb544c4bb",
+    "bytes": 1297,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/die_top_bridge.flp",
+    "source_sha256": "fcdfca51ab423db9781b6991fa01da3e557a02f30c15cc8d8aa3880afd0195cb",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/emb-E4-575.stk",
     "path": "models/interlayer/warm-loop/emb-E4-575.stk",
-    "role": "requested",
-    "sha256": "c3a64b9a3934aa189130331ddc01d410b4c6a920593129d950d640c2e7430025",
-    "bytes": 6753
+    "sha256": "00ef0ddf300595102348db0a60f04fc64da840dd20e818bdc09ce139fe9f404a",
+    "bytes": 4817,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/emb-E4-575.stk",
+    "source_sha256": "c3a64b9a3934aa189130331ddc01d410b4c6a920593129d950d640c2e7430025",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/emb-E4-735.stk",
     "path": "models/interlayer/warm-loop/emb-E4-735.stk",
-    "role": "requested",
-    "sha256": "67bc74de23ccda42ed291ecae707a4663e4e52a454b0e5fef41a2db84afae515",
-    "bytes": 6736
+    "sha256": "0ad9e843466b9a8ec74ccea6935989d52f4e954c75ebe551fbdabb0262189f92",
+    "bytes": 4817,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/emb-E4-735.stk",
+    "source_sha256": "67bc74de23ccda42ed291ecae707a4663e4e52a454b0e5fef41a2db84afae515",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pic_plane_bridge.flp",
     "path": "models/interlayer/warm-loop/pic_plane_bridge.flp",
-    "role": "dependency",
-    "sha256": "a314779d6295339c77e5a09a803472c49120a7d65beb53fd3cdfcc365b2cb7e6",
-    "bytes": 2169
+    "sha256": "6388fb7066e8115fe846dd20fe7dc522cdaeea3a8a541b35343aa26e1e3db911",
+    "bytes": 1723,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pic_plane_bridge.flp",
+    "source_sha256": "a314779d6295339c77e5a09a803472c49120a7d65beb53fd3cdfcc365b2cb7e6",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_bot_bridge.flp",
     "path": "models/interlayer/water/die_bot_bridge.flp",
-    "role": "requested-path-corrected",
-    "sha256": "a743e7841299477e28dea5216fd6815ed64536c3b4cf0fd9b828986e0c9122e1",
-    "bytes": 1421
+    "sha256": "b1a838b87f22607e8fed53656b39e59771321d6c4129fe671ec038e50be6be9d",
+    "bytes": 1315,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_bot_bridge.flp",
+    "source_sha256": "a743e7841299477e28dea5216fd6815ed64536c3b4cf0fd9b828986e0c9122e1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_E0.flp",
     "path": "models/interlayer/water/die_emb_E0.flp",
-    "role": "requested-path-corrected",
-    "sha256": "a81384536eebd9c12792e409f5db188d7ae666be603be9e00abe045968500253",
-    "bytes": 1042
+    "sha256": "dfb4a59f2fed7ffc3b7316e3a18ce5d439c0e3c72aba790a70821d404fd3982b",
+    "bytes": 334,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_E0.flp",
+    "source_sha256": "a81384536eebd9c12792e409f5db188d7ae666be603be9e00abe045968500253",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_E1.flp",
     "path": "models/interlayer/water/die_emb_E1.flp",
-    "role": "dependency",
-    "sha256": "af8b5a1f408eb45cddc11b4d08a0efc20e6e8cfff663e20576cd32aef14852d8",
-    "bytes": 1396
+    "sha256": "6ec60575944374a1aec23023eb257458cb51ed02ff5dcf70914e81eeeb5b86ae",
+    "bytes": 691,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_E1.flp",
+    "source_sha256": "af8b5a1f408eb45cddc11b4d08a0efc20e6e8cfff663e20576cd32aef14852d8",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_E2.flp",
     "path": "models/interlayer/water/die_emb_E2.flp",
-    "role": "dependency",
-    "sha256": "d69683be9d99bb1032c58c1ec4b92485b6fc67c5e8a129f4c0f4bfe189b135b1",
-    "bytes": 1748
+    "sha256": "405bf57135991d771b78def9b5b2565824f219afcc5c49d61f3dc0eec4e1af2a",
+    "bytes": 1043,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_E2.flp",
+    "source_sha256": "d69683be9d99bb1032c58c1ec4b92485b6fc67c5e8a129f4c0f4bfe189b135b1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_E4.flp",
     "path": "models/interlayer/water/die_emb_E4.flp",
-    "role": "dependency",
-    "sha256": "52b017c5252ce463474649f5f1ebdda393875c61075cc7a4aeabc1eeb591e5ad",
-    "bytes": 2116
+    "sha256": "9a1121808fd0dff306f66cd08f18c80a495e1374999e25b6b34762ed852c698c",
+    "bytes": 1412,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_E4.flp",
+    "source_sha256": "52b017c5252ce463474649f5f1ebdda393875c61075cc7a4aeabc1eeb591e5ad",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_H1.flp",
     "path": "models/interlayer/water/die_emb_H1.flp",
-    "role": "requested",
-    "sha256": "cabe13cbf6fb0687d73f89fbe69fd1f8398c98c4d432b17b3fed2611ce89274b",
-    "bytes": 3920
+    "sha256": "cfa1778b49696e62a4d89581b8d3de2f2042aaa92e7e0d21121c745e93bd1bf6",
+    "bytes": 3198,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_H1.flp",
+    "source_sha256": "cabe13cbf6fb0687d73f89fbe69fd1f8398c98c4d432b17b3fed2611ce89274b",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_H1M2.flp",
     "path": "models/interlayer/water/die_emb_H1M2.flp",
-    "role": "requested",
-    "sha256": "39b0cd59991242172a87fda6b45660a7375fd2d1540635bd101c6906e6501c16",
-    "bytes": 5320
+    "sha256": "1656f0720d50d02f2471230bff09998b437b8b2320b47c3ed2d4d709e741073a",
+    "bytes": 4597,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_emb_H1M2.flp",
+    "source_sha256": "39b0cd59991242172a87fda6b45660a7375fd2d1540635bd101c6906e6501c16",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_top_bridge.flp",
     "path": "models/interlayer/water/die_top_bridge.flp",
-    "role": "requested-path-corrected",
-    "sha256": "fcdfca51ab423db9781b6991fa01da3e557a02f30c15cc8d8aa3880afd0195cb",
-    "bytes": 1529
+    "sha256": "670f290bc1c513c279306e807c10159c68b93c16deb5f1061f03225fb544c4bb",
+    "bytes": 1297,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/die_top_bridge.flp",
+    "source_sha256": "fcdfca51ab423db9781b6991fa01da3e557a02f30c15cc8d8aa3880afd0195cb",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-E0-std.stk",
     "path": "models/interlayer/water/emb-E0-std.stk",
-    "role": "requested",
-    "sha256": "8bc4ce17aaeb11b75e95a0e126bfa7e0ef6c3323729676209653f72a54813929",
-    "bytes": 6380
+    "sha256": "fbf46345f47519bbb8d5309532faf95428bc6d8e7629740ae761782f2ab15c15",
+    "bytes": 4813,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-E0-std.stk",
+    "source_sha256": "8bc4ce17aaeb11b75e95a0e126bfa7e0ef6c3323729676209653f72a54813929",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-E1-std.stk",
     "path": "models/interlayer/water/emb-E1-std.stk",
-    "role": "requested",
-    "sha256": "42e0583fabe9e4575ecfcd94521e7f6feeedd5cd6fba7bd3a5eec60980120f06",
-    "bytes": 6383
+    "sha256": "c62363f578a6937d40ce9c080909789e7006e4522fb7ac1d4d9d9335c8015e02",
+    "bytes": 4813,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-E1-std.stk",
+    "source_sha256": "42e0583fabe9e4575ecfcd94521e7f6feeedd5cd6fba7bd3a5eec60980120f06",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-E2-std.stk",
     "path": "models/interlayer/water/emb-E2-std.stk",
-    "role": "requested",
-    "sha256": "c2965c6b86cb5dcef5554d425385740ee1ca32ebb004149ea0d3912a6523a373",
-    "bytes": 6383
+    "sha256": "ad2fc3f30fd9422e7f8a289545e3b9b535ca21f66642805b64b814b458e2604a",
+    "bytes": 4813,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-E2-std.stk",
+    "source_sha256": "c2965c6b86cb5dcef5554d425385740ee1ca32ebb004149ea0d3912a6523a373",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-E4-std.stk",
     "path": "models/interlayer/water/emb-E4-std.stk",
-    "role": "requested",
-    "sha256": "7f7b7754cf990b2a086c92f6478c545f5393e8156ed850f6488832d1246ce601",
-    "bytes": 6383
+    "sha256": "fde3a8f2e6af1263dd242588d24edbb334582e5545b3013802cf6fe2dcc1ef85",
+    "bytes": 4813,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-E4-std.stk",
+    "source_sha256": "7f7b7754cf990b2a086c92f6478c545f5393e8156ed850f6488832d1246ce601",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-H1-std.stk",
     "path": "models/interlayer/water/emb-H1-std.stk",
-    "role": "requested",
-    "sha256": "e132bb3da799430a665d43c3e703bdf68593e265d1a755ef7d616ad1850c08f5",
-    "bytes": 6403
+    "sha256": "363717a8b508cf078cce5dadcb98a8e3f90197c3369a1efae90a3f3e12ed0176",
+    "bytes": 4813,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-H1-std.stk",
+    "source_sha256": "e132bb3da799430a665d43c3e703bdf68593e265d1a755ef7d616ad1850c08f5",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-H1M2-std.stk",
     "path": "models/interlayer/water/emb-H1M2-std.stk",
-    "role": "requested",
-    "sha256": "86901eddf667c897c155b19f3ac6c658cc9936b54edbc160e7be81bc40f2a839",
-    "bytes": 6443
+    "sha256": "1e17bd13546d38dc56cc6c6bcc121ae91180a94e873b1edf4d14fbf9bcdc2e73",
+    "bytes": 4851,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/runs/emb-H1M2-std.stk",
+    "source_sha256": "86901eddf667c897c155b19f3ac6c658cc9936b54edbc160e7be81bc40f2a839",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/pic_plane_bridge.flp",
     "path": "models/interlayer/water/pic_plane_bridge.flp",
-    "role": "requested-path-corrected",
-    "sha256": "a314779d6295339c77e5a09a803472c49120a7d65beb53fd3cdfcc365b2cb7e6",
-    "bytes": 2169
+    "sha256": "6388fb7066e8115fe846dd20fe7dc522cdaeea3a8a541b35343aa26e1e3db911",
+    "bytes": 1723,
+    "source": "seelab-russell:~/chips/val-flps-exp/interlayer/pic_plane_bridge.flp",
+    "source_sha256": "a314779d6295339c77e5a09a803472c49120a7d65beb53fd3cdfcc365b2cb7e6",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/gen_prov.py",
-    "path": "models/panel/provisioning/gen_prov.py",
-    "role": "requested",
-    "sha256": "d4b38ca363fa5b4385a8788fa62e77d8ea3c264b2e329068ad3293356477933b",
-    "bytes": 4342
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan-std.stk",
-    "path": "models/panel/provisioning/pan-std.stk",
-    "role": "validation-supplement",
-    "sha256": "8ce2375b2f7b4dbc01ba6cb8e04601f2c528ee59f7502f3be68d02c80a3e7d91",
-    "bytes": 4954
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan-tdp.stk",
     "path": "models/panel/provisioning/pan-tdp.stk",
-    "role": "requested",
-    "sha256": "1f428f792212d173c2b83c2980cf107dbe3d20f188fd5b22d0b6dfc706e632c3",
-    "bytes": 5121
+    "sha256": "1551fe5e3c053530affe03a0a9dde63fb60d93428b83d707b3db715a1626a370",
+    "bytes": 3913,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan-tdp.stk",
+    "source_sha256": "1f428f792212d173c2b83c2980cf107dbe3d20f188fd5b22d0b6dfc706e632c3",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan-wl.stk",
     "path": "models/panel/provisioning/pan-wl.stk",
-    "role": "requested",
-    "sha256": "b05ae049f1a62f84a66ecf4e28f5d8ad7dc2d45c2cc0a014760ee03bce131c3a",
-    "bytes": 5081
+    "sha256": "4755979db68ef508ed78452e412e4f1c12c38845fff406c27a71fa118b832370",
+    "bytes": 3893,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan-wl.stk",
+    "source_sha256": "b05ae049f1a62f84a66ecf4e28f5d8ad7dc2d45c2cc0a014760ee03bce131c3a",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_logic.flp",
-    "path": "models/panel/provisioning/pan_logic.flp",
-    "role": "validation-supplement",
-    "sha256": "5e3174e00ade1a25b9d7b1e9b313e43dec0684a249ad16a320eb4203ad4725d5",
-    "bytes": 927
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_logic_tdp.flp",
     "path": "models/panel/provisioning/pan_logic_tdp.flp",
-    "role": "requested",
-    "sha256": "a999d0ee820739f36ae60d1e00a779e44896725f6b7f6c992202b6f8529ca9e1",
-    "bytes": 985
+    "sha256": "1b67c6e866733d48d4f7aebb2837cec580572daea43ca1d968fe579febf5571d",
+    "bytes": 872,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_logic_tdp.flp",
+    "source_sha256": "a999d0ee820739f36ae60d1e00a779e44896725f6b7f6c992202b6f8529ca9e1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_logic_wl.flp",
     "path": "models/panel/provisioning/pan_logic_wl.flp",
-    "role": "requested",
-    "sha256": "eb8357cf6fd3e7fb1a6f95aa243544e0129481311a198cb2edc267c4edd85d43",
-    "bytes": 958
+    "sha256": "71042acef94dc30f18bee8ecbadd34b80ebd54be286e356c0266c9bd192717c1",
+    "bytes": 863,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_logic_wl.flp",
+    "source_sha256": "eb8357cf6fd3e7fb1a6f95aa243544e0129481311a198cb2edc267c4edd85d43",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_mem.flp",
-    "path": "models/panel/provisioning/pan_mem.flp",
-    "role": "validation-supplement",
-    "sha256": "a1fa316fba35145c05ac1086acca0cdc14435e8bddea53cab2a71cab067d0b00",
-    "bytes": 4182
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_mem_tdp.flp",
     "path": "models/panel/provisioning/pan_mem_tdp.flp",
-    "role": "requested",
-    "sha256": "29b47d20359ac3dac498c7d0b47aed89c279be971b19f968c5028bd2d9162fc1",
-    "bytes": 4336
+    "sha256": "8fd3a5e8f4de1720848760f5c63fbc28eb4cd2f0e1b9c53a7546377d1e721ace",
+    "bytes": 4213,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_mem_tdp.flp",
+    "source_sha256": "29b47d20359ac3dac498c7d0b47aed89c279be971b19f968c5028bd2d9162fc1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_mem_wl.flp",
     "path": "models/panel/provisioning/pan_mem_wl.flp",
-    "role": "requested",
-    "sha256": "a174ad613449af232348bbfe80e054ac3003493665835555b09f54548649892d",
-    "bytes": 4315
+    "sha256": "3a17bc5939c3645a7fab5dacba21b289b4c73330723feb9a52f9db3d1dc2bd70",
+    "bytes": 4212,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_mem_wl.flp",
+    "source_sha256": "a174ad613449af232348bbfe80e054ac3003493665835555b09f54548649892d",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_pic.flp",
-    "path": "models/panel/provisioning/pan_pic.flp",
-    "role": "dependency",
-    "sha256": "750cd7bef6e53c9a8d81b6292228f30129a955d00a3cbb93fe138a0b36a75579",
-    "bytes": 1289
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan2/pan_pic_die.flp",
-    "path": "models/panel/provisioning/pan_pic_die.flp",
-    "role": "dependency",
-    "sha256": "516d276a3e249fd51726cbba5840432cb2ae6dee18029463c4249b366ddf0722",
-    "bytes": 1780
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/gen_pan_flps.py",
-    "path": "models/panel/trace-floor/gen_pan_flps.py",
-    "role": "requested",
-    "sha256": "aecf67b27af3c6e052c8acd33cc3e24ba671d8fcd3a2ea89aa2f1180d5365aec",
-    "bytes": 6317
-  },
-  {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan-std.stk",
     "path": "models/panel/trace-floor/pan-std.stk",
-    "role": "requested",
-    "sha256": "8ce2375b2f7b4dbc01ba6cb8e04601f2c528ee59f7502f3be68d02c80a3e7d91",
-    "bytes": 4954
+    "sha256": "59686c89528d575d4066ce21ef11069ec1365736e57bec0d47ad206021445f3d",
+    "bytes": 3872,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan-std.stk",
+    "source_sha256": "8ce2375b2f7b4dbc01ba6cb8e04601f2c528ee59f7502f3be68d02c80a3e7d91",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan_logic.flp",
     "path": "models/panel/trace-floor/pan_logic.flp",
-    "role": "requested",
-    "sha256": "5e3174e00ade1a25b9d7b1e9b313e43dec0684a249ad16a320eb4203ad4725d5",
-    "bytes": 927
+    "sha256": "e98d0f8adea94eb7ca2dd9c5bbe900e8e36664ea953d9a6f5b21729b57c6678a",
+    "bytes": 866,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan_logic.flp",
+    "source_sha256": "5e3174e00ade1a25b9d7b1e9b313e43dec0684a249ad16a320eb4203ad4725d5",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan_mem.flp",
     "path": "models/panel/trace-floor/pan_mem.flp",
-    "role": "requested",
-    "sha256": "a1fa316fba35145c05ac1086acca0cdc14435e8bddea53cab2a71cab067d0b00",
-    "bytes": 4182
+    "sha256": "78e071980cedd0afc08e88f9ae2c3c4c0fc1aa4a24ff593af659b08e40170bf0",
+    "bytes": 4209,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan_mem.flp",
+    "source_sha256": "a1fa316fba35145c05ac1086acca0cdc14435e8bddea53cab2a71cab067d0b00",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan_pic.flp",
     "path": "models/panel/trace-floor/pan_pic.flp",
-    "role": "dependency",
-    "sha256": "750cd7bef6e53c9a8d81b6292228f30129a955d00a3cbb93fe138a0b36a75579",
-    "bytes": 1289
+    "sha256": "96e35bf14263b52c341a04032e085f31c908d73696c2d0217af96b743d2d7ce9",
+    "bytes": 1091,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan_pic.flp",
+    "source_sha256": "750cd7bef6e53c9a8d81b6292228f30129a955d00a3cbb93fe138a0b36a75579",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan_pic_die.flp",
     "path": "models/panel/trace-floor/pan_pic_die.flp",
-    "role": "dependency",
-    "sha256": "516d276a3e249fd51726cbba5840432cb2ae6dee18029463c4249b366ddf0722",
-    "bytes": 1780
+    "sha256": "0ee9d6782e1679f40f1c1db040f739da77ce01273d50b876093ab30aacd47591",
+    "bytes": 1457,
+    "source": "seelab-russell:~/chips/val-flps-exp/tianqi/pan/pan_pic_die.flp",
+    "source_sha256": "516d276a3e249fd51726cbba5840432cb2ae6dee18029463c4249b366ddf0722",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan-tdp-575.stk",
     "path": "models/panel/warm-loop/pan-tdp-575.stk",
-    "role": "requested",
-    "sha256": "a879e6cd8d60bb5b616951b11388fc898fdee491d69671a60225cfed631c9e21",
-    "bytes": 5480
+    "sha256": "19f56e0b5034b46f31572b6524327304b8a8e2071c98d181077c484bc7ead4b1",
+    "bytes": 3957,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan-tdp-575.stk",
+    "source_sha256": "a879e6cd8d60bb5b616951b11388fc898fdee491d69671a60225cfed631c9e21",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan-tdp-735.stk",
     "path": "models/panel/warm-loop/pan-tdp-735.stk",
-    "role": "requested",
-    "sha256": "d102e6b91c6ecc7fd647535de55d9b487950ca7ae52b0e815be4d275ff7b9e79",
-    "bytes": 5473
+    "sha256": "24162f0b0edd3b6ee71e0113f4c89bbb59ecfcf9b01e919f09d361a7f4775a39",
+    "bytes": 3957,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan-tdp-735.stk",
+    "source_sha256": "d102e6b91c6ecc7fd647535de55d9b487950ca7ae52b0e815be4d275ff7b9e79",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan-wl-575.stk",
     "path": "models/panel/warm-loop/pan-wl-575.stk",
-    "role": "requested",
-    "sha256": "bddd53b3133bc763579814aa36906cbdd50da2f32c786f84676fcd950f77ea3f",
-    "bytes": 5435
+    "sha256": "61add0dec3441c5515ce16f1e28210d1404923b9e0b109b2d29b4bab59844346",
+    "bytes": 3937,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan-wl-575.stk",
+    "source_sha256": "bddd53b3133bc763579814aa36906cbdd50da2f32c786f84676fcd950f77ea3f",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_logic_tdp.flp",
     "path": "models/panel/warm-loop/pan_logic_tdp.flp",
-    "role": "requested",
-    "sha256": "a999d0ee820739f36ae60d1e00a779e44896725f6b7f6c992202b6f8529ca9e1",
-    "bytes": 985
+    "sha256": "1b67c6e866733d48d4f7aebb2837cec580572daea43ca1d968fe579febf5571d",
+    "bytes": 872,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_logic_tdp.flp",
+    "source_sha256": "a999d0ee820739f36ae60d1e00a779e44896725f6b7f6c992202b6f8529ca9e1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_logic_wl.flp",
     "path": "models/panel/warm-loop/pan_logic_wl.flp",
-    "role": "requested",
-    "sha256": "eb8357cf6fd3e7fb1a6f95aa243544e0129481311a198cb2edc267c4edd85d43",
-    "bytes": 958
+    "sha256": "71042acef94dc30f18bee8ecbadd34b80ebd54be286e356c0266c9bd192717c1",
+    "bytes": 863,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_logic_wl.flp",
+    "source_sha256": "eb8357cf6fd3e7fb1a6f95aa243544e0129481311a198cb2edc267c4edd85d43",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_mem_tdp.flp",
     "path": "models/panel/warm-loop/pan_mem_tdp.flp",
-    "role": "requested",
-    "sha256": "29b47d20359ac3dac498c7d0b47aed89c279be971b19f968c5028bd2d9162fc1",
-    "bytes": 4336
+    "sha256": "8fd3a5e8f4de1720848760f5c63fbc28eb4cd2f0e1b9c53a7546377d1e721ace",
+    "bytes": 4213,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_mem_tdp.flp",
+    "source_sha256": "29b47d20359ac3dac498c7d0b47aed89c279be971b19f968c5028bd2d9162fc1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_mem_wl.flp",
     "path": "models/panel/warm-loop/pan_mem_wl.flp",
-    "role": "requested",
-    "sha256": "a174ad613449af232348bbfe80e054ac3003493665835555b09f54548649892d",
-    "bytes": 4315
+    "sha256": "3a17bc5939c3645a7fab5dacba21b289b4c73330723feb9a52f9db3d1dc2bd70",
+    "bytes": 4212,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_mem_wl.flp",
+    "source_sha256": "a174ad613449af232348bbfe80e054ac3003493665835555b09f54548649892d",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_pic.flp",
     "path": "models/panel/warm-loop/pan_pic.flp",
-    "role": "requested",
-    "sha256": "750cd7bef6e53c9a8d81b6292228f30129a955d00a3cbb93fe138a0b36a75579",
-    "bytes": 1289
+    "sha256": "96e35bf14263b52c341a04032e085f31c908d73696c2d0217af96b743d2d7ce9",
+    "bytes": 1091,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_pic.flp",
+    "source_sha256": "750cd7bef6e53c9a8d81b6292228f30129a955d00a3cbb93fe138a0b36a75579",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_pic_die.flp",
     "path": "models/panel/warm-loop/pan_pic_die.flp",
-    "role": "requested",
-    "sha256": "516d276a3e249fd51726cbba5840432cb2ae6dee18029463c4249b366ddf0722",
-    "bytes": 1780
-  },
-  {
-    "path": "validation/Baselines/H100/ttv_heater.flp",
-    "source": "local-validation:Baselines/H100/ttv_heater.flp",
-    "role": "requested",
-    "sha256": "f29701c6ced1e21709d49314a6be288ac4879fa61e31ef16423b22cc54a5e620",
-    "bytes": 455
-  },
-  {
-    "path": "validation/Baselines/H100/ttv_interpack.stk",
-    "source": "local-validation:Baselines/H100/ttv_interpack.stk",
-    "role": "requested",
-    "sha256": "3cb2d2ec532d6b6992a7656faae2a236fd36fe03e2a86b64dfb6704ad7ae879d",
-    "bytes": 3822
-  },
-  {
-    "path": "validation/Baselines/H200/h200_stratum_htc_probe.flp",
-    "source": "local-validation:Baselines/H200/h200_stratum_htc_probe.flp",
-    "role": "requested",
-    "sha256": "dfd760f5b5c72b78b510c6c7270e81398556a19b00a0a0e22fda8e6b2070d859",
-    "bytes": 1194
-  },
-  {
-    "path": "validation/Baselines/H200/h200_stratum_htc_probe.stk",
-    "source": "local-validation:Baselines/H200/h200_stratum_htc_probe.stk",
-    "role": "requested",
-    "sha256": "592f15e5f085169746d0eea3c98944416f73e96c53429f69e41d3be23bbff301",
-    "bytes": 6755
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/die_bot_bridge.flp",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/die_bot_bridge.flp",
-    "role": "requested",
-    "sha256": "a743e7841299477e28dea5216fd6815ed64536c3b4cf0fd9b828986e0c9122e1",
-    "bytes": 1421
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/die_emb_E4.flp",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/die_emb_E4.flp",
-    "role": "requested",
-    "sha256": "52b017c5252ce463474649f5f1ebdda393875c61075cc7a4aeabc1eeb591e5ad",
-    "bytes": 2116
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/die_top_bridge.flp",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/die_top_bridge.flp",
-    "role": "requested",
-    "sha256": "fcdfca51ab423db9781b6991fa01da3e557a02f30c15cc8d8aa3880afd0195cb",
-    "bytes": 1529
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_cp_base_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_cp_base_tmap.txt",
-    "role": "requested",
-    "sha256": "795ade5003b9bc9bed49632b5147b9226bb709c0b64d77405ffd72e166c4e344",
-    "bytes": 1130903
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_bot_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_bot_ave.txt",
-    "role": "requested",
-    "sha256": "06497601257f1a0b970a8f4f9a518fb38bd382c19383480054dfa08601a949cd",
-    "bytes": 366
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_bot_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_bot_max.txt",
-    "role": "requested",
-    "sha256": "e7eefca01c58bbb64c5bf1608b30595185da901e36604a4faf7b566919493b25",
-    "bytes": 366
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_bot_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_bot_min.txt",
-    "role": "requested",
-    "sha256": "783f4d6c9188ae56723e8527ebbb95f059b1fd1846a9e2cb4f6998c08dbec7dc",
-    "bytes": 366
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_emb_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_emb_ave.txt",
-    "role": "requested",
-    "sha256": "2df8bddf0a1bfcb9704c845853d89f26993fc30f52ee9ee18a5b351df0822542",
-    "bytes": 380
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_emb_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_emb_max.txt",
-    "role": "requested",
-    "sha256": "0fb83589091b4f19faf32ba13c58e08afd622ff199e3fd3cd0b83ad391779e7e",
-    "bytes": 380
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_emb_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_emb_min.txt",
-    "role": "requested",
-    "sha256": "5ff914fbc0c9090fd26e2c59c7860f25d0cb0ab052a658b05ffbc82a09cdf5b6",
-    "bytes": 380
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_emb_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_emb_tmap.txt",
-    "role": "requested",
-    "sha256": "4ef1055da6e2f156f52aa3f175ddca5f7e41db5b896e7fc39ff22535216871f7",
-    "bytes": 1130903
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_top_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_top_ave.txt",
-    "role": "requested",
-    "sha256": "31f883d698c9f4d478cbdfdb8c7b29fa1dd5da2e19595293bf682315ee0cb95b",
-    "bytes": 342
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_top_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_top_max.txt",
-    "role": "requested",
-    "sha256": "e45ac11c83abbb19da02eee6529c48844653f31ec6b01ade00ec9d9dd755a7cf",
-    "bytes": 342
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_top_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_top_min.txt",
-    "role": "requested",
-    "sha256": "f2766ca3b7bf8ae325a452868d582c7e3139ef2ec5b8bd3690c3660710c7b0de",
-    "bytes": 342
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_top_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_die_top_tmap.txt",
-    "role": "requested",
-    "sha256": "5a2c910b685d9862d24f6c37df9bdf2fda5d9649873f51fd86a73696a76c3663",
-    "bytes": 1130903
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_emb_ch_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_emb_ch_tmap.txt",
-    "role": "requested",
-    "sha256": "49000cfd05a8a1322e5150fe25b513c69b61e22ff9b771286a02fde49c4918b9",
-    "bytes": 1130902
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_pic_plane_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_pic_plane_ave.txt",
-    "role": "requested",
-    "sha256": "0c014c9cdf9de6a37f5f0346e64caad6f9849b68197da741973180c8b5662b30",
-    "bytes": 469
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_pic_plane_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_pic_plane_max.txt",
-    "role": "requested",
-    "sha256": "5ec12399cf35e084fe02c636cdc5a468a54d27c3c80f353b84f335faea3488db",
-    "bytes": 469
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_pic_plane_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_pic_plane_min.txt",
-    "role": "requested",
-    "sha256": "bd336d37f1efc3fc81d5e40830028bfd094a198cdd4f2120a883eb0c29221ee3",
-    "bytes": 469
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_pic_plane_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_anchored_pic_plane_tmap.txt",
-    "role": "requested",
-    "sha256": "8c01160e5c3cd4cae80428ed81c401718878721d6245b7f32483b45925c3b5b5",
-    "bytes": 1130905
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_cp_base_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_cp_base_tmap.txt",
-    "role": "requested",
-    "sha256": "ad11862c58a0d8a869eeea4e8e5079c8491de0c0b42e387a8de704d2868854ff",
-    "bytes": 1130903
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_bot_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_bot_ave.txt",
-    "role": "requested",
-    "sha256": "c836f4590aaecce57c43cc71aafb9559a40202aaaaf0ffa66c9cd66249c65e8a",
-    "bytes": 366
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_bot_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_bot_max.txt",
-    "role": "requested",
-    "sha256": "086125b58172fa22dda068aec5a34718c4dfb9af47ba87e77f04ef7f95486e25",
-    "bytes": 366
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_bot_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_bot_min.txt",
-    "role": "requested",
-    "sha256": "8caf81ded7cddbb8e0591dbd280dff7eeb9f8ab49e3a35a5cd9bbc26fb12b560",
-    "bytes": 366
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_emb_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_emb_ave.txt",
-    "role": "requested",
-    "sha256": "373533440cdff1a0019fad819a5daf427dd580af5eaa12b0b6d1a0ec2d42002a",
-    "bytes": 380
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_emb_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_emb_max.txt",
-    "role": "requested",
-    "sha256": "c32cb7ecf94509b9ac78731a30eb922db200d2350433baaa22a52b5af507006a",
-    "bytes": 380
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_emb_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_emb_min.txt",
-    "role": "requested",
-    "sha256": "06f4ac42a4122953c7d4edd1c0636c4cab746214710c80774db8828db7a37bfe",
-    "bytes": 380
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_emb_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_emb_tmap.txt",
-    "role": "requested",
-    "sha256": "e65c113a7e7b5add9e3880a3bab6c10ce2d0fc5382f548edc2e5e01f97b0f04d",
-    "bytes": 1130903
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_top_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_top_ave.txt",
-    "role": "requested",
-    "sha256": "7ef8f7e03430eb0fae0b36a887f96944d226a43011b7d7ff6ee4743fc134e487",
-    "bytes": 342
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_top_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_top_max.txt",
-    "role": "requested",
-    "sha256": "b928ff5a5558c28dba8583301ceb1d64e49ff6f487099f76cace2468917098ad",
-    "bytes": 342
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_top_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_top_min.txt",
-    "role": "requested",
-    "sha256": "4c6271f219c315a2a0e65e486bb339ebadec02f477ec76c99814c01c31c21965",
-    "bytes": 342
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_top_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_die_top_tmap.txt",
-    "role": "requested",
-    "sha256": "d53534cad43cf0cb30b0884efe482124ac97c04dd53acaf468178e14b46185c7",
-    "bytes": 1130903
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_emb_ch_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_emb_ch_tmap.txt",
-    "role": "requested",
-    "sha256": "b676afce77ceca13750e0cf5432d36e568f6f19dc8c2c74d2a568bd8babce2c9",
-    "bytes": 1130902
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_pic_plane_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_pic_plane_ave.txt",
-    "role": "requested",
-    "sha256": "290da625f6a4a19859f7895374275dc5e11f98a802551890a9abc662ca7a2a9d",
-    "bytes": 469
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_pic_plane_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_pic_plane_max.txt",
-    "role": "requested",
-    "sha256": "84b792dc9a752dc6542e34a7542b11672698a43b5d1e58f3be6e4727f382b0d1",
-    "bytes": 469
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_pic_plane_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_pic_plane_min.txt",
-    "role": "requested",
-    "sha256": "8674cff1c65dc8b2f9fa7356f3a181fbac519b02e091a80f9f53432b05fe6f20",
-    "bytes": 469
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_pic_plane_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_hausen_pic_plane_tmap.txt",
-    "role": "requested",
-    "sha256": "f1fe6c6012c439d32570d059c5a5859684e8510d53ffe4208c56d8cc7848a484",
-    "bytes": 1130905
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_cp_base_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_cp_base_tmap.txt",
-    "role": "requested",
-    "sha256": "4a7a04227c4a5f471105145a4756c64c302a970174267e91d8acc8114f3ed147",
-    "bytes": 1130903
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_bot_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_bot_ave.txt",
-    "role": "requested",
-    "sha256": "c90797e697c2e74effecfa146b000510d190be3b9a6fbb891a494a7e8943819a",
-    "bytes": 366
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_bot_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_bot_max.txt",
-    "role": "requested",
-    "sha256": "ea0c63f52c647d032dc4000588e51a565e798b906df165ca75cfa954e459b42e",
-    "bytes": 366
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_bot_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_bot_min.txt",
-    "role": "requested",
-    "sha256": "2f396e00e1f68362fa0ab00c0c159f35c36adb2cc7f5638f546b98dedfdf1ea7",
-    "bytes": 366
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_emb_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_emb_ave.txt",
-    "role": "requested",
-    "sha256": "f4175ba49c4fe3295d2c2c0eaa1d832106c8a197a3f350837d98d646d63649b6",
-    "bytes": 380
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_emb_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_emb_max.txt",
-    "role": "requested",
-    "sha256": "ab367397583a563c7e61480a2b64870565c6d94ec924fa6f779f9107bf49d0bf",
-    "bytes": 380
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_emb_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_emb_min.txt",
-    "role": "requested",
-    "sha256": "0837f48a6e41e5ca106bd4ea0d224fc4a7ab25f1b918c3f31c29e443a5dca763",
-    "bytes": 380
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_emb_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_emb_tmap.txt",
-    "role": "requested",
-    "sha256": "7ae5206ace023ccc8a5e1f9e79de9fd2d47ef2e7bae36a5bd529020a24d70e10",
-    "bytes": 1130903
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_top_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_top_ave.txt",
-    "role": "requested",
-    "sha256": "055b628dd03a0d9c16cc767540504c1e49dd8d3fa971540e2f87ee79b532a140",
-    "bytes": 342
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_top_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_top_max.txt",
-    "role": "requested",
-    "sha256": "13701631756a34881d7a9047e07dead8b3b168b12b68a5ae7158fab5feaac7b4",
-    "bytes": 342
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_top_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_top_min.txt",
-    "role": "requested",
-    "sha256": "b9811fbd5028b0c37ee3c7b3465c943a65689cb66eea192494f9cc3beb05329d",
-    "bytes": 342
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_top_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_die_top_tmap.txt",
-    "role": "requested",
-    "sha256": "a7359ab555ddd21f3cffa940b2bfc3137c9f62be3104708c6aa16c55182f8b7f",
-    "bytes": 1130903
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_emb_ch_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_emb_ch_tmap.txt",
-    "role": "requested",
-    "sha256": "2465f6c166d9b9ae8e0c6139f7e768a44eb453b9c8532b1af304c0cc47dbf4f1",
-    "bytes": 1130902
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_pic_plane_ave.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_pic_plane_ave.txt",
-    "role": "requested",
-    "sha256": "ce7886e6f14af47af81c9ab154c3b1c4a6362fb6340d3a1da8e1d1b5452e5dce",
-    "bytes": 469
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_pic_plane_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_pic_plane_max.txt",
-    "role": "requested",
-    "sha256": "cdd38e4e051997d5b234bb47185313648fdb21dd57e40e114daeffd5ba547f90",
-    "bytes": 469
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_pic_plane_min.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_pic_plane_min.txt",
-    "role": "requested",
-    "sha256": "881fc0874e71f8e90f5d28f314f722786f6b28992b3d1790e7ef11edb1f5836f",
-    "bytes": 469
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4/E4_735_square_pic_plane_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4/E4_735_square_pic_plane_tmap.txt",
-    "role": "requested",
-    "sha256": "50504c6698ef6d68f26187e537806c9511bc898114162b65a133a4c4caff3d1b",
-    "bytes": 1130905
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/e4_hausen_master_combined.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/e4_hausen_master_combined.txt",
-    "role": "requested",
-    "sha256": "c07815c666c0f48382b513bc0ed35e442a4ff55a07ddb1641cfe57999a38407d",
-    "bytes": 15479
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/emb-E4-dell.stk",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/emb-E4-dell.stk",
-    "role": "requested",
-    "sha256": "60ac810a57fb28221c449a31df42bd5a0005e7fc071309f5f01879cc3dc20e90",
-    "bytes": 6479
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/emb-E4-std.stk",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/emb-E4-std.stk",
-    "role": "requested",
-    "sha256": "7f7b7754cf990b2a086c92f6478c545f5393e8156ed850f6488832d1246ce601",
-    "bytes": 6383
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1a_hausen_avg.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1a_hausen_avg.txt",
-    "role": "requested",
-    "sha256": "2f0c03293e51746c32db0bf2e66b15964a9ce69b2f393fe40454b13c8ec996e6",
-    "bytes": 516
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1a_hausen_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1a_hausen_max.txt",
-    "role": "requested",
-    "sha256": "bb23fb0d56493ac19a19fd3e5f3935f5a5f34c20ea353f8b70182b7497d71273",
-    "bytes": 516
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1a_hausen_mch.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1a_hausen_mch.txt",
-    "role": "requested",
-    "sha256": "a354c9344b4d66b509290fa97af15ff7eb4379dd95bd298cb08e4d4cb21e63eb",
-    "bytes": 408991
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1a_hausen_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1a_hausen_tmap.txt",
-    "role": "requested",
-    "sha256": "636d68224b8b5949f416ecd9dbd0d191801f0d91948a7b651937ac02a35bd42a",
-    "bytes": 408991
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1b_hausen_square_avg.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1b_hausen_square_avg.txt",
-    "role": "requested",
-    "sha256": "65548ced564bf53cd8a16b72534c1eb1724aa2794dc960816c047f2ebe4a8f8b",
-    "bytes": 516
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1b_hausen_square_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1b_hausen_square_max.txt",
-    "role": "requested",
-    "sha256": "5081f54cee04e6154e2f9806d91e91148814351d47a2e0045889386121223ca2",
-    "bytes": 516
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1b_hausen_square_mch.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1b_hausen_square_mch.txt",
-    "role": "requested",
-    "sha256": "22c6d3b6c10cfef72911fbf512fee34b387c5f9130184b5114a4e0513822f4bf",
-    "bytes": 408991
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1b_hausen_square_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1b_hausen_square_tmap.txt",
-    "role": "requested",
-    "sha256": "4473359e551b89bb04b8d018cab2f934bffbe5a41f14c6845cfb1249649be8be",
-    "bytes": 408991
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1c_anchored_avg.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1c_anchored_avg.txt",
-    "role": "requested",
-    "sha256": "6f97be552c815c9027ec69d125bce43c9c9614ae3d1394095e362a34df6a81bd",
-    "bytes": 516
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1c_anchored_max.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1c_anchored_max.txt",
-    "role": "requested",
-    "sha256": "1dfa2740b78543614a3bd2b5901fa666535c2ccc5a5aeaebe94f9fa3cb6fb2cf",
-    "bytes": 516
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1c_anchored_mch.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1c_anchored_mch.txt",
-    "role": "requested",
-    "sha256": "96fb3955cdf3f8bb5f0c4236f04721575ebd41f1004f6878bd180c55be118768",
-    "bytes": 408991
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/outputs/E1c_anchored_tmap.txt",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/outputs/E1c_anchored_tmap.txt",
-    "role": "requested",
-    "sha256": "719ea11dcbb6850cc85d94015a71286c3933db1d0271694314b309f83a479336",
-    "bytes": 408991
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/parse.py",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/parse.py",
-    "role": "requested",
-    "sha256": "24d6daeb9f03162fecd50c15a420068769eb94b854697cbad1a29e8b326519f2",
-    "bytes": 1736
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hausen/pic_plane_bridge.flp",
-    "source": "local-validation:Baselines/HyFlexPIM/hausen/pic_plane_bridge.flp",
-    "role": "requested",
-    "sha256": "a314779d6295339c77e5a09a803472c49120a7d65beb53fd3cdfcc365b2cb7e6",
-    "bytes": 2169
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hfp_chiplet_4rm_glasswall.stk",
-    "source": "local-validation:Baselines/HyFlexPIM/hfp_chiplet_4rm_glasswall.stk",
-    "role": "requested",
-    "sha256": "c3961852571f17be6668797b2296910ff066d42c14b08f52300afbfa14cef5bb",
-    "bytes": 6295
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hfp_chiplet_4rm_glasswall_v4.stk",
-    "source": "local-validation:Baselines/HyFlexPIM/hfp_chiplet_4rm_glasswall_v4.stk",
-    "role": "requested",
-    "sha256": "46e3ec8f7dffe3b1c0ee6b6fcc5542f471cb3f020ea0cabf8834d5923d1bee59",
-    "bytes": 10307
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hfp_chiplet_4rm_tgvwall_v4.stk",
-    "source": "local-validation:Baselines/HyFlexPIM/hfp_chiplet_4rm_tgvwall_v4.stk",
-    "role": "requested",
-    "sha256": "9eaef72f097a54427c6dc9848b0cdae229bbbbf9fe8db7e03e33abd299b6ea31",
-    "bytes": 10356
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hfp_chiplet_duty.flp",
-    "source": "local-validation:Baselines/HyFlexPIM/hfp_chiplet_duty.flp",
-    "role": "requested",
-    "sha256": "4ee7c8a11f03791a1d26a29d88e78b617383dd3fb3fe649290d6af4b9da31ee9",
-    "bytes": 3602
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hfp_chiplet_pinfin.stk",
-    "source": "local-validation:Baselines/HyFlexPIM/hfp_chiplet_pinfin.stk",
-    "role": "requested",
-    "sha256": "a273f1c809d7dbab4f45edd36db50b9509dbe248e23080e09aeddb02522c059d",
-    "bytes": 9595
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/hfp_duty.flp",
-    "source": "local-validation:Baselines/HyFlexPIM/hfp_duty.flp",
-    "role": "requested",
-    "sha256": "4ebf28dc8b24ba8c7e2f470244b8a9b610fc10ff45d0c2d990b0b9ef5a99ff3d",
-    "bytes": 5717
-  },
-  {
-    "path": "validation/Baselines/HyFlexPIM/sim_run.log",
-    "source": "local-validation:Baselines/HyFlexPIM/sim_run.log",
-    "role": "requested",
-    "sha256": "ce0eefd29ef00518b9c8c2a17dd3c9ea3724400930d8bbceb6fd8a815f9f9c74",
-    "bytes": 1188
-  },
-  {
-    "path": "validation/Baselines/Stratum-S/die_bot_S_v2.flp",
-    "source": "local-validation:Baselines/Stratum-S/die_bot_S_v2.flp",
-    "role": "requested",
-    "sha256": "0b2c545db4c8f42ca4047b7e6551088cdb6f88548b108a9b409be9b878190134",
-    "bytes": 2989
-  },
-  {
-    "path": "validation/Baselines/Stratum-S/die_top_S_v2.flp",
-    "source": "local-validation:Baselines/Stratum-S/die_top_S_v2.flp",
-    "role": "requested",
-    "sha256": "d282cd74c586532c21d89b951c63d4afb621fdcc0303e1a0d3f9bb962a0fa1e8",
-    "bytes": 4125
-  },
-  {
-    "path": "validation/Baselines/Stratum-S/logic_die_S.flp",
-    "source": "local-validation:Baselines/Stratum-S/logic_die_S.flp",
-    "role": "requested",
-    "sha256": "8a0381f2f2becc12226d960e3c94a4bd3dd77d90421a3b2367233a8733ceb0b5",
-    "bytes": 2414
-  },
-  {
-    "path": "validation/Baselines/Stratum-S/mem_die_S.flp",
-    "source": "local-validation:Baselines/Stratum-S/mem_die_S.flp",
-    "role": "requested",
-    "sha256": "974e051f1f9f6b0a824fdc334f6a10ad4d676ed02ddf65feb93bb59eac90693d",
-    "bytes": 1988
-  },
-  {
-    "path": "validation/Baselines/Stratum-S/stratum_S_v2_liquid.stk",
-    "source": "local-validation:Baselines/Stratum-S/stratum_S_v2_liquid.stk",
-    "role": "requested",
-    "sha256": "fcd7ae5cbf289225ee6498234e188eaf329e4d3c052ef2a5746d3665ceadabc1",
-    "bytes": 11757
-  },
-  {
-    "path": "validation/Baselines/pic-sohrab/cpo_2p5d.stk",
-    "source": "local-validation:Baselines/pic-sohrab/cpo_2p5d.stk",
-    "role": "requested",
-    "sha256": "1b7a617ab45f76edd58b14c82663c86bcb68532389c9325292bd8c281645a000",
-    "bytes": 5013
-  },
-  {
-    "path": "validation/Baselines/pic-sohrab/pic_plane.flp",
-    "source": "local-validation:Baselines/pic-sohrab/pic_plane.flp",
-    "role": "requested",
-    "sha256": "e71d5619a80d7e5a80292c4cc7de8549d2fcfcd895ee3c32cf2d9fdf8310d99d",
-    "bytes": 1535
-  },
-  {
-    "path": "validation/Baselines/pic-sohrab/tier1_2p5d.flp",
-    "source": "local-validation:Baselines/pic-sohrab/tier1_2p5d.flp",
-    "role": "requested",
-    "sha256": "01f01e647e204348e04423c0735874d2ebc34148623e7ff569053d95ee3b48cb",
-    "bytes": 3243
-  },
-  {
-    "path": "validation/Baselines/pic-sohrab/tier1_3d.flp",
-    "source": "local-validation:Baselines/pic-sohrab/tier1_3d.flp",
-    "role": "requested",
-    "sha256": "94c3b4b6779319876ba212b0805a0ff3bebd5536b4842e7b04697056a7ad7ea7",
-    "bytes": 3232
-  },
-  {
-    "source": "seelab-russell:~/chips/validation/other/tier2_cpu.flp",
-    "path": "validation/Baselines/pic-sohrab/tier2_cpu.flp",
-    "role": "validation-supplement",
-    "sha256": "4f96d8dfad1de55a603b7b73c001f29aa49ba3d178263ea13e2ba77a1da79a24",
-    "bytes": 585
-  },
-  {
-    "source": "seelab-russell:~/chips/validation/hausen/hfp_chiplet_duty.flp",
-    "path": "validation/supplemental/coefficient-comparison/hfp_chiplet_duty.flp",
-    "role": "validation-supplement",
-    "sha256": "4ee7c8a11f03791a1d26a29d88e78b617383dd3fb3fe649290d6af4b9da31ee9",
-    "bytes": 3602
-  },
-  {
-    "source": "seelab-russell:~/chips/validation/hausen/hfp_tgv_E1a_hausen.stk",
-    "path": "validation/supplemental/coefficient-comparison/hfp_tgv_E1a_hausen.stk",
-    "role": "validation-supplement",
-    "sha256": "55f42bb86aafa9f79037da353e8b22e4b905274538260c99bbbf57cce0264ca6",
-    "bytes": 8604
-  },
-  {
-    "source": "seelab-russell:~/chips/validation/hausen/hfp_tgv_E1b_hausen_square.stk",
-    "path": "validation/supplemental/coefficient-comparison/hfp_tgv_E1b_hausen_square.stk",
-    "role": "validation-supplement",
-    "sha256": "a2deb742b9119d3effefa04c3182c46afb473ce3ab34560c2d95568e6fb47bd6",
-    "bytes": 4131
-  },
-  {
-    "source": "seelab-russell:~/chips/validation/hausen/hfp_tgv_E1c_anchored.stk",
-    "path": "validation/supplemental/coefficient-comparison/hfp_tgv_E1c_anchored.stk",
-    "role": "validation-supplement",
-    "sha256": "0a7afe8f0775bc2c189a253ff086a629a03932c8fa0801abff66d75d9ed7e988",
-    "bytes": 3999
-  },
-  {
-    "source": "seelab-russell:~/chips/validation/psu/estc_cupillar_active1mm_p100.flp",
-    "path": "validation/supplemental/cu-pillar/estc_cupillar_active1mm_p100.flp",
-    "role": "validation-supplement",
-    "sha256": "1136b601f291dbf32aaf0fef63e1f996f0e0380e99848d8d1ac154407be16b4a",
-    "bytes": 486
-  },
-  {
+    "sha256": "0ee9d6782e1679f40f1c1db040f739da77ce01273d50b876093ab30aacd47591",
+    "bytes": 1457,
+    "source": "seelab-russell:~/chips/val-flps-exp/bounded/pan_pic_die.flp",
+    "source_sha256": "516d276a3e249fd51726cbba5840432cb2ae6dee18029463c4249b366ddf0722",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/checkpoints.json",
+    "sha256": "4801f46a3fbd362a19a1481f5671a2a2c552da10c4f22b0bf8cdbaba49de3bcf",
+    "bytes": 8455,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/cu-pillar/expected.json",
+    "sha256": "515f80b54c366e4d9589d155f91b5417ff06d1c60764d9858b64c0efdff27a67",
+    "bytes": 412,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/cu-pillar/inputs/estc_cupillar_active1mm_p111.flp",
+    "sha256": "6548cdd4c6d094eed12d003b42eb7e4ae29cec428fe6363ffa7a192aec263f7b",
+    "bytes": 359,
     "source": "seelab-russell:~/chips/validation/psu/estc_cupillar_active1mm_p111.flp",
-    "path": "validation/supplemental/cu-pillar/estc_cupillar_active1mm_p111.flp",
-    "role": "validation-supplement",
-    "sha256": "1136b601f291dbf32aaf0fef63e1f996f0e0380e99848d8d1ac154407be16b4a",
-    "bytes": 486
+    "source_sha256": "1136b601f291dbf32aaf0fef63e1f996f0e0380e99848d8d1ac154407be16b4a",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/validation/psu/estc_cupillar_pinfin_active1mm_p100.stk",
-    "path": "validation/supplemental/cu-pillar/estc_cupillar_pinfin_active1mm_p100.stk",
-    "role": "validation-supplement",
-    "sha256": "8013c0e7158b8057f86284222ed1b0bad1ab723bc83255f2f28da522d255a2bc",
-    "bytes": 4979
-  },
-  {
+    "path": "validation/cu-pillar/inputs/estc_cupillar_pinfin_active1mm_p111.stk",
+    "sha256": "821b3b3b2629c5dab8270993e8a8cb61fd56c84ed1b36d5ce8457eb30b817141",
+    "bytes": 2253,
     "source": "seelab-russell:~/chips/validation/psu/estc_cupillar_pinfin_active1mm_p111.stk",
-    "path": "validation/supplemental/cu-pillar/estc_cupillar_pinfin_active1mm_p111.stk",
-    "role": "validation-supplement",
-    "sha256": "4f7b0f30670672b639906e17ab1cd41fe35b7f9da5885ecd55fef1eea48d96ae",
-    "bytes": 4894
+    "source_sha256": "4f7b0f30670672b639906e17ab1cd41fe35b7f9da5885ecd55fef1eea48d96ae",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/validation/h100/extract_R.py",
-    "path": "validation/supplemental/h100-power-sweep/extract_R.py",
-    "role": "validation-supplement",
-    "sha256": "2b57ccce65dc55812a406f62894ee8c64fde14a489225a18404a0bf337d2ca47",
-    "bytes": 5715
+    "path": "validation/cu-pillar/reference.json",
+    "sha256": "97d9f2f6b5f19a45a6d49e1a29eacaf3fa2c7da7ede1c0f28cce9bfdb003634a",
+    "bytes": 423,
+    "source": "3D-ICE-Glass framework / supplied source assets"
   },
   {
-    "source": "seelab-russell:~/chips/validation/h100/ttv_heater_1350.flp",
-    "path": "validation/supplemental/h100-power-sweep/ttv_heater_1350.flp",
-    "role": "validation-supplement",
-    "sha256": "8ef5653b658847ffde3fc86fe2a38dd5f0b00e3659844979937bfe2252bf9e22",
-    "bytes": 456
+    "path": "validation/glass-microchannel/expected.json",
+    "sha256": "9eab07f7fffa500535c6e88b778804400d211e6e054f71b80925464c5a596e03",
+    "bytes": 436,
+    "source": "3D-ICE-Glass framework / supplied source assets"
   },
   {
-    "source": "seelab-russell:~/chips/validation/h100/ttv_heater_500.flp",
-    "path": "validation/supplemental/h100-power-sweep/ttv_heater_500.flp",
-    "role": "validation-supplement",
-    "sha256": "de9ce41a59d37067595fdcc9770401af1d2cc76583be179edff24d39e69dc876",
-    "bytes": 455
+    "path": "validation/glass-microchannel/inputs/estc_microchannel_author_inputs_v2.flp",
+    "sha256": "fa81658cfa1ed793edfd56bb19c633b2ce20b4f9fe95be040fc9aea1c73fbffd",
+    "bytes": 382,
+    "source": "/Users/ben/Downloads/estc_microchannel_author_inputs_v2.flp",
+    "source_sha256": "95046f783a156753130f760f1aa9983eca4c5d85e4105108cb9eb3641458007f",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/validation/h100/ttv_heater_665.flp",
-    "path": "validation/supplemental/h100-power-sweep/ttv_heater_665.flp",
-    "role": "validation-supplement",
-    "sha256": "1943c1e4fc4121b1f90de9443d96ec7472122dbfbd2f4a7a74a6f8416d9b81f9",
-    "bytes": 455
+    "path": "validation/glass-microchannel/inputs/estc_microchannel_author_inputs_v2.stk",
+    "sha256": "f162626d21b8b990fa7aec48d218c001a8411571414f71e51cd07849f2035973",
+    "bytes": 2811,
+    "source": "/Users/ben/Downloads/estc_microchannel_author_inputs_v2.stk",
+    "source_sha256": "cd97711dccf858fa62f76566b93b40ad81a2e820fbc27f59c913f264a950554c",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/validation/h100/ttv_heater_900.flp",
-    "path": "validation/supplemental/h100-power-sweep/ttv_heater_900.flp",
-    "role": "validation-supplement",
-    "sha256": "4107ab2d60993d7828669d6d8cbd45b16d88f0d92cf114f9588fc626b996184c",
-    "bytes": 455
+    "path": "validation/glass-microchannel/reference.json",
+    "sha256": "683d9da913b77ef1730e726f0da546a2a15dca9f6118ee7884c284d9b4d213c4",
+    "bytes": 686,
+    "source": "3D-ICE-Glass framework / supplied source assets"
   },
   {
-    "source": "seelab-russell:~/chips/validation/h100/ttv_interpack_1350W.stk",
-    "path": "validation/supplemental/h100-power-sweep/ttv_interpack_1350W.stk",
-    "role": "validation-supplement",
-    "sha256": "0a494dfd380e1ec7917ef03218aae85b3405f776e7cfe6281c2019e7620ad149",
-    "bytes": 3831
+    "path": "validation/h100-ttv/expected.json",
+    "sha256": "210a7220dd18ed8f72928e2840a9f337c43ec71e2d33ac2165b648d6f95a901c",
+    "bytes": 387,
+    "source": "3D-ICE-Glass framework / supplied source assets"
   },
   {
-    "source": "seelab-russell:~/chips/validation/h100/ttv_interpack_500W.stk",
-    "path": "validation/supplemental/h100-power-sweep/ttv_interpack_500W.stk",
-    "role": "validation-supplement",
-    "sha256": "e6d9d241e7741563cc1c45defbceb70b2c5a0cc4e7e81a8c361ab84cb5ec5b13",
-    "bytes": 3826
+    "path": "validation/h100-ttv/inputs/ttv_heater_p510.flp",
+    "sha256": "5e6c56990fd7ea76684f05765dbaad9627bfe7f580ed6fd6ed395e046ebd1d4a",
+    "bytes": 345,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/h100-ttv-heldout/ttv_heater_p510.flp",
+    "source_sha256": "6b169432ebaf4df5da49bf0ae2d02e19fb4cbfd096b5295a67659e06f6504203",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/validation/h100/ttv_interpack_900W.stk",
-    "path": "validation/supplemental/h100-power-sweep/ttv_interpack_900W.stk",
-    "role": "validation-supplement",
-    "sha256": "9d10feafae4e2b51a8f28c46cf4d32622c355ebf310d626f4a421a886c0531f7",
-    "bytes": 3826
+    "path": "validation/h100-ttv/inputs/ttv_heater_p720.flp",
+    "sha256": "2fe790580f954c90860c38eb5e7a5e0bf5e7d9f8e68217ce52c2e322e959fd7a",
+    "bytes": 345,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/h100-ttv-heldout/ttv_heater_p720.flp",
+    "source_sha256": "63f32c65ef4b73e5f5bf549b119a40f43b66fe60a058925b0c92bdcacd34deff",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/validation/h100/ttv_interpack_parasitic.stk",
-    "path": "validation/supplemental/h100-power-sweep/ttv_interpack_parasitic.stk",
-    "role": "validation-supplement",
-    "sha256": "03d72b632f24681ba6690b500dc5a57a2dd47bd3ca3092254ee297259e0b7195",
-    "bytes": 3826
+    "path": "validation/h100-ttv/inputs/ttv_heater_p920.flp",
+    "sha256": "4cdc4d1a6bf74b33de43d65bc07959625324f1af4273df2e9301a6b867166c84",
+    "bytes": 345,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/h100-ttv-heldout/ttv_heater_p920.flp",
+    "source_sha256": "5dd40ca5678d0d684eb520b8d884eff0553b1bb486cddd51533782535b1bf824",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "validation/h100-ttv/inputs/ttv_pred_510W.stk",
+    "sha256": "bf6ac0cdd27042bb688776c7557916c9b6d183d2fb084c520d048143ba8550c0",
+    "bytes": 1334,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/h100-ttv-heldout/ttv_pred_510W.stk",
+    "source_sha256": "7e550adf0fde058e78f875e0486e6419bc3743cc68c79969bfb7c5baec1b0e43",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/h100-ttv/inputs/ttv_pred_720W.stk",
+    "sha256": "46d04640354e7121d83105b0e65ea92430cf12a416cb25426f36c0bd80641a2f",
+    "bytes": 1334,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/h100-ttv-heldout/ttv_pred_720W.stk",
+    "source_sha256": "3ff88110a53706c014aca149712606e0642e0c1f92c64144a474962039a104f5",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/h100-ttv/inputs/ttv_pred_920W.stk",
+    "sha256": "a7d276aa993c517bc2045449a0a2053f1b851c67b065e70142009e4b99baa520",
+    "bytes": 1334,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/h100-ttv-heldout/ttv_pred_920W.stk",
+    "source_sha256": "16bb36956b6ecac0da60e3f6e00b3095d0b6dca4e833c012578400c681802cd5",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/h100-ttv/reference.json",
+    "sha256": "b8c7439ee0959ad307288d8a2a029de6d4d938ae2260b73e5259fe33e9547150",
+    "bytes": 455,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/h200-plate/expected.json",
+    "sha256": "189a53f1be4e2bfe05d9b55b7a8b447c43b7a271bf509317a9c22a4f7bb6a249",
+    "bytes": 394,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/h200-plate/inputs/h200_stratum_htc_probe.flp",
+    "sha256": "27cb0b4e1ebc8bd040093d6beaa34ae35e9d76cbf859b4e5f46c32a2fd84dba1",
+    "bytes": 727,
+    "source": "local-validation:Baselines/H200/h200_stratum_htc_probe.flp",
+    "source_sha256": "dfd760f5b5c72b78b510c6c7270e81398556a19b00a0a0e22fda8e6b2070d859",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/h200-plate/inputs/h200_stratum_htc_probe.stk",
+    "sha256": "659caa49b06efe28456ee642a6676684029f140f01b16a6ca40665fc48592734",
+    "bytes": 2011,
+    "source": "local-validation:Baselines/H200/h200_stratum_htc_probe.stk",
+    "source_sha256": "592f15e5f085169746d0eea3c98944416f73e96c53429f69e41d3be23bbff301",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths",
+      "exact reference shift 300 -> 311.15 K; coefficients unchanged"
+    ]
+  },
+  {
+    "path": "validation/h200-plate/reference.json",
+    "sha256": "3d9ccda0afaaa1030e02c0ef514880715a2101bebc74be43ba7f58917dd9c1ca",
+    "bytes": 549,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/hyflex-microchannel/expected.json",
+    "sha256": "4d3bebe9051a7801a4e759f191190a9cc3352df069f87bf2a9122afa614afdb6",
+    "bytes": 403,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/hyflex-microchannel/inputs/hfp_chiplet_duty.flp",
+    "sha256": "e23e3c6863345d296ab1d79e16035e28f310dde379dfe3399bfe0a190f1811ec",
+    "bytes": 1904,
+    "source": "seelab-russell:~/chips/validation/hausen/hfp_chiplet_duty.flp",
+    "source_sha256": "4ee7c8a11f03791a1d26a29d88e78b617383dd3fb3fe649290d6af4b9da31ee9",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/hyflex-microchannel/inputs/hfp_tgv_E1a_hausen.stk",
+    "sha256": "9f75fc2318a7811646cb1d696a656ce9cd59e1d44771a61a74c0be06f9c69b29",
+    "bytes": 2603,
+    "source": "seelab-russell:~/chips/validation/hausen/hfp_tgv_E1a_hausen.stk",
+    "source_sha256": "55f42bb86aafa9f79037da353e8b22e4b905274538260c99bbbf57cce0264ca6",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/hyflex-microchannel/inputs/hfp_tgv_E1b_hausen_square.stk",
+    "sha256": "9974ee9fc4a628bf743396cf06ec55807164f2a101681806eeeed0ac2f1c2804",
+    "bytes": 2491,
+    "source": "seelab-russell:~/chips/validation/hausen/hfp_tgv_E1b_hausen_square.stk",
+    "source_sha256": "a2deb742b9119d3effefa04c3182c46afb473ce3ab34560c2d95568e6fb47bd6",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/hyflex-microchannel/inputs/hfp_tgv_E1c_anchored.stk",
+    "sha256": "5f3fe86e60b505352269838d3b291a8c46cec6a91a22d74e7d424b9a08885c7a",
+    "bytes": 2466,
+    "source": "seelab-russell:~/chips/validation/hausen/hfp_tgv_E1c_anchored.stk",
+    "source_sha256": "0a7afe8f0775bc2c189a253ff086a629a03932c8fa0801abff66d75d9ed7e988",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/hyflex-microchannel/reference.json",
+    "sha256": "da4c75ccd5f7e2a4a2f91b9431194f242bc76b87080bd6f590b396ca95f9f0b2",
+    "bytes": 509,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/hyflex-pinfin/expected.json",
+    "sha256": "48aece0bd67924b4deb22a6826bebfeaab7727eb25963e68e7fff189d693b337",
+    "bytes": 384,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/hyflex-pinfin/inputs/hfp_chiplet_duty.flp",
+    "sha256": "e23e3c6863345d296ab1d79e16035e28f310dde379dfe3399bfe0a190f1811ec",
+    "bytes": 1904,
+    "source": "local-validation:Baselines/HyFlexPIM/hfp_chiplet_duty.flp",
+    "source_sha256": "4ee7c8a11f03791a1d26a29d88e78b617383dd3fb3fe649290d6af4b9da31ee9",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/hyflex-pinfin/inputs/hfp_chiplet_pinfin.stk",
+    "sha256": "5c4b6171cf2c2952d0cf257a933c17f526a9067115a0c630f164a3ed832d6f37",
+    "bytes": 2479,
+    "source": "local-validation:Baselines/HyFlexPIM/hfp_chiplet_pinfin.stk",
+    "source_sha256": "a273f1c809d7dbab4f45edd36db50b9509dbe248e23080e09aeddb02522c059d",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths",
+      "native pin-fin declaration order corrected"
+    ]
+  },
+  {
+    "path": "validation/hyflex-pinfin/reference.json",
+    "sha256": "59e89d3b4093fc8ac4e942452872ac40c756dd0175f01d62657a34618eda98e0",
+    "bytes": 496,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/photonic/expected.json",
+    "sha256": "625ac049fd93377c1229cde3c2d9fb176211a1398a84a4d22211635d4614b3c4",
+    "bytes": 385,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/photonic/inputs/cpo_2p5d.stk",
+    "sha256": "93566d2bc537aec2facf5c876a459611acb26bdd2f0006ef81c526d51f9b4551",
+    "bytes": 2825,
+    "source": "local-validation:Baselines/pic-sohrab/cpo_2p5d.stk",
+    "source_sha256": "1b7a617ab45f76edd58b14c82663c86bcb68532389c9325292bd8c281645a000",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/photonic/inputs/cpo_3d.stk",
+    "sha256": "56a3fcefbce4a50a6f332b31920bc0dc508c4bf60dafe3f8d4a2fed91e93d640",
+    "bytes": 2815,
     "source": "seelab-russell:~/chips/validation/other/cpo_3d.stk",
-    "path": "validation/supplemental/photonic/cpo_3d.stk",
-    "role": "validation-supplement",
-    "sha256": "bd5df52e8bf85033c600f9b77abaef09feb3aeadf958c194ce9deaab3cae4b70",
-    "bytes": 5194
+    "source_sha256": "bd5df52e8bf85033c600f9b77abaef09feb3aeadf958c194ce9deaab3cae4b70",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/validation/other/pic_plane.flp",
-    "path": "validation/supplemental/photonic/pic_plane.flp",
-    "role": "validation-supplement",
-    "sha256": "e71d5619a80d7e5a80292c4cc7de8549d2fcfcd895ee3c32cf2d9fdf8310d99d",
-    "bytes": 1535
+    "path": "validation/photonic/inputs/pic_plane.flp",
+    "sha256": "1c7d3f6b8e4c1f66e5ea823b52443d088f0e945df3957d02c6b39aa7d0d50e62",
+    "bytes": 1505,
+    "source": "local-validation:Baselines/pic-sohrab/pic_plane.flp",
+    "source_sha256": "e71d5619a80d7e5a80292c4cc7de8549d2fcfcd895ee3c32cf2d9fdf8310d99d",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/chips/validation/other/tier1_3d.flp",
-    "path": "validation/supplemental/photonic/tier1_3d.flp",
-    "role": "validation-supplement",
-    "sha256": "94c3b4b6779319876ba212b0805a0ff3bebd5536b4842e7b04697056a7ad7ea7",
-    "bytes": 3232
+    "path": "validation/photonic/inputs/tier1_2p5d.flp",
+    "sha256": "fd4dfd6ecf9b8665137936e6de8f65cb87f99fb963921808ebc894c55ab367c8",
+    "bytes": 3347,
+    "source": "local-validation:Baselines/pic-sohrab/tier1_2p5d.flp",
+    "source_sha256": "01f01e647e204348e04423c0735874d2ebc34148623e7ff569053d95ee3b48cb",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "validation/photonic/inputs/tier1_3d.flp",
+    "sha256": "7ca9b5988f5fa05dfaa9bf29a9abf499719b874fa2fbf7d00ab8fb66f945fcdf",
+    "bytes": 3348,
+    "source": "local-validation:Baselines/pic-sohrab/tier1_3d.flp",
+    "source_sha256": "94c3b4b6779319876ba212b0805a0ff3bebd5536b4842e7b04697056a7ad7ea7",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/photonic/inputs/tier2_cpu.flp",
+    "sha256": "10359dae1c5cd7460078ab0cde0bc652dff557b1684e46b3592f51da72c7dbb8",
+    "bytes": 691,
     "source": "seelab-russell:~/chips/validation/other/tier2_cpu.flp",
-    "path": "validation/supplemental/photonic/tier2_cpu.flp",
-    "role": "validation-supplement",
-    "sha256": "4f96d8dfad1de55a603b7b73c001f29aa49ba3d178263ea13e2ba77a1da79a24",
-    "bytes": 585
+    "source_sha256": "4f96d8dfad1de55a603b7b73c001f29aa49ba3d178263ea13e2ba77a1da79a24",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "validation/photonic/reference.json",
+    "sha256": "65087b17b791cb499d3760280784b47bda40468ea27fd094de601d59eb64f601",
+    "bytes": 482,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/silicon-interlayer/expected.json",
+    "sha256": "13213dd2918896d0cd0093621cd80a2584daef0bfbb363bd8b1971b1aa2d1cdb",
+    "bytes": 414,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/silicon-interlayer/inputs/bchip_ibm.flp",
+    "sha256": "ea85f4f57b99dcffb39290fc20b1dcec9e418d0307a0d2e9b23142d1c868afe1",
+    "bytes": 338,
     "source": "seelab-russell:~/chips/validation/other/bchip_ibm.flp",
-    "path": "validation/supplemental/silicon-interlayer/bchip_ibm.flp",
-    "role": "validation-supplement",
-    "sha256": "0c2a7b3af6d94b1b1d993fddf343ba1cc119198f3d705a79a3d776bb2bb680ba",
-    "bytes": 227
+    "source_sha256": "0c2a7b3af6d94b1b1d993fddf343ba1cc119198f3d705a79a3d776bb2bb680ba",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "validation/silicon-interlayer/inputs/ibm_intra_100W_calibrated.stk",
+    "sha256": "af746e85d064d26c978af4759d8f172bb814bfe5d9d23f4107d8610726fdf5c4",
+    "bytes": 3133,
     "source": "seelab-russell:~/chips/validation/other/ibm_intra_100W_calibrated.stk",
-    "path": "validation/supplemental/silicon-interlayer/ibm_intra_100W_calibrated.stk",
-    "role": "validation-supplement",
-    "sha256": "5c6a79f2850f2a5a956754a1c57848037ac8ce3cf534898ef59521a9fb70e884",
-    "bytes": 5285
+    "source_sha256": "5c6a79f2850f2a5a956754a1c57848037ac8ce3cf534898ef59521a9fb70e884",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "validation/silicon-interlayer/inputs/ibm_intra_q19.stk",
+    "sha256": "f0e7db7ea0ddf8334beac6e3db89d450dd2ebf6e9758ce8c862a5cc63cca5804",
+    "bytes": 3121,
     "source": "seelab-russell:~/chips/validation/other/ibm_intra_q19.stk",
-    "path": "validation/supplemental/silicon-interlayer/ibm_intra_q19.stk",
-    "role": "validation-supplement",
-    "sha256": "70ea2b3f86ab6fa617da020f9583c80d80806c6ad333eefe1cd835ed65fd3175",
-    "bytes": 5279
+    "source_sha256": "70ea2b3f86ab6fa617da020f9583c80d80806c6ad333eefe1cd835ed65fd3175",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "validation/silicon-interlayer/inputs/ibm_intra_q20.stk",
+    "sha256": "4e2f8dd1d45f8cfd7a03ed3f9b5ecdcfd394bc0592f80978f5400025d17ba2fb",
+    "bytes": 3053,
     "source": "seelab-russell:~/chips/validation/other/ibm_intra_q20.stk",
-    "path": "validation/supplemental/silicon-interlayer/ibm_intra_q20.stk",
-    "role": "validation-supplement",
-    "sha256": "930333207c965346fd3b426478cf2552ca742a8ab77075cde53c9c1bc1f406e5",
-    "bytes": 5205
+    "source_sha256": "930333207c965346fd3b426478cf2552ca742a8ab77075cde53c9c1bc1f406e5",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "validation/silicon-interlayer/inputs/ibm_intra_q21.stk",
+    "sha256": "a29a18f0d6525617e13f13d809646bab8798c9d648a47842442aa2078d446fcb",
+    "bytes": 3053,
     "source": "seelab-russell:~/chips/validation/other/ibm_intra_q21.stk",
-    "path": "validation/supplemental/silicon-interlayer/ibm_intra_q21.stk",
-    "role": "validation-supplement",
-    "sha256": "1b4057ec649504fe86e2400112bc10d3aa927552e437b9162d4e1bdfeea95627",
-    "bytes": 5207
+    "source_sha256": "1b4057ec649504fe86e2400112bc10d3aa927552e437b9162d4e1bdfeea95627",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "validation/silicon-interlayer/inputs/ibm_intra_q22.stk",
+    "sha256": "e7cf8327afe526b7ffa20280ea2ca61ded7424d73e332cb00309326b6080b2d4",
+    "bytes": 3053,
     "source": "seelab-russell:~/chips/validation/other/ibm_intra_q22.stk",
-    "path": "validation/supplemental/silicon-interlayer/ibm_intra_q22.stk",
-    "role": "validation-supplement",
-    "sha256": "c3a53f704e5373e8ed61ad01b9bd0b539e6e977d91aa160b26e72e1eb8743a11",
-    "bytes": 5206
+    "source_sha256": "c3a53f704e5373e8ed61ad01b9bd0b539e6e977d91aa160b26e72e1eb8743a11",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
+    "path": "validation/silicon-interlayer/inputs/tchip_ibm.flp",
+    "sha256": "cf2684f795d28772cf598b33ee469cd9687936d0c310886aeb294473b47f9fda",
+    "bytes": 338,
     "source": "seelab-russell:~/chips/validation/other/tchip_ibm.flp",
-    "path": "validation/supplemental/silicon-interlayer/tchip_ibm.flp",
-    "role": "validation-supplement",
-    "sha256": "490ebd07d6f5b9ff9c187f762e8e18653bca48aab37f98e5e5226ea4d9e58a61",
-    "bytes": 456
+    "source_sha256": "490ebd07d6f5b9ff9c187f762e8e18653bca48aab37f98e5e5226ea4d9e58a61",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
   },
   {
-    "source": "seelab-russell:~/3d-ice/superlu_mt-4.0.0/SRC/sp_ienv.c",
-    "path": "provenance/research-build/sp_ienv.c",
-    "role": "research sparse-solver allocation configuration; preserved reference, not used verbatim",
-    "sha256": "5eca2dab374d877bc1660ec532ca1186bc8efad0fa9c9f8bc2a13c5c231e7e41",
-    "bytes": 4365
+    "path": "validation/silicon-interlayer/reference.json",
+    "sha256": "64b17e680224b6a593046ce4dd2956ec650ae55429b417eb76395280ca251554",
+    "bytes": 695,
+    "source": "3D-ICE-Glass framework / supplied source assets"
   },
   {
-    "source": "vendor/3d-ice/superlu_mt-4.0.0.zip:superlu_mt-4.0.0/License.txt",
+    "path": "validation/stratum-l/expected.json",
+    "sha256": "efeff8f9b4a0746fa05ff4aba1f79c9612a7ce4ff4563a7b95f40d02356cb7bc",
+    "bytes": 408,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/stratum-l/inputs/logic_die_3D.flp",
+    "sha256": "154a7e9aec3b506b018840a6c73db4c669cc7eb1d18a9223337b4fdb03b8ab7e",
+    "bytes": 1099,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/stratum-l/logic_die_3D.flp",
+    "source_sha256": "a1e133db7038240fb1697ee2bb74d3eb6f08adebcd5513d09dc04d3898c597c6",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/stratum-l/inputs/mem_die_3D.flp",
+    "sha256": "bc683a954b75867a9f692f87df5b56eff85fe5ede691b6a3e27eb0d571c6ae2f",
+    "bytes": 1120,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/stratum-l/mem_die_3D.flp",
+    "source_sha256": "8cb731ce79ca68554886af0b780b0d19a015bada878113d36c3a29e4710efa1d",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/stratum-l/inputs/stratum_L_steady_125.stk",
+    "sha256": "599fbe8a59761ba20fca897f4ecb9763fcf49f131d610b6fc55f872242969b34",
+    "bytes": 1726,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/stratum-l/stratum_L_steady_125.stk",
+    "source_sha256": "7a0a34f0a649feed2cc4ef0869bce160012e865afff56b83ceb528a0cd79c7ef",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/stratum-l/provenance/3ddram_logic_3D.stk",
+    "sha256": "7b0ea31d50d28b3d0b0576f20e1599594574d1c8646257a0253afd36d48a94af",
+    "bytes": 7420,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/stratum-l/3ddram_logic_3D.stk",
+    "source_sha256": "7b0ea31d50d28b3d0b0576f20e1599594574d1c8646257a0253afd36d48a94af"
+  },
+  {
+    "path": "validation/stratum-l/provenance/3ddram_logic_3D_nonuniform.stk",
+    "sha256": "18e2afbef2f89272de4670ad1f96966cf4835be107ee9d966c49e70da257c55d",
+    "bytes": 7885,
+    "source": "/Users/ben/Downloads/3D-ICE-Glass-recovered-checkpoints/validation/stratum-l/3ddram_logic_3D_nonuniform.stk",
+    "source_sha256": "18e2afbef2f89272de4670ad1f96966cf4835be107ee9d966c49e70da257c55d"
+  },
+  {
+    "path": "validation/stratum-l/reference.json",
+    "sha256": "39a1ec95aaa4b30bcf1f4d394d7607de95f7d1c70f10332f9db81c401e9d32cf",
+    "bytes": 610,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/stratum-s/expected.json",
+    "sha256": "872e137b5b98b9381e087e6dcd1394d370f36b33c359a21b4081702951c334b8",
+    "bytes": 411,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/stratum-s/inputs/die_bot_S_v2.flp",
+    "sha256": "6e2af11d3e4ea7cdb22ef25ea59bd17d271765c564930f41e031df8036961257",
+    "bytes": 1074,
+    "source": "local-validation:Baselines/Stratum-S/die_bot_S_v2.flp",
+    "source_sha256": "0b2c545db4c8f42ca4047b7e6551088cdb6f88548b108a9b409be9b878190134",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/stratum-s/inputs/die_top_S_v2.flp",
+    "sha256": "907f9f9fc741f342bd68782c33acb2ea55c2e95a22a0fc04b72b63a667c9f7cb",
+    "bytes": 1063,
+    "source": "local-validation:Baselines/Stratum-S/die_top_S_v2.flp",
+    "source_sha256": "d282cd74c586532c21d89b951c63d4afb621fdcc0303e1a0d3f9bb962a0fa1e8",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/stratum-s/inputs/stratum_S_v2_liquid.stk",
+    "sha256": "77e6c3ee7727a667409b2fed5058610f0bcf2a400ec4fdcbf88764d588670efd",
+    "bytes": 3169,
+    "source": "local-validation:Baselines/Stratum-S/stratum_S_v2_liquid.stk",
+    "source_sha256": "fcd7ae5cbf289225ee6498234e188eaf329e4d3c052ef2a5746d3665ceadabc1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "validation/stratum-s/reference.json",
+    "sha256": "f684a1a7fdebd211d6a3ff50f8727aaf0d9334d6e182a0f95940f5b8b25526b1",
+    "bytes": 429,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/summary.csv",
+    "sha256": "460e3ae7a6f2acc7dfb407f7151aff42d582dceb0901a02f13440646c34f0375",
+    "bytes": 1197,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "validation/verified-results.json",
+    "sha256": "34fca1f891311e0cede4b282100fad3fd180df2ce170d7d4f01f7db2d664fb40",
+    "bytes": 12170,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "transient/analysis/demo_figure.py",
+    "sha256": "b2b69d0fad0d10e4f786b6a948e397ff822031ba778f91b00913906f08d75348",
+    "bytes": 7740,
+    "source": "archive-byte-identical-2026-10-11:demo/analysis/demo_figure.py",
+    "source_sha256": "f164c73334a348c51f615e26a4f04292fc54fab6a7af8194a1d8a61f538d4b3b"
+  },
+  {
+    "path": "transient/figures/smoke-check.json",
+    "sha256": "ad47075c7d48842bff1500ecc0f3b46387a0890d099ae2b060e0521f03effce1",
+    "bytes": 260,
+    "source": "archive-byte-identical-2026-10-11:demo/figures/smoke-check.json",
+    "source_sha256": "ad47075c7d48842bff1500ecc0f3b46387a0890d099ae2b060e0521f03effce1"
+  },
+  {
+    "path": "transient/figures/smoke-fine-check.json",
+    "sha256": "0c257e2141be5c661830049cfd6d38078e1082fe325223e571e5f347b5491a69",
+    "bytes": 262,
+    "source": "archive-byte-identical-2026-10-11:demo/figures/smoke-fine-check.json",
+    "source_sha256": "0c257e2141be5c661830049cfd6d38078e1082fe325223e571e5f347b5491a69"
+  },
+  {
+    "path": "transient/figures/smoke-fine.png",
+    "sha256": "0ade187e297671e7d95404dccea62ce82821a9ae4d23d395826f28f5f7213862",
+    "bytes": 75143,
+    "source": "archive-byte-identical-2026-10-11:demo/figures/smoke-fine.png",
+    "source_sha256": "0ade187e297671e7d95404dccea62ce82821a9ae4d23d395826f28f5f7213862"
+  },
+  {
+    "path": "transient/figures/smoke.png",
+    "sha256": "442d9a765288c6fa97b60e25cdbaa331095ffc08804bc1944496f9cf4d443e54",
+    "bytes": 74498,
+    "source": "archive-byte-identical-2026-10-11:demo/figures/smoke.png",
+    "source_sha256": "442d9a765288c6fa97b60e25cdbaa331095ffc08804bc1944496f9cf4d443e54"
+  },
+  {
+    "path": "transient/figures/transient-full.png",
+    "sha256": "d9feae13504347726e4c8c01ce5ec5348a7d1593c1f95615ba4e80973a3d0682",
+    "bytes": 347194,
+    "source": "archive-byte-identical-2026-10-11:demo/figures/transient-full.png",
+    "source_sha256": "d9feae13504347726e4c8c01ce5ec5348a7d1593c1f95615ba4e80973a3d0682"
+  },
+  {
+    "path": "transient/figures/transient-zoom.png",
+    "sha256": "ceb17fba81660c56ba68b462d0014766de5a69cdbb7a36ab68ae493bfd2df3ea",
+    "bytes": 236943,
+    "source": "archive-byte-identical-2026-10-11:demo/figures/transient-zoom.png",
+    "source_sha256": "ceb17fba81660c56ba68b462d0014766de5a69cdbb7a36ab68ae493bfd2df3ea"
+  },
+  {
+    "path": "transient/inputs/pan-tdp-735.map.json",
+    "sha256": "6452adb0a89e6dfd42fd31b89c8f010dcd48682816c5679ae65eaa4c62aa22a5",
+    "bytes": 2940,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan-tdp-735.map.json",
+    "source_sha256": "6452adb0a89e6dfd42fd31b89c8f010dcd48682816c5679ae65eaa4c62aa22a5"
+  },
+  {
+    "path": "transient/inputs/pan-tdp-735.stk",
+    "sha256": "24162f0b0edd3b6ee71e0113f4c89bbb59ecfcf9b01e919f09d361a7f4775a39",
+    "bytes": 3957,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan-tdp-735.stk",
+    "source_sha256": "d102e6b91c6ecc7fd647535de55d9b487950ca7ae52b0e815be4d275ff7b9e79",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan-tdp-735_1000-1010s_5ms.stk",
+    "sha256": "d44b3cc5589973717f4104f9b494d9a149542d6bea8d40aab547ee2eaf32cd1c",
+    "bytes": 4304,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan-tdp-735_1000-1010s_5ms.stk",
+    "source_sha256": "39c15bee81221870a7dcdc6cbc76bdbe21eb4e4c5a5931fe7be5207057cebb3c",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan-tdp-735_mean_1000-1010s_5ms.stk",
+    "sha256": "498aee0333305f1b0173a4f75197c0ba74b65aeb25eb75fd1c3098cd51b25089",
+    "bytes": 4397,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan-tdp-735_mean_1000-1010s_5ms.stk",
+    "source_sha256": "ac3d1fb2a5bc09d792bfa3ebee8f399c34377af798b21c214e9ac24bdaa95c74",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan-tdp-735_peak_1000-1010s_5ms.stk",
+    "sha256": "60bc0c7c00c39501fc05a0a76434716422d9ebd9eeb96f1b1b7bacb5f629b79a",
+    "bytes": 4397,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan-tdp-735_peak_1000-1010s_5ms.stk",
+    "source_sha256": "b772e3ecb3234a3cadfc2fd3c4553597634afe35a1ef2b9355416a6735986d3c",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_logic_tdp.flp",
+    "sha256": "1b67c6e866733d48d4f7aebb2837cec580572daea43ca1d968fe579febf5571d",
+    "bytes": 872,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_logic_tdp.flp",
+    "source_sha256": "a999d0ee820739f36ae60d1e00a779e44896725f6b7f6c992202b6f8529ca9e1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_logic_tdp_1000-1010s_5ms.flp",
+    "sha256": "c938f6c7824817f71f458b46fd86c89718a900cec645191887c0d602147dce52",
+    "bytes": 363875,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_logic_tdp_1000-1010s_5ms.flp",
+    "source_sha256": "8ed59db6feecfcc97fea1d05288d51abc55ad8e6e1cea437b65f705644540eb8",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_logic_tdp_mean_1000-1010s_5ms.flp",
+    "sha256": "a29ebfeff1d1b01ed19d567bb9cd9282f62887eb7421f88d88f855281bf2a275",
+    "bytes": 963,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_logic_tdp_mean_1000-1010s_5ms.flp",
+    "source_sha256": "19d068f80c41d2f380edf76fc43567002e59fad09a1547d6dea84618a77adce3",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_logic_tdp_peak_1000-1010s_5ms.flp",
+    "sha256": "53fc58d134267a0842fb604d15045fbae42d8868317f581b0e3ee0e4421ca57c",
+    "bytes": 965,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_logic_tdp_peak_1000-1010s_5ms.flp",
+    "source_sha256": "94e8bf9ba096d7f5b826b2139b1c9b02f9b1a12e19ecc21f4bf601bd113f9fcb",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_mem_tdp.flp",
+    "sha256": "8fd3a5e8f4de1720848760f5c63fbc28eb4cd2f0e1b9c53a7546377d1e721ace",
+    "bytes": 4213,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_mem_tdp.flp",
+    "source_sha256": "29b47d20359ac3dac498c7d0b47aed89c279be971b19f968c5028bd2d9162fc1",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_mem_tdp_1000-1010s_5ms.flp",
+    "sha256": "58876c2cb7a00666d423be48d458ec115f39ee522dbf00ae35e751aa32bd13d1",
+    "bytes": 2321848,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_mem_tdp_1000-1010s_5ms.flp",
+    "source_sha256": "ca066df6871034643c68961113df6af74038498a29a5fbb39daa7d7fc8c2b35c",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_mem_tdp_mean_1000-1010s_5ms.flp",
+    "sha256": "a82a5e9d74e068b0559032eac68aeafe879cbc938b7fbf815d30ba90cc9226cf",
+    "bytes": 4705,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_mem_tdp_mean_1000-1010s_5ms.flp",
+    "source_sha256": "aa9928fb65b436290048073badb305258997d2888ef3eb1faa835582b396250a",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_mem_tdp_peak_1000-1010s_5ms.flp",
+    "sha256": "53ab5a6c1dca43a1695262e274093c0893636420b0856b41c2659ad4316a2589",
+    "bytes": 4705,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_mem_tdp_peak_1000-1010s_5ms.flp",
+    "source_sha256": "49e6dc4d364b273f8dc327d275cea56eb13a72c8a834d28a38204887a6fdd128",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_pic.flp",
+    "sha256": "96e35bf14263b52c341a04032e085f31c908d73696c2d0217af96b743d2d7ce9",
+    "bytes": 1091,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_pic.flp",
+    "source_sha256": "750cd7bef6e53c9a8d81b6292228f30129a955d00a3cbb93fe138a0b36a75579",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_pic_1000-1010s_5ms.flp",
+    "sha256": "8cf73f40b2357324f0b41f7ad1771a5fd8a86c8be39a0c9b726dfb8b2a7f2b70",
+    "bytes": 503579,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_pic_1000-1010s_5ms.flp",
+    "source_sha256": "fb1df149ed2d3505b649113313298068ecb95684ebba5a691f84e79a1a07640b",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_pic_die.flp",
+    "sha256": "0ee9d6782e1679f40f1c1db040f739da77ce01273d50b876093ab30aacd47591",
+    "bytes": 1457,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_pic_die.flp",
+    "source_sha256": "516d276a3e249fd51726cbba5840432cb2ae6dee18029463c4249b366ddf0722",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_pic_die_1000-1010s_5ms.flp",
+    "sha256": "add54d827e5ae9ba7b0ef75e602bd8f827c37416424be0db30a8f4b95bb641f2",
+    "bytes": 704927,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_pic_die_1000-1010s_5ms.flp",
+    "source_sha256": "5e216d2862685b00e6067a5de738cb7984457061350aa221744bc83365821e99",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_pic_die_mean_1000-1010s_5ms.flp",
+    "sha256": "1c3b76afa0f411b5e9f5da390aeb4031b8384a5b87e99d542083af2ef2138790",
+    "bytes": 1625,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_pic_die_mean_1000-1010s_5ms.flp",
+    "source_sha256": "74ecbed4d40301bf09a32f9f0894a981f5f076ab23b5ebffc05b5af9672175c7",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_pic_die_peak_1000-1010s_5ms.flp",
+    "sha256": "57c2f8ed31d3cb661c537e5ce21d067c312dd9515e62a1969ec0af33e639ed1b",
+    "bytes": 1624,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_pic_die_peak_1000-1010s_5ms.flp",
+    "source_sha256": "5c05650abb6f55e0459a92bed85f8ee0a1ce15f89c74280f881af4d5374b1101",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_pic_mean_1000-1010s_5ms.flp",
+    "sha256": "446f7381586b6b60d7151fd3f42bf81ee5b17144a78274f582b82069362f20fc",
+    "bytes": 1221,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_pic_mean_1000-1010s_5ms.flp",
+    "source_sha256": "2585dcb4be450aed7f66941df8bb38f4499800d1d63e47882298108f055927c4",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/pan_pic_peak_1000-1010s_5ms.flp",
+    "sha256": "3d09c4c19f64a878957d4a50836d9abf18c72c76ff4481b5ca1f1732294b50ad",
+    "bytes": 1221,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/pan_pic_peak_1000-1010s_5ms.flp",
+    "source_sha256": "2585dcb4be450aed7f66941df8bb38f4499800d1d63e47882298108f055927c4",
+    "transformations": [
+      "single active-statement header",
+      "relative native floorplan/output paths"
+    ]
+  },
+  {
+    "path": "transient/inputs/slots_1000-1010s_5ms.csv",
+    "sha256": "3d6828eb3a46a95205e896109ac1e9a0bc539160e57265313e9c6282b0e6a061",
+    "bytes": 508132,
+    "source": "archive-byte-identical-2026-10-11:demo/inputs/slots_1000-1010s_5ms.csv",
+    "source_sha256": "3d6828eb3a46a95205e896109ac1e9a0bc539160e57265313e9c6282b0e6a061"
+  },
+  {
+    "path": "transient/reference/metrics_pan-tdp-735_1000-1010s_5ms.csv",
+    "sha256": "48ab8f972ffb2797cf937e7e11a2dc7a26ace417d0ef5a6450886601fadb9ac5",
+    "bytes": 3915,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/metrics_pan-tdp-735_1000-1010s_5ms.csv",
+    "source_sha256": "48ab8f972ffb2797cf937e7e11a2dc7a26ace417d0ef5a6450886601fadb9ac5"
+  },
+  {
+    "path": "transient/reference/metrics_pan-tdp-735_1000-1010s_5ms.png",
+    "sha256": "ec6026eb82132ba95143d711f6dab0ccaa8524271dee277f9588ef2280ca6a9d",
+    "bytes": 240558,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/metrics_pan-tdp-735_1000-1010s_5ms.png",
+    "source_sha256": "ec6026eb82132ba95143d711f6dab0ccaa8524271dee277f9588ef2280ca6a9d"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_die_logic_ave.txt",
+    "sha256": "c23ad9e7001283ee0c3f806b86301d59ab715ad9d6843870f43876fcd0fd8025",
+    "bytes": 240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_die_logic_ave.txt",
+    "source_sha256": "c23ad9e7001283ee0c3f806b86301d59ab715ad9d6843870f43876fcd0fd8025"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_die_logic_max.txt",
+    "sha256": "54925c3fc850374a98fdc5d95b85bca3593dddcbdf30bd8712091a0564b45feb",
+    "bytes": 240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_die_logic_max.txt",
+    "source_sha256": "54925c3fc850374a98fdc5d95b85bca3593dddcbdf30bd8712091a0564b45feb"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_die_logic_min.txt",
+    "sha256": "9061c84edfb19963e1879449dda5cce32acfed3c5c53c1eff4830f3535505e41",
+    "bytes": 240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_die_logic_min.txt",
+    "source_sha256": "9061c84edfb19963e1879449dda5cce32acfed3c5c53c1eff4830f3535505e41"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_die_mem_ave.txt",
+    "sha256": "d69ec890b89586aae28d9895c17fc25f94783d76ce0dc5ed9119c12066aa5405",
+    "bytes": 1107,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_die_mem_ave.txt",
+    "source_sha256": "d69ec890b89586aae28d9895c17fc25f94783d76ce0dc5ed9119c12066aa5405"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_die_mem_max.txt",
+    "sha256": "94a026da0cd3a7c1c55192de5174d09cad92b90e192e89722efa0b9a0e0dae25",
+    "bytes": 1107,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_die_mem_max.txt",
+    "source_sha256": "94a026da0cd3a7c1c55192de5174d09cad92b90e192e89722efa0b9a0e0dae25"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_die_mem_min.txt",
+    "sha256": "9a29bc9f1f1dbd4781dd35eb270b88b57fa2e9d1c2343f2a4cb8c60b68b1df43",
+    "bytes": 1107,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_die_mem_min.txt",
+    "source_sha256": "9a29bc9f1f1dbd4781dd35eb270b88b57fa2e9d1c2343f2a4cb8c60b68b1df43"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_die_pic_ave.txt",
+    "sha256": "bd7a0e57624b9e28d076afd2bdccb767c7f1cb93b622d706fffadc5392b56d30",
+    "bytes": 388,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_die_pic_ave.txt",
+    "source_sha256": "bd7a0e57624b9e28d076afd2bdccb767c7f1cb93b622d706fffadc5392b56d30"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_die_pic_max.txt",
+    "sha256": "e7bbe3af6ceed96c397504999abe2429b3378ab71fb1c97cc2071bba60e0aac6",
+    "bytes": 388,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_die_pic_max.txt",
+    "source_sha256": "e7bbe3af6ceed96c397504999abe2429b3378ab71fb1c97cc2071bba60e0aac6"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_die_pic_min.txt",
+    "sha256": "75d51a7c877476571c108cc9fa7f41d68dc66a570862181565fe436d68d37d83",
+    "bytes": 388,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_die_pic_min.txt",
+    "source_sha256": "75d51a7c877476571c108cc9fa7f41d68dc66a570862181565fe436d68d37d83"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_pic_plane_ave.txt",
+    "sha256": "2011ccdcee90e890b5b67d2c58654d87add6eaacb687ccfdbee0ec3dd7df2d2b",
+    "bytes": 306,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_pic_plane_ave.txt",
+    "source_sha256": "2011ccdcee90e890b5b67d2c58654d87add6eaacb687ccfdbee0ec3dd7df2d2b"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_pic_plane_max.txt",
+    "sha256": "44889b81c62580501588bd96f52b9e7abe56f32fe43a196d5d4354a4e9f215dd",
+    "bytes": 306,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_pic_plane_max.txt",
+    "source_sha256": "44889b81c62580501588bd96f52b9e7abe56f32fe43a196d5d4354a4e9f215dd"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan/pan-tdp-735_pic_plane_min.txt",
+    "sha256": "b95845110e42a8190ad3313a2124900eb54b1478a260bfa160b4350f5d548711",
+    "bytes": 306,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan/pan-tdp-735_pic_plane_min.txt",
+    "source_sha256": "b95845110e42a8190ad3313a2124900eb54b1478a260bfa160b4350f5d548711"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_die_logic_ave_1000-1010s_5ms.txt",
+    "sha256": "bbd31040b2608a96a6034428fd8bba344d70317fdf66445c9a5307a4f109f856",
+    "bytes": 478162,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_die_logic_ave_1000-1010s_5ms.txt",
+    "source_sha256": "bbd31040b2608a96a6034428fd8bba344d70317fdf66445c9a5307a4f109f856"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_die_logic_max_1000-1010s_5ms.txt",
+    "sha256": "14143b39804546f7df505b1e0350e200e16eea0482fb7bec510ab21c47ddfc36",
+    "bytes": 478162,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_die_logic_max_1000-1010s_5ms.txt",
+    "source_sha256": "14143b39804546f7df505b1e0350e200e16eea0482fb7bec510ab21c47ddfc36"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_die_logic_min_1000-1010s_5ms.txt",
+    "sha256": "c40f90baae8ffa3896033189617522efafeab96e36c84b11da950b1dac7d85e4",
+    "bytes": 478162,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_die_logic_min_1000-1010s_5ms.txt",
+    "source_sha256": "c40f90baae8ffa3896033189617522efafeab96e36c84b11da950b1dac7d85e4"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_die_mem_ave_1000-1010s_5ms.txt",
+    "sha256": "90cd236d91d0dfd0b9b56f591d51965498c09d2ca73759e5e1490043d1fd20ea",
+    "bytes": 2758649,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_die_mem_ave_1000-1010s_5ms.txt",
+    "source_sha256": "90cd236d91d0dfd0b9b56f591d51965498c09d2ca73759e5e1490043d1fd20ea"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_die_mem_max_1000-1010s_5ms.txt",
+    "sha256": "9756675c6b5278e67e9ca2ca6080620be927b084d2f7ebdc217a7115b6761a4a",
+    "bytes": 2758649,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_die_mem_max_1000-1010s_5ms.txt",
+    "source_sha256": "9756675c6b5278e67e9ca2ca6080620be927b084d2f7ebdc217a7115b6761a4a"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_die_mem_min_1000-1010s_5ms.txt",
+    "sha256": "dcfbb924282ee1d211b52a8b492e5c3befa89bd6c01ecdf48bd35b84895e66b3",
+    "bytes": 2758649,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_die_mem_min_1000-1010s_5ms.txt",
+    "source_sha256": "dcfbb924282ee1d211b52a8b492e5c3befa89bd6c01ecdf48bd35b84895e66b3"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_die_pic_ave_1000-1010s_5ms.txt",
+    "sha256": "a709b99a6222bee75fc818bf5132db3216b61a784acbee50aabee2799ce5310e",
+    "bytes": 898240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_die_pic_ave_1000-1010s_5ms.txt",
+    "source_sha256": "a709b99a6222bee75fc818bf5132db3216b61a784acbee50aabee2799ce5310e"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_die_pic_max_1000-1010s_5ms.txt",
+    "sha256": "8b5c98dcb097416e3b831fcecdbbc6e4a419d8b871d7b916e8bcd81306ac4f4c",
+    "bytes": 898240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_die_pic_max_1000-1010s_5ms.txt",
+    "source_sha256": "8b5c98dcb097416e3b831fcecdbbc6e4a419d8b871d7b916e8bcd81306ac4f4c"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_die_pic_min_1000-1010s_5ms.txt",
+    "sha256": "6150dc9bf3e8914e9582a4e811006fb8f3ac8a73e99c14af240acee0a767ecd1",
+    "bytes": 898240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_die_pic_min_1000-1010s_5ms.txt",
+    "source_sha256": "6150dc9bf3e8914e9582a4e811006fb8f3ac8a73e99c14af240acee0a767ecd1"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_pic_plane_ave_1000-1010s_5ms.txt",
+    "sha256": "d3f58741d6e73d461b981bb79c8c9c884a065c575c2a43334fbea6a13b554128",
+    "bytes": 658198,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_pic_plane_ave_1000-1010s_5ms.txt",
+    "source_sha256": "d3f58741d6e73d461b981bb79c8c9c884a065c575c2a43334fbea6a13b554128"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_pic_plane_max_1000-1010s_5ms.txt",
+    "sha256": "0c4baafccb92641a62927ac32c80121430d0dcdc1bd247ca3bf93e5669ae54ff",
+    "bytes": 658198,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_pic_plane_max_1000-1010s_5ms.txt",
+    "source_sha256": "0c4baafccb92641a62927ac32c80121430d0dcdc1bd247ca3bf93e5669ae54ff"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-10/pan-tdp-735_pic_plane_min_1000-1010s_5ms.txt",
+    "sha256": "9c587aee04a32947ddbe6acb063b6a952485d04ba2bab1f8170b1b7226ffd0e2",
+    "bytes": 658198,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-10/pan-tdp-735_pic_plane_min_1000-1010s_5ms.txt",
+    "source_sha256": "9c587aee04a32947ddbe6acb063b6a952485d04ba2bab1f8170b1b7226ffd0e2"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_die_logic_ave_mean_1000-1010s_5ms.txt",
+    "sha256": "5ae578c3a48fc6385a7b7abf0b814ff3c2f373583a7e13b1df96bc7ac17e24c9",
+    "bytes": 240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_die_logic_ave_mean_1000-1010s_5ms.txt",
+    "source_sha256": "5ae578c3a48fc6385a7b7abf0b814ff3c2f373583a7e13b1df96bc7ac17e24c9"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_die_logic_max_mean_1000-1010s_5ms.txt",
+    "sha256": "be394333221b70d044f20d8b6fd6ddcbb8e9efcc09b5aaa64d7ce7f950eb75af",
+    "bytes": 240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_die_logic_max_mean_1000-1010s_5ms.txt",
+    "source_sha256": "be394333221b70d044f20d8b6fd6ddcbb8e9efcc09b5aaa64d7ce7f950eb75af"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_die_logic_min_mean_1000-1010s_5ms.txt",
+    "sha256": "dc1a5f3f6c2f47b9f538eb564aa076cbde3bd10777b921d48c314a45f060d50a",
+    "bytes": 240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_die_logic_min_mean_1000-1010s_5ms.txt",
+    "source_sha256": "dc1a5f3f6c2f47b9f538eb564aa076cbde3bd10777b921d48c314a45f060d50a"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_die_mem_ave_mean_1000-1010s_5ms.txt",
+    "sha256": "0adddc6f6f6e4442a17efb0f4dfa740bfb708b07dbf8fc3ac1fa63e0adaf2bf2",
+    "bytes": 1107,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_die_mem_ave_mean_1000-1010s_5ms.txt",
+    "source_sha256": "0adddc6f6f6e4442a17efb0f4dfa740bfb708b07dbf8fc3ac1fa63e0adaf2bf2"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_die_mem_max_mean_1000-1010s_5ms.txt",
+    "sha256": "5068b5059b6b0c40189690cda3d93d2afb6e0de3dba93e0aac50402cc600bfdc",
+    "bytes": 1107,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_die_mem_max_mean_1000-1010s_5ms.txt",
+    "source_sha256": "5068b5059b6b0c40189690cda3d93d2afb6e0de3dba93e0aac50402cc600bfdc"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_die_mem_min_mean_1000-1010s_5ms.txt",
+    "sha256": "6dfc0f9679785b1fdf745f5c35a77259f072d16025803ba76406ed8a337ce9c9",
+    "bytes": 1107,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_die_mem_min_mean_1000-1010s_5ms.txt",
+    "source_sha256": "6dfc0f9679785b1fdf745f5c35a77259f072d16025803ba76406ed8a337ce9c9"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_die_pic_ave_mean_1000-1010s_5ms.txt",
+    "sha256": "d555fe929256bc784ac86d544a99c0dac4e447730706292bd22860df7883fb76",
+    "bytes": 388,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_die_pic_ave_mean_1000-1010s_5ms.txt",
+    "source_sha256": "d555fe929256bc784ac86d544a99c0dac4e447730706292bd22860df7883fb76"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_die_pic_max_mean_1000-1010s_5ms.txt",
+    "sha256": "1a8bb09e39990521064b8a6595448a16922fffa68349406fac8be8ac9ac42559",
+    "bytes": 388,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_die_pic_max_mean_1000-1010s_5ms.txt",
+    "source_sha256": "1a8bb09e39990521064b8a6595448a16922fffa68349406fac8be8ac9ac42559"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_die_pic_min_mean_1000-1010s_5ms.txt",
+    "sha256": "1821cc3da7cd0441ad63b9387776d20db3ae439631e933d357929dc13a22f6f0",
+    "bytes": 388,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_die_pic_min_mean_1000-1010s_5ms.txt",
+    "source_sha256": "1821cc3da7cd0441ad63b9387776d20db3ae439631e933d357929dc13a22f6f0"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_pic_plane_ave_mean_1000-1010s_5ms.txt",
+    "sha256": "3aff6d34ffec03fd1e605663434b80d4c9145104671a735eb731a57f906e4bdc",
+    "bytes": 306,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_pic_plane_ave_mean_1000-1010s_5ms.txt",
+    "source_sha256": "3aff6d34ffec03fd1e605663434b80d4c9145104671a735eb731a57f906e4bdc"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_pic_plane_max_mean_1000-1010s_5ms.txt",
+    "sha256": "0590f9bd881a47d593b304edf38f3e936592e3baeadf86cad5f5a2bf14fc89ae",
+    "bytes": 306,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_pic_plane_max_mean_1000-1010s_5ms.txt",
+    "source_sha256": "0590f9bd881a47d593b304edf38f3e936592e3baeadf86cad5f5a2bf14fc89ae"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-mean/pan-tdp-735_pic_plane_min_mean_1000-1010s_5ms.txt",
+    "sha256": "0c3952918527750079ebb35afc8da6b0f47b913c5901375ddd083577a8f3650f",
+    "bytes": 306,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-mean/pan-tdp-735_pic_plane_min_mean_1000-1010s_5ms.txt",
+    "source_sha256": "0c3952918527750079ebb35afc8da6b0f47b913c5901375ddd083577a8f3650f"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_die_logic_ave_peak_1000-1010s_5ms.txt",
+    "sha256": "e1e661022b6dbbde9d8f7b4396845636f87954eb0a0769f2e58ac11d4b26c1cb",
+    "bytes": 240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_die_logic_ave_peak_1000-1010s_5ms.txt",
+    "source_sha256": "e1e661022b6dbbde9d8f7b4396845636f87954eb0a0769f2e58ac11d4b26c1cb"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_die_logic_max_peak_1000-1010s_5ms.txt",
+    "sha256": "38bf1d4ed5ca3c707b37cc18a6b091a5e11ac884753bb26e9d3c73862b09afa2",
+    "bytes": 240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_die_logic_max_peak_1000-1010s_5ms.txt",
+    "source_sha256": "38bf1d4ed5ca3c707b37cc18a6b091a5e11ac884753bb26e9d3c73862b09afa2"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_die_logic_min_peak_1000-1010s_5ms.txt",
+    "sha256": "e8e5624f2a344fe06395958f150dfaa343f88e24725ae89fbafff0f036d11a00",
+    "bytes": 240,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_die_logic_min_peak_1000-1010s_5ms.txt",
+    "source_sha256": "e8e5624f2a344fe06395958f150dfaa343f88e24725ae89fbafff0f036d11a00"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_die_mem_ave_peak_1000-1010s_5ms.txt",
+    "sha256": "7a76ef94892b63bebddc9e189f420032a89fb30d2fdd70e502d9a94b9d783239",
+    "bytes": 1107,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_die_mem_ave_peak_1000-1010s_5ms.txt",
+    "source_sha256": "7a76ef94892b63bebddc9e189f420032a89fb30d2fdd70e502d9a94b9d783239"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_die_mem_max_peak_1000-1010s_5ms.txt",
+    "sha256": "b8bec2181aab0d53d901278797591cb9a3c01d96a2fd7c3f6ed0953e6625bc73",
+    "bytes": 1107,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_die_mem_max_peak_1000-1010s_5ms.txt",
+    "source_sha256": "b8bec2181aab0d53d901278797591cb9a3c01d96a2fd7c3f6ed0953e6625bc73"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_die_mem_min_peak_1000-1010s_5ms.txt",
+    "sha256": "51b04b33829cb6378bc23a3eb9745fa1ce92d43132c06336802baa9d552699fa",
+    "bytes": 1107,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_die_mem_min_peak_1000-1010s_5ms.txt",
+    "source_sha256": "51b04b33829cb6378bc23a3eb9745fa1ce92d43132c06336802baa9d552699fa"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_die_pic_ave_peak_1000-1010s_5ms.txt",
+    "sha256": "110c9c9f6eb12632c64a47c85319a9a28098c7a4872b7108a0977b274f9f92ac",
+    "bytes": 388,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_die_pic_ave_peak_1000-1010s_5ms.txt",
+    "source_sha256": "110c9c9f6eb12632c64a47c85319a9a28098c7a4872b7108a0977b274f9f92ac"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_die_pic_max_peak_1000-1010s_5ms.txt",
+    "sha256": "69a82da21fd7c95e02589d0de512a1e970dff1cadc694f5ddbfe432e0f38cdd0",
+    "bytes": 388,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_die_pic_max_peak_1000-1010s_5ms.txt",
+    "source_sha256": "69a82da21fd7c95e02589d0de512a1e970dff1cadc694f5ddbfe432e0f38cdd0"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_die_pic_min_peak_1000-1010s_5ms.txt",
+    "sha256": "dbdf13685161cd0f29868f7702a16cf5172b91ba4e27048e206d3b1bc4c6c093",
+    "bytes": 388,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_die_pic_min_peak_1000-1010s_5ms.txt",
+    "source_sha256": "dbdf13685161cd0f29868f7702a16cf5172b91ba4e27048e206d3b1bc4c6c093"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_pic_plane_ave_peak_1000-1010s_5ms.txt",
+    "sha256": "1fac282ba54cdf1b56930c416cce050c92b7804e4de46b63d8903676de42d296",
+    "bytes": 306,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_pic_plane_ave_peak_1000-1010s_5ms.txt",
+    "source_sha256": "1fac282ba54cdf1b56930c416cce050c92b7804e4de46b63d8903676de42d296"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_pic_plane_max_peak_1000-1010s_5ms.txt",
+    "sha256": "c7d48c3120a455d9607a7e34bf925172191f99a6db9cc70f74190428da4739ea",
+    "bytes": 306,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_pic_plane_max_peak_1000-1010s_5ms.txt",
+    "source_sha256": "c7d48c3120a455d9607a7e34bf925172191f99a6db9cc70f74190428da4739ea"
+  },
+  {
+    "path": "transient/reference/outputs/outputs-pan-peak/pan-tdp-735_pic_plane_min_peak_1000-1010s_5ms.txt",
+    "sha256": "75263816088486cfc8a59cc380f0cf04d8bab2aa023561e5fb3c41c64ec36c8c",
+    "bytes": 306,
+    "source": "archive-byte-identical-2026-10-11:demo/reference/outputs/outputs-pan-peak/pan-tdp-735_pic_plane_min_peak_1000-1010s_5ms.txt",
+    "source_sha256": "75263816088486cfc8a59cc380f0cf04d8bab2aa023561e5fb3c41c64ec36c8c"
+  },
+  {
+    "path": "transient/run_demo.py",
+    "sha256": "f270a21446c3662c27bb993381865a3e7ab90ed8a70251c0c9ccbbd9b479de84",
+    "bytes": 8605,
+    "source": "archive-byte-identical-2026-10-11:demo/run_demo.py",
+    "source_sha256": "b3ec130a1659108855bd8da23a4cf52164f3cdc820b2a2ccb4f2caf8ebd9c63e"
+  },
+  {
+    "path": "library/materials.json",
+    "sha256": "c268b600d7cb68b3df0cc53c133f0d20ad1f59d2218b7e3f4ec1ae1f806e8bcb",
+    "bytes": 3531,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "library/primitives.json",
+    "sha256": "d34459bbbbb9e57149b6928fead9e9af2dfc51bb4af1dab11307bba98935498b",
+    "bytes": 2273,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "examples/calibration/synthetic-cfd.csv",
+    "sha256": "e1bb9f74c88d9c69cffd8dc37345dd3de89fc5fcfc32103486c46078a73de81b",
+    "bytes": 66,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "examples/calibration/synthetic-ttv.csv",
+    "sha256": "6675f538a626b38ced6011ae1180137f189e47627af8353cc4055b438a67cb9c",
+    "bytes": 46,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "examples/glass-package.json",
+    "sha256": "2ed1c4ca0a4d74e26b91b9ebd18424ab1f0722305e0c817d5a291a7d78bd19aa",
+    "bytes": 960,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/co-planar/build_bridge_stks.py",
+    "sha256": "de0f2d67e2b41ed0fd15a1804c0c0c360c865f920f8d24527327e84d670ce58b",
+    "bytes": 9740,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/co-planar/gen_bridge_flps.py",
+    "sha256": "f9ed26976a9d308f417c37a4f89fbda586ad9ea6c904f1974133da8f3433f498",
+    "bytes": 8345,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/dual-side/build_dual_stks.py",
+    "sha256": "212950a67566b8419e17cf1028ed0b44a887d0caffe27f5fed5e3cf0d2ff4ebf",
+    "bytes": 8553,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/dual-side/gen_dual.py",
+    "sha256": "d1a5eb8d5dc99f04b6e8f772c6e174cb7a42dc3c91c65e465858ec3ebc3312d5",
+    "bytes": 8132,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/interlayer/build_embedded_stks.py",
+    "sha256": "34f2529cfb19ca9d14b304357758c5479ab83aa1e329f76a6d555bce7dc8d13d",
+    "bytes": 9710,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/interlayer/gen_embedded.py",
+    "sha256": "af89ea58072ce96575d9c0962d071d92addbc4c18bef0edc328933b8b432afd9",
+    "bytes": 6942,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/panel/build_pan_stks.py",
+    "sha256": "3b685bfc3e94384a77268c1c11c2a9dce86a279fb99c2be6d96ac1baac56baa4",
+    "bytes": 5244,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/panel/gen_pan_flps.py",
+    "sha256": "aecf67b27af3c6e052c8acd33cc3e24ba671d8fcd3a2ea89aa2f1180d5365aec",
+    "bytes": 6317,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/panel/gen_prov.py",
+    "sha256": "6407b4e2bc2bd124e51f2b2c1f463970b2cb0ff328a608e858233dddd49f38e3",
+    "bytes": 4392,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/photonic/gen_cpo_flps.py",
+    "sha256": "034e89da04e1dc53b1ec3d612dbcbad49ef39ff8a2a539e33c22e269a5cca418",
+    "bytes": 4291,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/shared/build_matrix.py",
+    "sha256": "b1a425d26b5ed16f616ae2e0291dbcf7b10ab42a808195755237092a944ab0ba",
+    "bytes": 7549,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "generators/shared/gen_endpoints.py",
+    "sha256": "01edbd93329a6f6bfb9405ed63f9df071a1d56c79a459fdd4902afa28344abc9",
+    "bytes": 1877,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "docs/figures/architectures.png",
+    "sha256": "8db235eaef62ca06acc2c7ab25416bffbb75a024f7e54f24ff0649dee7d04cad",
+    "bytes": 330551,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "docs/figures/methodology.png",
+    "sha256": "a14192a3c245be9cc064b770aa1b8bc1d6117365d6f1c52a2e2d2f9ebb88e184",
+    "bytes": 181083,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "docs/figures/panel-temperature.png",
+    "sha256": "58de197d367a3afdbc457cfddd7a9a1785632eeccc939897e9aef3336d514084",
+    "bytes": 118024,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "docs/figures/source/architectures.pdf",
+    "sha256": "1306faa55b58b8e052eb0cc1cf260af460619203ab7538f23aa42edf8fb5dbe1",
+    "bytes": 132332,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "docs/figures/source/methodology.pdf",
+    "sha256": "0d93a9e7e456c17c34df9d6c7314490b8142a3beece02097839ab1dc92aaee54",
+    "bytes": 163447,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
+    "path": "docs/figures/source/panel-temperature.pdf",
+    "sha256": "b48d6d0d4398b41b8506ccd3ab98617fcdd8e30b5bbb77f5ee965147b7d03717",
+    "bytes": 127251,
+    "source": "3D-ICE-Glass framework / supplied source assets"
+  },
+  {
     "path": "provenance/research-build/License.txt",
-    "role": "SuperLU BSD license for preserved research tuning source",
     "sha256": "5ae57ff762cfa3a25d10f8fe88dcc861194a35e8753a5877fce0828a3b02f915",
-    "bytes": 1684
+    "bytes": 1684,
+    "source": "3D-ICE-Glass framework / supplied source assets"
   }
 ]

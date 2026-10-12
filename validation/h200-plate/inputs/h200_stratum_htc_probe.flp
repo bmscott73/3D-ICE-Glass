@@ -1,0 +1,29 @@
+// 3D-ICE-Glass | h200_stratum_htc_probe.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 5 rectangles; first-sample power 700 W; 1 power sample(s); powered footprint 811.2 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+FILL_LEFT :
+    position  0, 0 ;
+    dimension 6800, 31800 ;
+    power values 0 ;
+
+FILL_SOURCE_BOTTOM :
+    position  6800, 0 ;
+    dimension 26000, 300 ;
+    power values 0 ;
+
+H200_GPU_EQUIV :
+    position  6800, 300 ;
+    dimension 26000, 31200 ;
+    power values 700 ;
+
+FILL_SOURCE_TOP :
+    position  6800, 31500 ;
+    dimension 26000, 300 ;
+    power values 0 ;
+
+FILL_RIGHT :
+    position  32800, 0 ;
+    dimension 6800, 31800 ;
+    power values 0 ;

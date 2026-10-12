@@ -1,0 +1,66 @@
+// 3D-ICE-Glass | h200_stratum_htc_probe.stk | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// Canvas 39600 x 31800 um; grid 100 x 100 um.
+// Source power: first 700 W; range 700..700 W; 1 sample(s).
+// Top boundary: h=4.08e-08 W/um2K (40800 W/m2K), reference=311.15 K.
+// Temperatures in emulator outputs are kelvin; time is seconds.
+// Model data: CC-BY-4.0. References and observation planes: checkpoint README / docs/case-index.md.
+
+material SILICON :
+    thermal conductivity     1.30e-04 ;
+    volumetric heat capacity 1.75e-12 ;
+
+material TIM :
+    thermal conductivity     4.00e-06 ;
+    volumetric heat capacity 4.00e-12 ;
+
+material COPPER :
+    thermal conductivity     4.00e-04 ;
+    volumetric heat capacity 3.45e-12 ;
+
+top heat sink :
+    heat transfer coefficient 4.08e-08 ;
+    temperature 311.15 ;
+
+dimensions :
+    chip length 39600, width 31800 ;
+    cell length 100,   width 100 ;
+    non-uniform false ;
+
+layer CP_BULK_L :
+    height   1990 ;
+    material COPPER ;
+
+layer CP_CONTACT_PROBE_L :
+    height   10 ;
+    material COPPER ;
+
+layer TIM_L :
+    height   20 ;
+    material TIM ;
+
+die H200_EQUIV_D :
+    layer  695 SILICON ;
+    source   5 SILICON ;
+
+stack :
+    layer CP_BULK          CP_BULK_L ;
+    layer CP_CONTACT_PROBE CP_CONTACT_PROBE_L ;
+    layer TIM_TOP          TIM_L ;
+    die   H200_DIE         H200_EQUIV_D floorplan "h200_stratum_htc_probe.flp" ;
+
+solver :
+    steady ;
+    initial temperature 311.15 ;
+    numofcores 12 ;
+
+output :
+    Tflp( H200_DIE, "outputs/h200_source_max.txt", maximum, final ) ;
+    Tflp( H200_DIE, "outputs/h200_source_avg.txt", average, final ) ;
+    Tflp( H200_DIE, "outputs/h200_source_min.txt", minimum, final ) ;
+    Tmap( H200_DIE, "outputs/h200_source_tmap.txt", final ) ;
+    T( CP_CONTACT_PROBE, 19750, 15850, "outputs/h200_plate_contact_center.txt", final ) ;
+    Tmap( CP_CONTACT_PROBE, "outputs/h200_plate_contact_tmap.txt", final ) ;
+
+    Tmap( CP_BULK,
+          "outputs/h200_cp_bulk_tmap.txt", final ) ;

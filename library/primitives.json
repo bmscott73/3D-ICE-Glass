@@ -1,0 +1,63 @@
+{
+  "license": "CC-BY-4.0",
+  "primitives": {
+    "water-plate": {
+      "kind": "robin",
+      "h_W_m2K": 40800,
+      "reference_K": 300,
+      "lumped_interface": false,
+      "applied_area_mm2": 1259.28,
+      "provenance": {
+        "input": "validation/stratum-s/inputs/stratum_S_v2_liquid.stk",
+        "reference": "docs/references.md#plate",
+        "status": "frozen matched-package convective boundary"
+      },
+      "transfer_domain": "Same plate/contact interpretation and cooling regime; model explicit TIM and copper base."
+    },
+    "h100-two-phase": {
+      "kind": "robin",
+      "h_W_m2K": 44186,
+      "reference_K": 320.07,
+      "lumped_interface": true,
+      "applied_area_mm2": 910,
+      "provenance": {
+        "input": "validation/h100-ttv/inputs/ttv_pred_720W.stk",
+        "reference": "docs/references.md#ttv",
+        "status": "510 W fit frozen at held-out powers"
+      },
+      "transfer_domain": "Copper case to local saturation; use power-specific saturation reference. Not a GPU junction or arbitrary coolant."
+    },
+    "air-4mps": {
+      "kind": "conductance",
+      "resistance_K_W": 0.23,
+      "reference_K": 308,
+      "sink_base_mm2": 8700,
+      "provenance": {
+        "input": "models/dual-side/warm-loop/d2air-4ms-735.stk",
+        "reference": "docs/references.md#air",
+        "status": "ducted ATS sink specification"
+      },
+      "transfer_domain": "Same sink and 4 m/s ducted flow. Normalize conductance to engine applied area."
+    },
+    "glass-4rm-anchor": {
+      "kind": "4rm",
+      "height_um": 100,
+      "channel_um": 100,
+      "wall_um": 100,
+      "first_wall_um": 100,
+      "last_wall_um": 100,
+      "wall_material": "tgv-glass",
+      "h_native": 1.27e-08,
+      "reference_K": 300,
+      "coolant_capacity_native": 4.18e-12,
+      "anchor_channels": 130,
+      "anchor_flow_ml_min": 156.5,
+      "provenance": {
+        "input": "validation/hyflex-microchannel/inputs/hfp_tgv_E1c_anchored.stk",
+        "reference": "docs/references.md#hyflex",
+        "status": "conjugate CFD effective coefficient"
+      },
+      "transfer_domain": "100 x 100 um channels and Cu-TGV walls; scale total flow by channel count to preserve velocity. Coolant/geometry/regime changes need a new anchor."
+    }
+  }
+}

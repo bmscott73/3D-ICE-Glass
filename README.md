@@ -1,149 +1,115 @@
 # 3D-ICE-Glass
 
-**Calibrated thermal exploration of glass packages, embedded cooling, and photonic AI serving architectures.**
+**Calibrated thermal design for glass packages, Cu-TGV heat paths, embedded cooling, and photonic AI architectures.**
 
-3D-ICE-Glass supplies package stacks, floorplans, calibrated cooling inputs, and reproducible run tools around **EPFL's unmodified 3D-ICE 4.0 engine**. It models co-planar compute/memory bridges, dual-side cooling, embedded capacity tiers, and a panel-scale prefill/decode neighborhood. The thermal solver is developed by the [Embedded Systems Laboratory at EPFL](https://github.com/esl-epfl/3d-ice); this repository contributes the glass-package research workflow and inputs.
+3D-ICE-Glass follows **anchor once, freeze, then transfer within the calibrated cooling domain**. It combines glass and orthotropic TGV primitives, hybrid bonds, liquid plates, and embedded microchannels with stack/floorplan builders, power maps, and steady/transient studies. [EPFL's 3D-ICE 4.0](https://github.com/esl-epfl/3d-ice) provides the compact thermal engine; this project provides the calibration workflow and glass-package framework.
 
-Start with [installation](#installation), run the [small validation example](#first-simulation), then choose an [architecture](#architecture-models). The [complete input index](docs/case-index.md) links **every released `.stk` and `.flp`** to its dependencies and academic sources.
+![Co-planar, dual-side, interlayer, and panel-scale glass architectures](docs/figures/architectures.png)
 
-> **Transient demo branch:** follow the [five-minute walkthrough](demo/README.md). With the analysis dependencies installed, run `python3 demo/run_demo.py reference` to regenerate the saved result, or `python3 demo/run_demo.py smoke --cores 2` for the short live simulation after building the solver.
+## Quick start: a glass result and a held-out boundary check
 
-> **Reproduction status:** imported inputs are preserved byte for byte and have SHA-256 provenance. Some historical inputs differ from the supplied manuscript. Consult [release verification and paper/input differences](docs/reproduction-status.md) before treating a run as an exact paper reproduction.
-
-## Repository map
-
-```text
-3D-ICE-Glass/
-├── vendor/3d-ice/          Complete, unmodified EPFL solver snapshot and user guide
-├── validation/
-│   ├── Baselines/         All research files from the supplied local Baselines folder
-│   └── supplemental/      Missing dependencies and additional server checkpoints
-├── models/
-│   ├── co-planar/         Shared cold plate: water and warm-loop endpoints
-│   ├── dual-side/         Liquid-only, dual-liquid, forced-air, warm-loop variants
-│   ├── interlayer/        E0/E1/E2/E4 and HyFlexPIM embedded-capacity variants
-│   └── panel/             Trace floor, workload/TDP provisioning, warm-loop endpoints
-├── tools/                 Build, isolated run, integrity check, input catalog
-├── docs/                  Calibration, citations, model index, manuscript figures
-├── provenance/            Original locations, SHA-256 hashes, upstream revision
-├── build/                 Generated solver build (ignored by Git)
-└── runs/                  Generated simulations and plots (ignored by Git)
-```
-
-The transient extension lives on [`codex/transient-demo`](https://github.com/bmscott73/3D-ICE-Glass/tree/codex/transient-demo). It adds `demo/inputs`, `demo/analysis`, and `demo/reference`, including the saved 1000–1010 s workload window and a five-minute presentation guide.
-
-## Installation
-
-### Linux native build
-
-The documented build uses Ubuntu/Debian, GCC/OpenMP, OpenBLAS, and SuperLU MT 4.0.0. The release was built and run in Ubuntu 24.04 on Linux ARM64 through Docker Desktop; the original research server uses Linux x86-64. The bundled solver source is pinned to EPFL commit [`e0bb6850c5e446363e26936586d625270c87f224`](https://github.com/esl-epfl/3d-ice/commit/e0bb6850c5e446363e26936586d625270c87f224). A clean build uses this snapshot, rather than whichever revision upstream currently serves.
+With Docker installed, from the repository root:
 
 ```bash
-sudo apt-get update
-sudo apt-get install -y build-essential bison flex libopenblas-dev csh unzip python3 python3-venv git
-
 git clone https://github.com/bmscott73/3D-ICE-Glass.git
 cd 3D-ICE-Glass
-python3 tools/check_inputs.py
-bash tools/build.sh
-```
-
-The executable is `build/3d-ice/bin/3D-ICE-Emulator`. Build logs are `build/superlu-build.log` and `build/3d-ice-build.log`. The build script copies the pinned source into `build/`; it preserves `vendor/3d-ice/`. If a build fails, inspect the logs and rename the failed build directory before retrying.
-
-The build sets SuperLU MT's **U-factor storage multiplier to 100** (bundled default 50). This changes sparse factorization allocation capacity, with no change to the thermal equations or input values. The default 50 exhausted storage on the original 200 µm transient panel. Russell's research dependency uses 500; its [original tuning source and license](provenance/research-build/) are preserved. For a larger workstation, choose `SUPERLU_U_FILL=500 bash tools/build.sh`, or Docker's `--build-arg SUPERLU_U_FILL=500`. Higher storage limits still require sufficient memory. See [measured release checks](docs/reproduction-status.md).
-
-For plotting and the transient demo, install the optional analysis dependencies:
-
-```bash
-python3 -m venv .venv
-. .venv/bin/activate
-python3 -m pip install -r requirements-analysis.txt
-```
-
-The released rectangular floorplans require no GDS extraction, Modelica, SystemC, or pluggable heatsink installation. Those optional upstream features are described in the [EPFL user guide](vendor/3d-ice/doc/3D-ICE-User_Guide.pdf). The upstream `make test` target also builds plugins and needs their additional dependencies.
-
-### macOS / Windows with Docker
-
-Use the Linux container for the solver. The image also includes the Python analysis dependencies; analysis can run locally if preferred.
-
-```bash
 docker build -t 3d-ice-glass .
 mkdir -p runs
 docker run --rm \
   --mount "type=bind,src=$(pwd)/runs,dst=/opt/3d-ice-glass/runs" \
-  3d-ice-glass validation/Baselines/H100/ttv_interpack.stk
+  3d-ice-glass
 ```
 
-Large architectural stacks need substantially more memory than the first example. Allocate sufficient container memory, or use a Linux workstation/server. Published inputs retain their original grids and 12-core solver setting; `--cores N` changes only the staged run's thread count.
+The default command solves the small **glass microchannel/Cu-TGV vehicle** and the **720 W copper TTV**. Expected results are **86.41 °C** at the glass vehicle's die peak and **64.83 °C** at the held-out TTV case surface, each within **±0.10 K** of the released model value. The first tests the glass cooling path; the second tests the two-phase boundary frozen after a 510 W fit. Their reference measurements are 83.3 and 64.90 °C. Generated inputs, logs, JSON and CSV appear in a new `runs/validation-*` folder.
 
-## First simulation
-
-From the repository root:
+Already built on Linux:
 
 ```bash
-python3 tools/run_case.py validation/Baselines/H100/ttv_interpack.stk
+python3 tools/reproduce.py --case glass-microchannel h100-ttv
 ```
 
-This small copper thermal test vehicle injects **700 W** over **26 × 35 mm**, with the effective two-phase boundary anchored at `h = 43,956 W/m²K` and `T_ref = 320.65 K`. It checks the **case boundary and thermocouple proxy**, rather than an H100 silicon junction. Its default case-surface closure is approximately 65 °C; the supplied manuscript's 720 W checkpoint is a different input that has not been located.
+[Native installation](docs/installation.md) · [Full paper reproduction](docs/reproduce.md) · [Five-minute transient demo](transient/README.md)
 
-The command creates `runs/ttv_interpack/` with the staged stack, floorplans, `run.json`, `simulator.log`, and `outputs/`. All simulator temperature outputs are **kelvin**; convert to °C by subtracting **273.15**. An existing run directory is never overwritten; use `--run-dir runs/my-next-run` for another run.
+## Paper results: command → expected value
 
-Prepare a case without running the solver:
+Run these commands from the repository root. The [checkpoint index](validation/README.md) gives each row's inputs, reference, physical observation plane and assumptions. Tolerances below check numerical reproduction of the model; experimental differences are reported separately.
+
+| Paper item | Command | Expected result |
+|---|---|---|
+| Table I: cooling primitives | `python3 tools/calibrate.py air --resistance-k-w .23 --area-mm2 1259.28 --sink-base-mm2 8700` | `G = 4.347826 W/K`, `h = 3.452629e-9 W/µm²K`; [plate/4RM library](library/primitives.json) |
+| Table II: complete validation table | `python3 tools/reproduce.py` | All ten rows within ±0.10 K; eight-scalar aggregate **2.6%** |
+| Table II: Stratum-L | `python3 tools/reproduce.py --case stratum-l` | **80.97 °C** die peak versus 86 °C |
+| Fig. 1: anchoring workflow | `python3 tools/calibrate.py --help` | CFD wall-flux extraction, TTV fit, and sink-conductance conversion; [methodology](docs/methodology.md) |
+| Fig. 2: Stratum-S / HyFlexPIM cross-validation | `python3 tools/reproduce.py --case stratum-s hyflex-microchannel` | **55.47 / 97.51 °C** die peaks |
+| Fig. 3: architecture floorplans | `python3 tools/check_geometry.py` | In-bounds, non-overlapping rectangular maps; [architecture inputs](docs/case-index.md) |
+| Fig. 4: panel warm-loop memory field | [Run and plot commands](docs/reproduce.md#panel-temperature-field) | **91.26 °C** memory-tier peak; **91.30 °C** package maximum |
+| Transient extension | `python3 transient/run_demo.py reference` | **19** reproduced metrics; PIC_A swing **24.856 K**, CPL_A swing **11.647 K** |
+
+For an immediate view of the **recorded release checks**, without a new solve:
 
 ```bash
-python3 tools/run_case.py models/panel/warm-loop/pan-tdp-735.stk \
-  --run-dir runs/panel-preview --prepare-only
+python3 tools/reproduce.py --recorded
 ```
 
-## Architecture models
+The full validation table needs a workstation with enough memory for Stratum-S's 100 µm grid. The two-case quick start runs in seconds after compilation. [Measured checks and input history](docs/reproduction-status.md) document hardware, numerical precision, and the flow-conditioned silicon row.
 
-![Four modeled architectures from the supplied manuscript, Fig. 3](docs/figures/architectures.png)
+## Build your own glass stack or variant
 
-| Architecture | Released cases | Cooling / workload distinction | Validation primitive |
-|---|---|---|---|
-| [Co-planar bridge](models/co-planar/README.md) | `static-standard`, `cp-h300`, `cp-h234` | Shared top liquid plate; 300 K water and 308 K property endpoints | [Stratum-S](validation/Baselines/Stratum-S/stratum_S_v2_liquid.stk), [H200 plate](validation/Baselines/H200/h200_stratum_htc_probe.stk) |
-| [Dual-side hybrid](models/dual-side/README.md) | `d2-noplate`, `d2-standard`, `d2air-3ms`, `d2air-4ms`, two bounded 4 m/s cases | Top liquid plus absent, liquid, or air secondary sink | Same plate/stack anchors; [ATS air-sink specification](docs/references.md#air) |
-| [Interlayer cooling](models/interlayer/README.md) | `emb-E0/E1/E2/E4-std`, `emb-H1/H1M2-std`, `emb-E4-735/575` | 4RM glass cavity, embedded memory/PIM capacity, water vs glycol-property envelope | [Anchored HyFlexPIM channel](validation/supplemental/coefficient-comparison/hfp_tgv_E1c_anchored.stk), [Cu-pillar vehicle](validation/supplemental/cu-pillar/estc_cupillar_pinfin_active1mm_p111.stk) |
-| [Panel neighborhood](models/panel/README.md) | `pan-std`, `pan-wl`, `pan-tdp`, `pan-tdp-735/575`, `pan-wl-575` | One prefill and two decode nodes; trace-floor / workload / configuration-TDP maps | Plate anchor and [photonic comparison](validation/supplemental/photonic/cpo_3d.stk) |
-
-Example architecture run:
+The [materials library](library/materials.json) stores glass, copper, silicon, an orthotropic Cu-TGV composite, hybrid bond, TIM, and die-attach properties with provenance. The [primitive library](library/primitives.json) records frozen plate, two-phase, air-sink, and 4RM anchors, including the domain in which each may transfer.
 
 ```bash
-python3 tools/run_case.py models/panel/warm-loop/pan-tdp-735.stk --cores 12
+# Assemble a small native stack and floorplan from a JSON configuration.
+python3 tools/build_model.py --config examples/glass-package.json \
+  --output runs/my-glass-package
+python3 tools/run_case.py runs/my-glass-package/glass-package.stk
+
+# Keep a paper floorplan's area and power map; change only the plate endpoint.
+python3 tools/build_model.py \
+  --from-stack models/co-planar/water/static-standard.stk \
+  --plate-factor .575 --reference-k 308 --output runs/my-bridge-575
+
+# Regenerate architecture layouts and stacks with their geometry checks.
+python3 tools/generate.py panel --output runs/my-panel
+python3 generators/shared/gen_endpoints.py --output runs/my-endpoints
 ```
 
-## Calibrated assumptions
+Builders reject out-of-bounds and overlapping rectangles, check power queues, and record area-preservation results in `model.json` or `generation.json`. New directories are required, so existing inputs/results are not overwritten. [Builder and generator guide](docs/builders.md) explains configuration fields, all twelve recovered generators, and how to register a new calibrated primitive.
 
-The protocol is **anchor once, freeze, then evaluate transfer within the same cooling domain**. A new coolant, geometry, contact area, or flow regime requires a new anchor. See [calibration and units](docs/calibration.md) for the full assumptions and [validation models](validation/README.md) for the observed physical plane and checkpoint status.
+## Calibrate before transferring
 
-| Quantity | Released convention / anchor |
-|---|---|
-| Length / power / temperature / time | µm / W / K / s; flow rate in mL/min; Darcy velocity in µm/s |
-| Cold-plate Robin boundary | Water `h_cp = 4.08e-8 W/µm²K = 40,800 W/m²K`; retain applied area and `G = hA` |
-| Glass µCH/Cu-TGV 4RM boundary | Frozen CFD anchor `h_eff = 1.27e-8 W/µm²K`; HyFlexPIM flow 156.5 mL/min |
-| Interlayer package cavity | 197 channels, 237.2 mL/min; water inlet 300 K; same calibrated velocity domain |
-| Warm-loop property envelope | Plate approximately `0.735 h_water` or `0.575 h_water`; cavity uses `0.735` at both endpoints; it is a sensitivity envelope |
-| Material anisotropy | Orthotropic Cu-TGV composite; numeric properties and layer thicknesses are explicit in each stack |
-| Feasibility | Manuscript comparison ceiling 85 °C; headroom is the minimum margin across blocks |
-| Photonics | Report PIC / corridor temperature spread; allowable wavelength drift and tracking rate require device-specific inputs |
+Native 3D-ICE uses **µm, W, K, s**; volumetric heat capacity is J/µm³K. Convert `h` from W/m²K by multiplying by `1e-12`, conductivity from W/mK by `1e-6`, and volumetric capacity from J/m³K by `1e-18`.
 
-![Calibration and exploration methodology from the supplied manuscript, Fig. 1](docs/figures/methodology.png)
+The main water plate is **40,800 W/m²K**. The glass/Cu-TGV 4RM anchor is **12,700 W/m²K**, with **156.5 mL/min over 130 channels**. Warm-loop studies apply plate ratios **0.735 / 0.575**, while the laminar cavity uses **0.735** at both endpoints. These are property sensitivities; a new coolant, channel geometry, wall material or flow regime requires a new anchor. [Calibration equations and input formats](docs/calibration.md) cover Stage 1 and the observation-plane discipline.
 
-## Results and reproducibility
+## Architecture studies and transient work
 
-![Panel memory-tier field from the supplied manuscript, Fig. 4](docs/figures/panel-temperature.png)
+| Family | Inputs | Main distinction |
+|---|---|---|
+| [Co-planar bridge](models/co-planar/README.md) | Water and warm-loop endpoints | Shared plate, local electrical bridge, glass optical plane |
+| [Dual-side hybrid](models/dual-side/README.md) | Liquid-only, dual-liquid, final 4 m/s air endpoints | Parallel primary-liquid and secondary-sink heat paths |
+| [Interlayer cooling](models/interlayer/README.md) | E0/E1/E2/E4 and H1/H1M2 | Frozen glass 4RM cavity and embedded capacity |
+| [Panel neighborhood](models/panel/README.md) | Trace-floor, workload mean, TDP and warm-loop endpoints | One prefill node and two decode nodes |
 
-The figure is a **manuscript illustration**, not an output regenerated by this README. The case corresponding to this boundary is [pan-tdp-575.stk](models/panel/warm-loop/pan-tdp-575.stk). Its numerical grid is 200 × 200 µm. The model index records the active grid, source power, and boundary in every case.
+![Panel memory-tier field at the 0.575 warm-loop plate endpoint](docs/figures/panel-temperature.png)
 
-```bash
-python3 tools/check_inputs.py   # hashes, floorplan dependencies, power queue consistency
-python3 tools/catalog.py        # regenerate the .stk/.flp index
+The embedded visuals are rendered from the [original figure PDFs](docs/figures/source/). [Reproduce Fig. 4](docs/reproduce.md#panel-temperature-field) to generate a new thermal field.
+
+`transient/` is part of **main**. It includes the 1000–1010 s workload window, static mean/peak/TDP comparisons, temperature traces, and a five-minute walkthrough. Its fast live smoke case uses a clearly labeled coarse grid; the original 200 µm grid and complete 6000-slot solve remain available. [Block-temperature metrics](tools/tflp_metrics.py) are shared tools.
+
+## Layout, references, and licenses
+
+```text
+library/       Materials and frozen cooling primitives, with provenance
+validation/    One folder per paper checkpoint; inputs, reference, expected value
+models/        Four architecture families and current cooling endpoints
+transient/     Workload extension, reference traces, live demo and analysis
+iceglass/      Stack/floorplan construction and input inspection
+tools/        Build, calibration, reproduction, generation, metrics and plotting
+generators/   Twelve recovered architecture-generation scripts
+docs/         Installation, methodology, reproduction and source figures
+vendor/3d-ice/ Pinned EPFL source and PDF guide; bulky test fixtures omitted
 ```
 
-[Reproduction status](docs/reproduction-status.md) distinguishes imported data, release tests, supplied manuscript results, and missing exact checkpoints. In particular, the panel source power sums are **942.03 / 1119.63 / 1361.01 W**, consistent with the manuscript's rounded totals; older script headers contain a 6.1 W accounting discrepancy. Active input statements take precedence over stale comments.
+Please cite **3D-ICE-Glass: Calibrated Thermal-Aware Floorplanning of Photonic Glass Packages for Scalable AI**, the applicable validation/architecture sources, and the four underlying [3D-ICE publications](docs/references.md#underlying-thermal-engine). [References](docs/references.md) · [BibTeX](docs/references.bib).
 
-## Citation and license
-
-Please cite **3D-ICE-Glass** and the underlying **3D-ICE** publications when using this workflow. The supplied manuscript is titled *3D-ICE-Glass: Calibrated Thermal-Aware Floorplanning of Photonic Glass Packages for Scalable AI*. It omits authors for blind review; a public author list, publication status, and DOI have not been supplied. Do not invent an accepted DATE 2027 citation. [Academic references](docs/references.md) include the four publications requested by EPFL, architecture sources, cooling anchors, and links used by every model. [BibTeX](docs/references.bib) is provided for verified public papers.
-
-Solver source, release tools, and model inputs are distributed under **GPL-3.0-or-later**; see [LICENSE](LICENSE) and [NOTICE](NOTICE). The vendored engine retains EPFL's original copyright and license notices, and bundled dependencies retain their own licenses. Manuscript figures retain their authors' attribution. [Upstream provenance](provenance/upstream.json) and [input provenance](provenance/files.json) record exactly what was imported.
+**Code:** [GPL-3.0-or-later](LICENSE), retaining EPFL and dependency notices. **Model inputs, material/primitive data, reference data, and project figures:** [CC-BY-4.0](LICENSE-MODELS.txt), with source attribution. [NOTICE](NOTICE) defines the scope. The [byte-identical archive tag](https://github.com/bmscott73/3D-ICE-Glass/tree/archive-byte-identical-2026-10-11) preserves the original files and licensing; raw baseline maps are available in the [archive release](https://github.com/bmscott73/3D-ICE-Glass/releases/tag/archive-byte-identical-2026-10-11).

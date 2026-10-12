@@ -1,0 +1,8 @@
+{
+  "source": "Kim et al., ESTC 2026; direct-contact vehicle",
+  "reference_C": 78.6,
+  "metric": "die peak",
+  "assessment": "experimental comparison",
+  "assumptions": "Corrected 1 mm active-region model and 111 um pitch variant. Use the die/source-plane maximum; RDL map is a separate observation plane. See active stack for flow and material assumptions.",
+  "academic_link": "../../docs/references.md#glass-cooling"
+}

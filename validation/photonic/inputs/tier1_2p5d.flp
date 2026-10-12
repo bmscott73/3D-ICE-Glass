@@ -1,0 +1,179 @@
+// 3D-ICE-Glass | tier1_2p5d.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 35 rectangles; first-sample power 444 W; 1 power sample(s); powered footprint 556 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+FILL_0_0 :
+   position 0, 0 ;
+   dimension 40000, 6000 ;
+   power values 0.0 ;
+
+FILL_6000_0 :
+   position 0, 6000 ;
+   dimension 1000, 8000 ;
+   power values 0.0 ;
+
+HBM_L1 :
+   position 1000, 6000 ;
+   dimension 6000, 8000 ;
+   power values 25.0 ;
+
+FILL_6000_7000 :
+   position 7000, 6000 ;
+   dimension 1000, 8000 ;
+   power values 0.0 ;
+
+GPU_A :
+   position 8000, 6000 ;
+   dimension 18000, 8000 ;
+   power values 144.0 ;
+
+FILL_6000_26000 :
+   position 26000, 6000 ;
+   dimension 1000, 8000 ;
+   power values 0.0 ;
+
+HBM_R1 :
+   position 27000, 6000 ;
+   dimension 6000, 8000 ;
+   power values 25.0 ;
+
+FILL_6000_33000 :
+   position 33000, 6000 ;
+   dimension 500, 8000 ;
+   power values 0.0 ;
+
+EIC :
+   position 33500, 6000 ;
+   dimension 5000, 8000 ;
+   power values 20.0 ;
+
+FILL_6000_38500 :
+   position 38500, 6000 ;
+   dimension 1500, 8000 ;
+   power values 0.0 ;
+
+FILL_14000_0 :
+   position 0, 14000 ;
+   dimension 1000, 500 ;
+   power values 0.0 ;
+
+HBM_L1b :
+   position 1000, 14000 ;
+   dimension 6000, 500 ;
+   power values 0.0 ;
+
+FILL_14000_7000 :
+   position 7000, 14000 ;
+   dimension 1000, 500 ;
+   power values 0.0 ;
+
+GPU_B :
+   position 8000, 14000 ;
+   dimension 18000, 500 ;
+   power values 9.0 ;
+
+FILL_14000_26000 :
+   position 26000, 14000 ;
+   dimension 1000, 500 ;
+   power values 0.0 ;
+
+HBM_R1b :
+   position 27000, 14000 ;
+   dimension 6000, 500 ;
+   power values 0.0 ;
+
+FILL_14000_33000 :
+   position 33000, 14000 ;
+   dimension 7000, 500 ;
+   power values 0.0 ;
+
+FILL_14500_0 :
+   position 0, 14500 ;
+   dimension 8000, 1000 ;
+   power values 0.0 ;
+
+GPU_C :
+   position 8000, 14500 ;
+   dimension 18000, 1000 ;
+   power values 18.0 ;
+
+FILL_14500_26000 :
+   position 26000, 14500 ;
+   dimension 14000, 1000 ;
+   power values 0.0 ;
+
+FILL_15500_0 :
+   position 0, 15500 ;
+   dimension 1000, 500 ;
+   power values 0.0 ;
+
+HBM_L2b :
+   position 1000, 15500 ;
+   dimension 6000, 500 ;
+   power values 0.0 ;
+
+FILL_15500_7000 :
+   position 7000, 15500 ;
+   dimension 1000, 500 ;
+   power values 0.0 ;
+
+GPU_D :
+   position 8000, 15500 ;
+   dimension 18000, 500 ;
+   power values 9.0 ;
+
+FILL_15500_26000 :
+   position 26000, 15500 ;
+   dimension 1000, 500 ;
+   power values 0.0 ;
+
+HBM_R2b :
+   position 27000, 15500 ;
+   dimension 6000, 500 ;
+   power values 0.0 ;
+
+FILL_15500_33000 :
+   position 33000, 15500 ;
+   dimension 7000, 500 ;
+   power values 0.0 ;
+
+FILL_16000_0 :
+   position 0, 16000 ;
+   dimension 1000, 8000 ;
+   power values 0.0 ;
+
+HBM_L2 :
+   position 1000, 16000 ;
+   dimension 6000, 8000 ;
+   power values 25.0 ;
+
+FILL_16000_7000 :
+   position 7000, 16000 ;
+   dimension 1000, 8000 ;
+   power values 0.0 ;
+
+GPU_E :
+   position 8000, 16000 ;
+   dimension 18000, 8000 ;
+   power values 144.0 ;
+
+FILL_16000_26000 :
+   position 26000, 16000 ;
+   dimension 1000, 8000 ;
+   power values 0.0 ;
+
+HBM_R2 :
+   position 27000, 16000 ;
+   dimension 6000, 8000 ;
+   power values 25.0 ;
+
+FILL_16000_33000 :
+   position 33000, 16000 ;
+   dimension 7000, 8000 ;
+   power values 0.0 ;
+
+FILL_24000_0 :
+   position 0, 24000 ;
+   dimension 40000, 6000 ;
+   power values 0.0 ;

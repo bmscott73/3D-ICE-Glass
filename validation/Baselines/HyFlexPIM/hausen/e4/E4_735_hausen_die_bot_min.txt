@@ -1,3 +1,0 @@
-% Minimum temperatures for the floorplan of the die DIE_BOT
-% Time(s) 	 FILL_0(K) 	 FILL_1(K) 	 FILL_2(K) 	 FILL_3(K) 	 FILL_4(K) 	 FILL_5(K) 	 FILL_6(K) 	 FILL_7(K) 	 FILL_8(K) 	 LOGIC0(K) 	 FILL_UNDER_OPT_IO(K) 	 FILL_UNDER_GPU0(K) 	 
-0.000 	 309.707 	 309.880 	 320.988 	 314.902 	 321.012 	 330.017 	 313.729 	 333.784 	 313.602 	 317.998 	 317.378 	 319.162 	 

@@ -1,0 +1,16 @@
+{
+  "id": "h200-plate",
+  "name": "H200-scale plate boundary",
+  "stack": "validation/h200-plate/inputs/h200_stratum_htc_probe.stk",
+  "expected_C": 61.73,
+  "reference_C": 65.0,
+  "aggregate": false,
+  "metric": "max plate contact",
+  "outputs": [
+    "h200_plate_contact_tmap.txt"
+  ],
+  "kind": "map",
+  "correction_K": 0,
+  "assessment": "specification consistency",
+  "tolerance_C": 0.1
+}

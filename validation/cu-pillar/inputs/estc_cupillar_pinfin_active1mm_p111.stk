@@ -1,0 +1,74 @@
+// 3D-ICE-Glass | estc_cupillar_pinfin_active1mm_p111.stk | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// Canvas 1000 x 1000 um; grid 50 x 50 um.
+// Source power: first 5.02 W; range 5.02..5.02 W; 1 sample(s).
+// External faces: adiabatic; coolant channel is the heat-removal boundary.
+// Embedded cooling pinfin: flow/velocity=750000.0 um/s; inlet=295.15 K; h=engine correlation.
+// Temperatures in emulator outputs are kelvin; time is seconds.
+// Model data: CC-BY-4.0. References and observation planes: checkpoint README / docs/case-index.md.
+
+material SILICON :
+    thermal conductivity    1.30e-04 ;
+    volumetric heat capacity 1.63e-12 ;
+
+material GLASS :
+    thermal conductivity    1.00e-06 ;
+    volumetric heat capacity 1.60e-12 ;
+
+material COPPER :
+    thermal conductivity    4.00e-04 ;
+    volumetric heat capacity 3.45e-12 ;
+
+material ABF :
+    thermal conductivity    3.00e-07 ;
+    volumetric heat capacity 1.60e-12 ;
+
+pinfin :
+    height 100 ;
+    pin diameter 50 ;
+    pin pitch 111.11 ;
+    pin distribution inline ;
+    pin material COPPER ;
+    darcy velocity 7.50e+05 ;
+    coolant volumetric heat capacity 4.18e-12 ;
+    coolant incoming temperature 295.15 ;
+
+dimensions :
+    chip length 1000, width 1000 ;
+    cell length 50, width 50 ;
+    non-uniform false ;
+
+layer GLASS1_COVER :
+    height 200 ;
+    material GLASS ;
+
+layer CU_RDL :
+    height 6 ;
+    material COPPER ;
+
+layer ABF_ELECTRICAL :
+    height 30 ;
+    material ABF ;
+
+die TTC_DIE :
+    source 10 SILICON ;
+    layer 290 SILICON ;
+
+stack :
+    layer COVER GLASS1_COVER ;
+    channel PINS ;
+    layer RDL CU_RDL ;
+    die TTC TTC_DIE floorplan "estc_cupillar_active1mm_p111.flp" ;
+    layer ABF_BOTTOM ABF_ELECTRICAL ;
+
+solver :
+    steady ;
+    initial temperature 295.15 ;
+    numofcores 12 ;
+
+output :
+    Tflp( TTC, "outputs/cupillar_active1mm_p111_tj_max_K_7.5.txt", maximum, final ) ;
+    Tflp( TTC, "outputs/cupillar_active1mm_p111_tj_avg_K_7.5.txt", average, final ) ;
+    Tmap( TTC, "outputs/cupillar_active1mm_p111_ttc_tmap_K_7.5.txt", final ) ;
+    Tmap( RDL, "outputs/cupillar_active1mm_p111_rdl_tmap_K_7.5.txt", final ) ;
+    Tcoolant( PINS, "outputs/cupillar_active1mm_p111_outlet_coolant_K_7.5.txt", maximum, final ) ;

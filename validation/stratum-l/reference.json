@@ -1,0 +1,8 @@
+{
+  "source": "https://doi.org/10.1109/ECTC51846.2026.00170",
+  "reference_C": 86.0,
+  "metric": "die peak",
+  "assessment": "architecture cross-validation",
+  "assumptions": "300 W GPU plus six 40 W logic and six 102 W memory blocks: 1152 W over 46.6 x 34.5 mm. Top h=2.78e-8 at 300 K, insulated bottom, 125 um cells. Compare the hottest logic or memory die with the 86 C PINN reference. The original transient and nonuniform inputs are unchanged in provenance/. The uniform engine truncates 46600/125 to 372 x-cells; the exact supplied grid is retained.",
+  "academic_link": "../../docs/references.md#pic"
+}

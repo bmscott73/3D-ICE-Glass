@@ -1,0 +1,8 @@
+{
+  "source": "Ansys Icepak matched package (paper Fig. 2b)",
+  "reference_C": 55.18,
+  "metric": "die peak",
+  "assessment": "matched CFD cross-validation",
+  "assumptions": "100 um grid; explicit 2 mm copper base, 20 um TIM, hybrid bond and orthotropic Cu-TGV composite. Reference is the project matched Icepak comparison. Coolant 300 K and plate h=4.08e-8 are frozen.",
+  "academic_link": "../../docs/references.md#stratum"
+}

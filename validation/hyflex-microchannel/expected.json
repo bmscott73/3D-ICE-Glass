@@ -1,0 +1,16 @@
+{
+  "id": "hyflex-microchannel",
+  "name": "HyFlexPIM microchannel + Cu-TGV",
+  "stack": "validation/hyflex-microchannel/inputs/hfp_tgv_E1c_anchored.stk",
+  "expected_C": 97.51,
+  "reference_C": 98.2,
+  "aggregate": true,
+  "metric": "die peak",
+  "outputs": [
+    "E1c_anchored_max.txt"
+  ],
+  "kind": "floorplan",
+  "correction_K": 0,
+  "assessment": "anchored CFD comparison",
+  "tolerance_C": 0.1
+}

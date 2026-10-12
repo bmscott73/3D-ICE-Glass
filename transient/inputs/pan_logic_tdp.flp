@@ -1,0 +1,39 @@
+// 3D-ICE-Glass | pan_logic_tdp.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 7 rectangles; first-sample power 618.5 W; 1 power sample(s); powered footprint 800 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+FILL_0 :
+    position  0, 0 ;
+    dimension 89800, 2200 ;
+    power values 0 ;
+
+FILL_1 :
+    position  0, 2200 ;
+    dimension 44000, 20000 ;
+    power values 0 ;
+
+FILL_2 :
+    position  64000, 2200 ;
+    dimension 4000, 20000 ;
+    power values 0 ;
+
+FILL_3 :
+    position  88000, 2200 ;
+    dimension 1800, 20000 ;
+    power values 0 ;
+
+FILL_4 :
+    position  0, 22200 ;
+    dimension 89800, 2200 ;
+    power values 0 ;
+
+LOGIC_A :
+    position  44000, 2200 ;
+    dimension 20000, 20000 ;
+    power values 309.25 ;
+
+LOGIC_B :
+    position  68000, 2200 ;
+    dimension 20000, 20000 ;
+    power values 309.25 ;

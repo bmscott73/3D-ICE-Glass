@@ -1,0 +1,16 @@
+{
+  "id": "h100-ttv",
+  "name": "H100-scale copper TTV",
+  "stack": "validation/h100-ttv/inputs/ttv_pred_720W.stk",
+  "expected_C": 64.83,
+  "reference_C": 64.9,
+  "aggregate": true,
+  "metric": "case surface",
+  "outputs": [
+    "pred_720W_case_ctr.txt"
+  ],
+  "kind": "probe",
+  "correction_K": -0.00989010989010989,
+  "assessment": "held-out power prediction",
+  "tolerance_C": 0.1
+}

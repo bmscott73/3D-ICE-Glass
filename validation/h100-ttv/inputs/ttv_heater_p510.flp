@@ -1,0 +1,9 @@
+// 3D-ICE-Glass | ttv_heater_p510.flp | generated from active statements
+// SPDX-License-Identifier: CC-BY-4.0
+// 1 rectangles; first-sample power 510 W; 1 power sample(s); powered footprint 910 mm2.
+// Positions/dimensions: um. Power: W. Model data: CC-BY-4.0.
+
+TTV_HEAT :
+   position 0, 0 ;
+   dimension 26000, 35000 ;
+   power values 510.0 ;

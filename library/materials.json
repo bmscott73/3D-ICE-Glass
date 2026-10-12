@@ -1,0 +1,122 @@
+{
+  "license": "CC-BY-4.0",
+  "materials": {
+    "glass": {
+      "conductivity_W_mK": [
+        1.4,
+        1.4,
+        1.4
+      ],
+      "volumetric_capacity_J_m3K": 1600000.0,
+      "provenance": {
+        "input": "validation/stratum-s/inputs/stratum_S_v2_liquid.stk",
+        "description": "Bulk glass used by package models; constant-property approximation."
+      },
+      "temperature_model": "constant"
+    },
+    "glass-vehicle": {
+      "conductivity_W_mK": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "volumetric_capacity_J_m3K": 1600000.0,
+      "provenance": {
+        "input": "validation/glass-microchannel/inputs/estc_microchannel_author_inputs_v2.stk",
+        "description": "Author-input glass test-vehicle assumption."
+      },
+      "temperature_model": "constant"
+    },
+    "copper": {
+      "conductivity_W_mK": [
+        400.0,
+        400.0,
+        400.0
+      ],
+      "volumetric_capacity_J_m3K": 3450000.0,
+      "provenance": {
+        "input": "validation/h100-ttv/inputs/ttv_pred_720W.stk",
+        "description": "Copper test-vehicle and spreader property."
+      },
+      "temperature_model": "constant"
+    },
+    "silicon": {
+      "conductivity_W_mK": [
+        130.0,
+        130.0,
+        130.0
+      ],
+      "volumetric_capacity_J_m3K": 1750000.0,
+      "provenance": {
+        "input": "validation/stratum-s/inputs/stratum_S_v2_liquid.stk",
+        "description": "Bulk silicon package baseline."
+      },
+      "temperature_model": "constant"
+    },
+    "tgv-glass": {
+      "conductivity_W_mK": [
+        1.0,
+        1.0,
+        79.204
+      ],
+      "volumetric_capacity_J_m3K": 1960000.0,
+      "provenance": {
+        "input": "validation/hyflex-microchannel/inputs/hfp_tgv_E1c_anchored.stk",
+        "description": "Orthotropic effective Cu-TGV/glass composite, rounded approximately 19.6% via fraction. Preserve frozen tensor; not a resolved via mesh."
+      },
+      "temperature_model": "constant"
+    },
+    "hybrid-bond": {
+      "conductivity_W_mK": [
+        121.0,
+        121.0,
+        121.0
+      ],
+      "volumetric_capacity_J_m3K": 2140000.0,
+      "provenance": {
+        "input": "validation/stratum-s/inputs/stratum_S_v2_liquid.stk",
+        "description": "1 um bond-layer material, approximately 30% Cu area; rounded effective conductivity."
+      },
+      "temperature_model": "constant"
+    },
+    "tim": {
+      "conductivity_W_mK": [
+        4.0,
+        4.0,
+        4.0
+      ],
+      "volumetric_capacity_J_m3K": 4000000.0,
+      "provenance": {
+        "input": "validation/stratum-s/inputs/stratum_S_v2_liquid.stk",
+        "description": "Explicit package TIM, separate from convective plate boundary."
+      },
+      "temperature_model": "constant"
+    },
+    "sinter-ag": {
+      "conductivity_W_mK": [
+        200.0,
+        200.0,
+        200.0
+      ],
+      "volumetric_capacity_J_m3K": 2500000.0,
+      "provenance": {
+        "input": "validation/hyflex-microchannel/inputs/hfp_tgv_E1c_anchored.stk",
+        "description": "Die attach in the anchored glass cooling stack."
+      },
+      "temperature_model": "constant"
+    },
+    "abf": {
+      "conductivity_W_mK": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "volumetric_capacity_J_m3K": 1600000.0,
+      "provenance": {
+        "input": "validation/glass-microchannel/inputs/estc_microchannel_author_inputs_v2.stk",
+        "description": "Build-up dielectric assumption for the experimental vehicle."
+      },
+      "temperature_model": "constant"
+    }
+  }
+}

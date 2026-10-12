@@ -1,0 +1,8 @@
+{
+  "source": "Kim et al., ESTC 2026; author-input vehicle",
+  "reference_C": 83.3,
+  "metric": "die peak",
+  "assessment": "experimental comparison with assumed HTC",
+  "assumptions": "16.252928 W on a 2.56 x 2.56 mm heater (248 W/cm2), 2.8 mm domain, water 25.46 mL/min at 295.15 K. 10 physical glass channels with copper TGVs. The 2RM pitch approximation rounds its effective channel count to 9; this finite-width approximation is part of the supplied case. HTC 50,000 W/m2K, 10 um interface, die source depth and effective TGV conductivity are modeling assumptions, not author-supplied or independently fitted values.",
+  "academic_link": "../../docs/references.md#glass-cooling"
+}

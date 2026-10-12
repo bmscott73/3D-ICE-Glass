@@ -1,3 +1,0 @@
-% Average temperatures for the floorplan of the die PIM
-% Time(s) 	 PU0_DIG_A(K) 	 PU0_ANA(K) 	 PU0_DIG_B(K) 	 PU1_DIG_A(K) 	 PU1_ANA(K) 	 PU1_DIG_B(K) 	 PU2_DIG_A(K) 	 PU2_ANA(K) 	 PU2_DIG_B(K) 	 PU3_DIG_A(K) 	 PU3_ANA(K) 	 PU3_DIG_B(K) 	 PU4_DIG_A(K) 	 PU4_ANA(K) 	 PU4_DIG_B(K) 	 PU5_DIG_A(K) 	 PU5_ANA(K) 	 PU5_DIG_B(K) 	 
-0.000 	 322.301 	 364.707 	 326.873 	 322.156 	 364.448 	 326.707 	 322.301 	 364.707 	 326.873 	 315.934 	 358.255 	 320.513 	 315.826 	 358.034 	 320.383 	 315.934 	 358.255 	 320.513 	 

@@ -1,0 +1,8 @@
+{
+  "source": "https://doi.org/10.1115/IPACK2024-141261",
+  "reference_C": 64.9,
+  "metric": "case surface",
+  "assessment": "held-out power prediction",
+  "assumptions": "Coefficient fitted once at 510 W (4.4186e-8 W/um2K), frozen for 720 and 920 W. Local saturation references differ by power. The probe centre is 5 um below the surface; remove its conduction offset. Copper case, not GPU junction.",
+  "academic_link": "../../docs/references.md#ttv"
+}

@@ -1,0 +1,8 @@
+{
+  "source": "Ansys Icepak conjugate CFD anchor (paper Fig. 2a)",
+  "reference_C": 98.2,
+  "metric": "die peak",
+  "assessment": "anchored CFD comparison",
+  "assumptions": "130 channels, 156.5 mL/min, 300 K inlet, h_eff=1.27e-8. Geometry, power and flow are frozen; circular Hausen and square-duct alternatives remain as controlled coefficient comparisons. Raw CFD wall-flux patches are not bundled; tools/calibrate.py accepts them for a new anchor.",
+  "academic_link": "../../docs/references.md#hyflex"
+}
